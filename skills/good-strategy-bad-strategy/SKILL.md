@@ -91,4 +91,4 @@ Three elements, all required:
 
 This skill is **not endorsed by Richard Rumelt**. It's Marcos Sponton's structured reading of Rumelt's public work. If Rumelt himself wants to correct or endorse anything here, PRs welcome.
 
-- **Skill maintained by:** [Marcos Sponton](https://github.com/marcossponton). Feedback, corrections, and PRs are welcome. See the repo's README for how to contribute.
+- **Skill maintained by:** [Marcos Sponton](https://github.com/marcos-sponton). Feedback, corrections, and PRs are welcome. See the repo's README for how to contribute.

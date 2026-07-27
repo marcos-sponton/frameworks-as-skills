@@ -39,7 +39,7 @@ The `_template/` directory contains the canonical scaffold. If you want to contr
 **In Claude Code:**
 ```bash
 # Clone the repo somewhere on your machine
-git clone https://github.com/marcossponton/frameworks-as-skills.git ~/frameworks-as-skills
+git clone https://github.com/marcos-sponton/frameworks-as-skills.git ~/frameworks-as-skills
 
 # Symlink the skill you want into your Claude Code skills directory
 ln -s ~/frameworks-as-skills/skills/playing-to-win ~/.claude/skills/playing-to-win
@@ -82,6 +82,6 @@ MIT — use, remix, redistribute. Attribution appreciated but not required.
 
 ## Who's behind this
 
-Marcos Sponton — [GitHub](https://github.com/marcossponton) · [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co) (AI interview infrastructure).
+Marcos Sponton — [GitHub](https://github.com/marcos-sponton) · [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co) (AI interview infrastructure).
 
 I use these frameworks in my own week — with clients, on my own products, in planning. This repo is what falls out.

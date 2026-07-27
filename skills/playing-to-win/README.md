@@ -66,4 +66,4 @@ The skill grows with the Practitioner Insights series. Especially welcome:
 
 ## Skill author
 
-[Marcos Sponton](https://github.com/marcossponton) — [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co). I use Playing to Win in my own week and this skill is what falls out.
+[Marcos Sponton](https://github.com/marcos-sponton) — [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co). I use Playing to Win in my own week and this skill is what falls out.

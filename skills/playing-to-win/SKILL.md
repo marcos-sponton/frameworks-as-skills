@@ -83,4 +83,4 @@ Martin's canonical formulation: *"Strategy is an integrated set of choices that 
 
 This skill is not endorsed by Roger Martin. It's Marcos Sponton's structured reading of Martin's public work. If Martin himself wants to correct or endorse anything here, PRs welcome.
 
-- **Skill maintained by:** [Marcos Sponton](https://github.com/marcossponton). Feedback, corrections, and PRs are welcome. See the repo's README for how to contribute.
+- **Skill maintained by:** [Marcos Sponton](https://github.com/marcos-sponton). Feedback, corrections, and PRs are welcome. See the repo's README for how to contribute.

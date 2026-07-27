@@ -72,4 +72,4 @@ The skill grows with Rumelt's Substack and any new interviews. Especially welcom
 
 ## Skill author
 
-[Marcos Sponton](https://github.com/marcossponton) — [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co). I use Rumelt's kernel in my own week and this skill is what falls out.
+[Marcos Sponton](https://github.com/marcos-sponton) — [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co). I use Rumelt's kernel in my own week and this skill is what falls out.
