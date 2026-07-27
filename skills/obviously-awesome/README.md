@@ -1,6 +1,6 @@
-# Obviously Awesome — a Claude Skill
+# Obviously Awesome — an agent skill
 
-A Claude Skill for **April Dunford's Positioning + Sales Pitch** framework — the 5 components of effective positioning and the 8-step B2B sales pitch that operationalizes it.
+An agent skill for **April Dunford's Positioning + Sales Pitch** framework — the 5 components of effective positioning and the 8-step B2B sales pitch that operationalizes it.
 
 This isn't a summary of the books. It's a working thinking partner in Dunford's method, built from:
 
@@ -13,7 +13,7 @@ This isn't a summary of the books. It's a working thinking partner in Dunford's 
 - Podcast appearances (Lenny Rachitsky 2022 & 2023, Farnam Street Knowledge Project #201, Intercom, SaaS Club, and others)
 - The Ambient Strategy site — her consulting practice — [ambientstrategy.com](https://www.ambientstrategy.com/)
 
-**Why this exists.** Invoke "positioning" in Claude without a skill and you get generic marketing advice — often blurred with branding, messaging, or copywriting (three things Dunford spends most of her airtime separating from positioning). This skill closes that gap. Post-2019 refinements — Sales Pitch, Value vs. Objection Handling, the No Differentiation Illusion, the Multi-Product Guide, Positioning in the Age of AI — live in `references/post-book.md` and `references/author-live-sources.md`.
+**Why this exists.** Invoke "positioning" in Claude or Codex without a skill and you get generic marketing advice — often blurred with branding, messaging, or copywriting (three things Dunford spends most of her airtime separating from positioning). This skill closes that gap. Post-2019 refinements — Sales Pitch, Value vs. Objection Handling, the No Differentiation Illusion, the Multi-Product Guide, Positioning in the Age of AI — live in `references/post-book.md` and `references/author-live-sources.md`.
 
 ## What's inside
 
@@ -40,10 +40,10 @@ obviously-awesome/
 # From this repo root:
 ln -s "$(pwd)/skills/obviously-awesome" ~/.claude/skills/obviously-awesome
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Obviously Awesome skill", "help me position this using Dunford's method", "let's design the sales pitch").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Obviously Awesome skill", "help me position this using Dunford's method", "let's design the sales pitch").
 
 ## Attribution
 
@@ -58,7 +58,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **Consulting practice:** [Ambient Strategy](https://www.ambientstrategy.com/)
 - **LinkedIn:** [/in/aprildunford](https://ca.linkedin.com/in/aprildunford)
 
-This skill is **not endorsed by April Dunford**. It is Marcos Sponton's structured reading of her public work, built to make Claude a better thinking partner in her method. If Dunford herself wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by April Dunford**. It is Marcos Sponton's structured reading of her public work, built to make Claude or Codex a better thinking partner in her method. If Dunford herself wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

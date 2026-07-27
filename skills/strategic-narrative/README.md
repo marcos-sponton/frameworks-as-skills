@@ -1,6 +1,6 @@
-# Strategic Narrative — a Claude Skill
+# Strategic Narrative — an agent skill
 
-A Claude Skill for **Andy Raskin's Strategic Narrative** — the 5-part company story (Name the Big Change → Winners & Losers → Promised Land → Magic Gifts → Evidence) that Raskin extracted from Zuora's 2015 sales deck and has refined ever since.
+An agent skill for **Andy Raskin's Strategic Narrative** — the 5-part company story (Name the Big Change → Winners & Losers → Promised Land → Magic Gifts → Evidence) that Raskin extracted from Zuora's 2015 sales deck and has refined ever since.
 
 This isn't a summary of the 2016 essay. It's a working thinking partner in Raskin's method, built from:
 
@@ -12,7 +12,7 @@ This isn't a summary of the 2016 essay. It's a working thinking partner in Raski
 - Raskin's own podcast at [andyraskin.com](https://andyraskin.com/) — CEO interviews
 - Podcast appearances: Nigel Green, The Transaction, Content Heroes, Piktochart, Product Marketing Alliance, GTM Unfiltered, and others
 
-**Why this exists.** Andy Raskin has no book. His footprint is essays + LinkedIn + podcasts. Invoke "strategic narrative" in Claude without a skill and you get either (a) the 2016 essay summary flattened into "tell a story about your product" or (b) generic pitch advice that collapses the method into StoryBrand-flavored copy craft. This skill closes both gaps.
+**Why this exists.** Andy Raskin has no book. His footprint is essays + LinkedIn + podcasts. Invoke "strategic narrative" in Claude or Codex without a skill and you get either (a) the 2016 essay summary flattened into "tell a story about your product" or (b) generic pitch advice that collapses the method into StoryBrand-flavored copy craft. This skill closes both gaps.
 
 ## What's inside
 
@@ -39,10 +39,10 @@ strategic-narrative/
 # From this repo root:
 ln -s "$(pwd)/skills/strategic-narrative" ~/.claude/skills/strategic-narrative
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the strategic narrative skill", "help me name the change in the world for our deck").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the strategic narrative skill", "help me name the change in the world for our deck").
 
 ## Attribution
 
@@ -56,7 +56,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 
 Raskin has **no book** and **no Substack**. The "newsletter" experience is following him on LinkedIn + Medium. That absence is not a gap — it's a stance. Read `references/author-live-sources.md` for the full index.
 
-This skill is **not endorsed by Andy Raskin**. It is Marcos Sponton's structured reading of Raskin's public work, built to make Claude a better thinking partner in Raskin's method. If Raskin himself wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Andy Raskin**. It is Marcos Sponton's structured reading of Raskin's public work, built to make Claude or Codex a better thinking partner in Raskin's method. If Raskin himself wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

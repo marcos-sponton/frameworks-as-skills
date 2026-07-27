@@ -1,6 +1,6 @@
-# Good Strategy Bad Strategy — a Claude Skill
+# Good Strategy Bad Strategy — an agent skill
 
-A Claude Skill for **Richard Rumelt's kernel of strategy** — diagnosis, guiding policy, coherent action — plus the 2022 refinement, **"the crux"** (the pivotal challenge on which the strategy actually turns), and Rumelt's more recent reframe: stop calling this "strategy"; call it an **action agenda**.
+An agent skill for **Richard Rumelt's kernel of strategy** — diagnosis, guiding policy, coherent action — plus the 2022 refinement, **"the crux"** (the pivotal challenge on which the strategy actually turns), and Rumelt's more recent reframe: stop calling this "strategy"; call it an **action agenda**.
 
 This isn't a summary of the book. It's a working thinking partner in Rumelt's method, built from:
 
@@ -11,7 +11,7 @@ This isn't a summary of the book. It's a working thinking partner in Rumelt's me
 - Podcast appearances including Lenny Rachitsky (2024), Strategy Skills Podcast Ep. 253, BCG Henderson Institute (2022)
 - Rumelt's Strategy Foundry operational method (from his official site)
 
-**Why this exists.** Invoke "Good Strategy Bad Strategy" in Claude without a skill and you get a thin summary — Claude knows the 2011 book but rarely brings in *The Crux* (2022), the action-agenda reframe (2024), the Foundry process (post-2022), or the chain-link logic (Substack). This skill closes that gap. Post-book material lives in `references/post-book.md`.
+**Why this exists.** Invoke "Good Strategy Bad Strategy" in Claude or Codex without a skill and you get a thin summary — the model knows the 2011 book but rarely brings in *The Crux* (2022), the action-agenda reframe (2024), the Foundry process (post-2022), or the chain-link logic (Substack). This skill closes that gap. Post-book material lives in `references/post-book.md`.
 
 ## What's inside
 
@@ -39,10 +39,10 @@ good-strategy-bad-strategy/
 # From this repo root:
 ln -s "$(pwd)/skills/good-strategy-bad-strategy" ~/.claude/skills/good-strategy-bad-strategy
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Good Strategy Bad Strategy skill", "let's find the crux", "diagnose this before we set goals").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Good Strategy Bad Strategy skill", "let's find the crux", "diagnose this before we set goals").
 
 ## Attribution
 
@@ -54,7 +54,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **Official site:** [https://www.richardrumelt.com/](https://www.richardrumelt.com/)
 - **Strategy Foundry (his consulting offering):** [https://www.richardrumelt.com/strategy-foundry](https://www.richardrumelt.com/strategy-foundry)
 
-This skill is **not endorsed by Richard Rumelt**. It is Marcos Sponton's structured reading of Rumelt's public work, built to make Claude a better thinking partner in Rumelt's method. If Rumelt himself wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Richard Rumelt**. It is Marcos Sponton's structured reading of Rumelt's public work, built to make Claude or Codex a better thinking partner in Rumelt's method. If Rumelt himself wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

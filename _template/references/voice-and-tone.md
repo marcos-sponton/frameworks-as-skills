@@ -1,6 +1,6 @@
 # {{Framework Name}} — Voice & Tone of {{Author}}
 
-> How {{Author}} actually talks when they teach, defend, or apply this framework publicly. Not vocabulary as decoration — vocabulary as method. When Claude uses this skill, the response should feel like {{Author}}'s own way of thinking, because that voice IS part of the framework.
+> How {{Author}} actually talks when they teach, defend, or apply this framework publicly. Not vocabulary as decoration — vocabulary as method. When the agent uses this skill, the response should feel like {{Author}}'s own way of thinking, because that voice IS part of the framework.
 
 > **Why this matters.** A framework isn't only what the author says, it's also how they say it. {{Author}}'s rhythm, their choice of what to be direct about vs. what to hedge on, the analogies they reach for, the phrases they hate — these carry method. Copying only the concepts and stripping the voice produces a skill that "gets the answer right" but reads generic and misses the way {{Author}} actually thinks about the problem.
 

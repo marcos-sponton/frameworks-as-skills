@@ -1,6 +1,6 @@
-# Escaping the Build Trap — a Claude Skill
+# Escaping the Build Trap — an agent skill
 
-A Claude Skill for **Melissa Perri's Escaping the Build Trap + Product Operations** frame — the diagnostic that names why product teams optimize outputs while outcomes stay flat, and the operational infrastructure that fixes it.
+An agent skill for **Melissa Perri's Escaping the Build Trap + Product Operations** frame — the diagnostic that names why product teams optimize outputs while outcomes stay flat, and the operational infrastructure that fixes it.
 
 This isn't a summary of the book. It's a working thinking partner in Perri's method, built from:
 
@@ -11,7 +11,7 @@ This isn't a summary of the book. It's a working thinking partner in Perri's met
 - Perri's **Substack** (active since 2023) and **melissaperri.com/blog** (2014–), including "Rethinking the Product Roadmap" (2014, the origin of the Problem Roadmap), "Product Operations: The Fuel for Winning Product Strategies" (2019), "Are We Getting Rid of Product Managers?" (2023), "Why are we making Product Managers the 'one throat to choke'?" (2024), "My Thoughts on Founder Mode…" (2024), and "How to Get Clarity When Your Company's Strategy is Fuzzy" (2024).
 - Ongoing LinkedIn commentary through 2026 on AI + PM and the State of AI in Product 2026 report (co-published with Product Circle, n=309 PM leaders).
 
-**Why this exists.** Invoke "Escaping the Build Trap" in Claude without a skill and you get a thin summary of the 2018 book — Claude knows the build trap concept but not the eight years of subsequent Perri material that refined it (Product Ops, Four Dimensions, the roadmap split, the "one throat to choke" argument, the Founder Mode critique, the Fuzzy Strategy diagnostic). This skill closes that gap. Post-book material lives in `references/post-book.md` and `references/author-live-sources.md`.
+**Why this exists.** Invoke "Escaping the Build Trap" in Claude or Codex without a skill and you get a thin summary of the 2018 book — Claude knows the build trap concept but not the eight years of subsequent Perri material that refined it (Product Ops, Four Dimensions, the roadmap split, the "one throat to choke" argument, the Founder Mode critique, the Fuzzy Strategy diagnostic). This skill closes that gap. Post-book material lives in `references/post-book.md` and `references/author-live-sources.md`.
 
 ## What's inside
 
@@ -39,10 +39,10 @@ escaping-the-build-trap/
 # From this repo root:
 ln -s "$(pwd)/skills/escaping-the-build-trap" ~/.claude/skills/escaping-the-build-trap
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Escaping the Build Trap skill", "audit our PM organization with Perri's Four Dimensions").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Escaping the Build Trap skill", "audit our PM organization with Perri's Four Dimensions").
 
 ## Attribution
 
@@ -57,7 +57,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **Substack:** [melissaperri.substack.com](https://melissaperri.substack.com/)
 - **LinkedIn:** [linkedin.com/in/melissajeanperri](https://www.linkedin.com/in/melissajeanperri/)
 
-This skill is **not endorsed by Melissa Perri**. It is Marcos Sponton's structured reading of Perri's public work, built to make Claude a better thinking partner in her method. If Perri herself (or Denise Tilles, her *Product Operations* co-author) wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Melissa Perri**. It is Marcos Sponton's structured reading of Perri's public work, built to make Claude or Codex a better thinking partner in her method. If Perri herself (or Denise Tilles, her *Product Operations* co-author) wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

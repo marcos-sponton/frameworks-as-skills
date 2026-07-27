@@ -1,6 +1,6 @@
-# Thinking in Bets — a Claude Skill
+# Thinking in Bets — an agent skill
 
-A Claude Skill for **Annie Duke's decision-making toolkit** — the integrated system across *Thinking in Bets* (2018), *How to Decide* (2020), and *Quit* (2022).
+An agent skill for **Annie Duke's decision-making toolkit** — the integrated system across *Thinking in Bets* (2018), *How to Decide* (2020), and *Quit* (2022).
 
 This isn't a summary of the three books. It's a working thinking partner in Duke's method, built from:
 
@@ -11,7 +11,7 @@ This isn't a summary of the three books. It's a working thinking partner in Duke
 - Podcast appearances: Lenny Rachitsky (2024), The Knowledge Project (Shane Parrish, x2), Freakonomics *People I (Mostly) Admire*, First Round Review Podcast, Tim Ferriss, Rational Reminder, Capital Allocators, Jordan Harbinger, Meb Faber.
 - YouTube talks: TEDxGeorgetown, SpeakInc keynotes, "Monkeys and Pedestals" clips.
 
-**Why this exists.** Invoke "Thinking in Bets" in Claude without a skill and you get a thin summary of the 2018 book — Claude knows the concept of "resulting" but not the full three-book system, the live Substack material, the First Round protocol, or the specific format of a kill criterion (state + date). This skill closes that gap.
+**Why this exists.** Invoke "Thinking in Bets" in Claude or Codex without a skill and you get a thin summary of the 2018 book — Claude knows the concept of "resulting" but not the full three-book system, the live Substack material, the First Round protocol, or the specific format of a kill criterion (state + date). This skill closes that gap.
 
 ## What's inside
 
@@ -38,10 +38,10 @@ thinking-in-bets/
 # From this repo root:
 ln -s "$(pwd)/skills/thinking-in-bets" ~/.claude/skills/thinking-in-bets
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md` (making a decision under uncertainty, running a post-mortem, considering a pivot, setting kill criteria, group decision hygiene), or when you invoke by name ("use the Thinking in Bets skill", "help me think in bets about this").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md` (making a decision under uncertainty, running a post-mortem, considering a pivot, setting kill criteria, group decision hygiene), or when you invoke by name ("use the Thinking in Bets skill", "help me think in bets about this").
 
 ## Attribution
 
@@ -57,7 +57,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **First Round Capital** — Special Partner. She helped design their explicit decision-recording system.
 - **LinkedIn:** [annie-duke](https://www.linkedin.com/in/annie-duke/) — reposts, thought pieces, 1–3/week.
 
-This skill is **not endorsed by Annie Duke**. It is Marcos Sponton's structured reading of Duke's public work, built to make Claude a better thinking partner in her method. If Duke herself wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Annie Duke**. It is Marcos Sponton's structured reading of Duke's public work, built to make Claude or Codex a better thinking partner in her method. If Duke herself wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

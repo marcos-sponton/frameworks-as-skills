@@ -1,6 +1,6 @@
-# 7 Powers — a Claude Skill
+# 7 Powers — an agent skill
 
-A Claude Skill for **Hamilton Helmer's 7 Powers** — the taxonomic framework for competitive advantage that names exactly seven conditions capable of producing Persistent Differential Returns.
+An agent skill for **Hamilton Helmer's 7 Powers** — the taxonomic framework for competitive advantage that names exactly seven conditions capable of producing Persistent Differential Returns.
 
 This isn't a summary of the book. It's a working thinking partner in Helmer's method, built from:
 
@@ -10,7 +10,7 @@ This isn't a summary of the book. It's a working thinking partner in Helmer's me
 - ~8 podcast appearances (Acquired 2020, Acquired *Platforms and Power* 2022, Acquired *Second Business* 2023, Invest Like the Best, 20VC, NFX, Venrock, and [Lenny Rachitsky's Podcast 2024](https://www.lennysnewsletter.com/p/business-strategy-with-hamilton-helmer))
 - Trium Group interview with Helmer + Chenyi Shi
 
-**Why this exists.** Invoke "7 Powers" in Claude without a skill and you get the seven names — often blurred with generic "moat" talk, sometimes mis-mapping network effects to Network Economies, brand recognition to Brand Power, operational excellence to Process Power. This skill closes that gap: strict definitions, the Benefit + Barrier test, the 3 S's screen, and the post-book Statics/Dynamics + three-stage sequencing that most summaries skip. Post-book material lives in `references/post-book.md` and `references/author-live-sources.md`.
+**Why this exists.** Invoke "7 Powers" in Claude or Codex without a skill and you get the seven names — often blurred with generic "moat" talk, sometimes mis-mapping network effects to Network Economies, brand recognition to Brand Power, operational excellence to Process Power. This skill closes that gap: strict definitions, the Benefit + Barrier test, the 3 S's screen, and the post-book Statics/Dynamics + three-stage sequencing that most summaries skip. Post-book material lives in `references/post-book.md` and `references/author-live-sources.md`.
 
 ## What's inside
 
@@ -37,10 +37,10 @@ This isn't a summary of the book. It's a working thinking partner in Helmer's me
 # From this repo root:
 ln -s "$(pwd)/skills/7-powers" ~/.claude/skills/7-powers
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the 7 Powers skill", "run this company through 7 Powers").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the 7 Powers skill", "run this company through 7 Powers").
 
 ## Attribution
 
@@ -51,7 +51,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **Helmer on Acquired ("7 Powers")** — [https://www.acquired.fm/episodes/7-powers-with-hamilton-helmer](https://www.acquired.fm/episodes/7-powers-with-hamilton-helmer). The single deepest recorded conversation on the framework.
 - **Helmer on Lenny's Podcast (2024)** — [https://www.lennysnewsletter.com/p/business-strategy-with-hamilton-helmer](https://www.lennysnewsletter.com/p/business-strategy-with-hamilton-helmer). Most accessible modern entry point; transcript available.
 
-This skill is **not endorsed by Hamilton Helmer**. It is Marcos Sponton's structured reading of Helmer's public work, built to make Claude a better thinking partner in Helmer's method. If Helmer himself (or Chenyi Shi at Strategy Capital) wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Hamilton Helmer**. It is Marcos Sponton's structured reading of Helmer's public work, built to make Claude or Codex a better thinking partner in Helmer's method. If Helmer himself (or Chenyi Shi at Strategy Capital) wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

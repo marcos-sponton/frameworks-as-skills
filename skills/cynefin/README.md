@@ -1,6 +1,6 @@
-# Cynefin — a Claude Skill
+# Cynefin — an agent skill
 
-A Claude Skill for **Dave Snowden's Cynefin framework** — the sense-making framework (Clear / Complicated / Complex / Chaotic / Confusion) that helps you decide *what kind of problem you have* before you reach for a method.
+An agent skill for **Dave Snowden's Cynefin framework** — the sense-making framework (Clear / Complicated / Complex / Chaotic / Confusion) that helps you decide *what kind of problem you have* before you reach for a method.
 
 This isn't a summary of the 2007 HBR paper. It's a working thinking partner in Snowden's method, built from:
 
@@ -12,7 +12,7 @@ This isn't a summary of the 2007 HBR paper. It's a working thinking partner in S
 - The EU Field Guide (with the European Commission JRC) for complex crisis response
 - Snowden's live output: near-daily posts on [thecynefin.co](https://thecynefin.co/author/dave-snowden/), the [cynefin.io wiki](https://cynefin.io), [@snowded](https://x.com/snowded), long-form podcast appearances (Jim Rutt Show EP11 + EP184, Simplifying Complexity, Cloud Realities), YouTube talks
 
-**Why this exists.** Invoke "Cynefin" in Claude without a skill and you get the 2×2 misreading — the framework used as a project-sorting tool, which is exactly the misuse Snowden spends most of his airtime correcting. This skill closes that gap. Sense-making not categorization, constraints as the tell, multiple parallel safe-to-fail probes in Complex, the cliff between Clear and Chaotic, the Aporetic Turn — all first-class.
+**Why this exists.** Invoke "Cynefin" in Claude or Codex without a skill and you get the 2×2 misreading — the framework used as a project-sorting tool, which is exactly the misuse Snowden spends most of his airtime correcting. This skill closes that gap. Sense-making not categorization, constraints as the tell, multiple parallel safe-to-fail probes in Complex, the cliff between Clear and Chaotic, the Aporetic Turn — all first-class.
 
 ## What's inside
 
@@ -40,10 +40,10 @@ cynefin/
 # From this repo root:
 ln -s "$(pwd)/skills/cynefin" ~/.claude/skills/cynefin
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Cynefin skill", "sense-make which domain this is").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Cynefin skill", "sense-make which domain this is").
 
 ## Attribution
 
@@ -58,7 +58,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 
 Note: Snowden does **not** run a Substack. His primary live output is the blog on thecynefin.co plus X/Mastodon/LinkedIn.
 
-This skill is **not endorsed by Dave Snowden**. It is Marcos Sponton's structured reading of Snowden's public work, built to make Claude a better thinking partner in Snowden's method. If Snowden himself (or The Cynefin Company) wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Dave Snowden**. It is Marcos Sponton's structured reading of Snowden's public work, built to make Claude or Codex a better thinking partner in Snowden's method. If Snowden himself (or The Cynefin Company) wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 

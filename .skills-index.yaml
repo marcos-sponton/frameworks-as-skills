@@ -1,0 +1,43 @@
+# Curated metadata for each skill — display title, human-readable tagline, and theme.
+# Consumed by scripts/update-readme.py to regenerate the "What's here" section.
+# Add a new entry when you add a new skill; the script warns if a skill isn't listed.
+
+- slug: playing-to-win
+  title: Playing to Win
+  tagline: Roger Martin's 5-question strategy cascade
+  theme: Strategy
+
+- slug: good-strategy-bad-strategy
+  title: Good Strategy Bad Strategy
+  tagline: Richard Rumelt's kernel (diagnosis / guiding policy / coherent action) + The Crux + "action agenda" reframe
+  theme: Strategy
+
+- slug: 7-powers
+  title: 7 Powers
+  tagline: Hamilton Helmer's taxonomy of durable competitive advantage (Benefit + Barrier, 3 S's, Statics vs. Dynamics)
+  theme: Strategy
+
+- slug: escaping-the-build-trap
+  title: Escaping the Build Trap
+  tagline: Melissa Perri's product-org diagnostic (Four Dimensions + Three Pillars of Product Ops)
+  theme: Product & discovery
+
+- slug: obviously-awesome
+  title: Obviously Awesome
+  tagline: April Dunford's positioning method (5 components + 8-step Sales Pitch)
+  theme: Positioning & narrative
+
+- slug: strategic-narrative
+  title: Strategic Narrative
+  tagline: Andy Raskin's 5-part narrative structure (Change in the World → Promised Land → Magic Gifts)
+  theme: Positioning & narrative
+
+- slug: cynefin
+  title: Cynefin
+  tagline: Dave Snowden's sensemaking framework (5 domains, constraints, aporetic turn, Estuarine)
+  theme: Sensemaking & decisions
+
+- slug: thinking-in-bets
+  title: Thinking in Bets
+  tagline: Annie Duke's decision toolkit (resulting, kill criteria, calibration, monkeys & pedestals)
+  theme: Sensemaking & decisions

@@ -1,6 +1,6 @@
-# Playing to Win — a Claude Skill
+# Playing to Win — an agent skill
 
-A Claude Skill for **Roger Martin and A.G. Lafley's Playing to Win** — the 5-question integrated cascade for strategy (winning aspiration, where to play, how to win, capabilities, management systems).
+An agent skill for **Roger Martin and A.G. Lafley's Playing to Win** — the 5-question integrated cascade for strategy (winning aspiration, where to play, how to win, capabilities, management systems).
 
 This isn't a summary of the book. It's a working thinking partner in Martin's method, built from:
 
@@ -10,7 +10,7 @@ This isn't a summary of the book. It's a working thinking partner in Martin's me
 - Martin's other five books (*The Opposable Mind*, *The Design of Business*, *Fixing the Game*, *Creating Great Choices*, *When More Is Not Better*, *A New Way to Think*)
 - Podcast appearances including Lenny Rachitsky (2024)
 
-**Why this exists.** Invoke "Playing to Win" in Claude without a skill and you get a thin summary — Claude knows the book but not the twelve years of refinements Martin has published since. This skill closes that gap. Post-book material lives in `references/post-book.md` and `references/practitioner-insights-index.md`.
+**Why this exists.** Invoke "Playing to Win" in Claude or Codex without a skill and you get a thin summary — the model knows the book but not the twelve years of refinements Martin has published since. This skill closes that gap. Post-book material lives in `references/post-book.md` and `references/practitioner-insights-index.md`.
 
 ## What's inside
 
@@ -38,10 +38,10 @@ playing-to-win/
 # From this repo root:
 ln -s "$(pwd)/skills/playing-to-win" ~/.claude/skills/playing-to-win
 
-# Or in Cowork / Claude Desktop, copy the folder into your skills directory.
+# Or in Codex CLI (~/.codex/skills/), Claude Desktop, copy the folder into your skills directory.
 ```
 
-Once installed, invoke naturally by describing your situation — Claude picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Playing to Win skill", "walk me through the cascade").
+Once installed, invoke naturally by describing your situation — the assistant picks it up when your task matches the triggers in `SKILL.md`, or when you invoke by name ("use the Playing to Win skill", "walk me through the cascade").
 
 ## Attribution
 
@@ -52,7 +52,7 @@ Once installed, invoke naturally by describing your situation — Claude picks i
 - **Roger Martin's Substack:** [https://rogerlmartin.substack.com/](https://rogerlmartin.substack.com/)
 - **HBR archive:** [Roger Martin on HBR](https://hbr.org/search?term=roger+martin)
 
-This skill is **not endorsed by Roger Martin**. It is Marcos Sponton's structured reading of Martin's public work, built to make Claude a better thinking partner in Martin's method. If Martin himself (or A.G. Lafley) wants to correct or endorse anything here, PRs welcome.
+This skill is **not endorsed by Roger Martin**. It is Marcos Sponton's structured reading of Martin's public work, built to make Claude or Codex a better thinking partner in Martin's method. If Martin himself (or A.G. Lafley) wants to correct or endorse anything here, PRs welcome.
 
 ## Contributing
 
