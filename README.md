@@ -100,6 +100,6 @@ MIT — use, remix, redistribute. Attribution appreciated but not required.
 
 ## Who's behind this
 
-Marcos Sponton — [GitHub](https://github.com/marcos-sponton) · [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co) (AI interview infrastructure).
+Marcos Sponton — [GitHub](https://github.com/marcos-sponton) · [LinkedIn](https://www.linkedin.com/in/marcossponton/) · founder of [Prown](https://prown.co) (AI interview infrastructure for consulting companies).
 
 I use these frameworks in my own week — with clients, on my own products, in planning. This repo is what falls out.
