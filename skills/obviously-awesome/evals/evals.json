@@ -1,0 +1,78 @@
+{
+  "skill_name": "obviously-awesome",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails (especially cases where it collapses positioning into branding/messaging/copywriting/tagline) are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "b2b-saas-positioning-workshop-from-scratch",
+      "prompt": "I'm running a Series B B2B SaaS in the developer-tools space. ~120 people, $22M ARR. Our product is a platform that helps engineering teams manage their internal APIs — design, testing, documentation, and monitoring. We've been called an 'API testing tool', an 'API management platform', a 'developer productivity tool', and 'like Postman but for internal APIs' — depending on who's describing us. Sales says they lose deals because prospects 'don't get it in the first call'. New prospects compare us to Postman, Kong, MuleSoft, and building it in-house. Existing customers love us and have 130% net retention. Help me think through our positioning using April Dunford's method. My VP Marketing keeps writing new taglines but nothing sticks.",
+      "expected_output": "Output should: (a) push back on 'writing new taglines' as the wrong intervention — positioning is upstream of copy; (b) walk through the 5 components (competitive alternatives, unique attributes, value themes, best-fit customers, market category); (c) explicitly include status quo / DIY / build-in-house as competitive alternatives, not just vendor names; (d) surface that 'category confusion' is a specific symptom that triggers repositioning; (e) reference the Postman case (3 years of category confusion → 'API platform'); (f) recommend a cross-functional workshop with sales in the room; (g) end with the 'what would customers do if we didn't exist?' diagnostic question; (h) NOT confuse positioning with branding, messaging, or tagline; (i) cite April Dunford / Obviously Awesome / a specific essay or episode at least once.",
+      "assertions": [
+        "Output names all 5 components of Dunford's framework (competitive alternatives, unique attributes, value themes, best-fit customers, market category)",
+        "Output explicitly pushes back on 'writing new taglines' as the wrong intervention — separating positioning from messaging/branding/copywriting",
+        "Output includes status quo, DIY, or building in-house as competitive alternatives (not just the vendor list)",
+        "Output references the Postman case or the pattern of category confusion as a specific symptom",
+        "Output recommends cross-functional workshop with sales in the room, not marketing solo",
+        "Output uses Dunford's specific vocabulary (at least 3 of: 'competitive alternatives', 'best-fit customers', 'differentiated value', 'value themes', 'market category', 'market frame of reference')",
+        "Output cites April Dunford, Obviously Awesome, a specific Substack essay, or a specific podcast episode at least once",
+        "Output does NOT recommend rewriting the homepage as the solution",
+        "Output does NOT default to 'let's create a new category'",
+        "Output ends with a diagnostic question the user has to answer"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-positioning-statement-mad-libs",
+      "prompt": "Here's our positioning statement — please tell me if it's any good.\n\n---\nOUR POSITIONING\n\n'For enterprise security teams who need to reduce cyber risk, SecureFlow is a next-generation, AI-powered cybersecurity platform that provides end-to-end threat detection and response, unlike traditional SIEM tools that are complex and expensive.'\n\nOur value props:\n1. AI-powered threat detection\n2. Reduced mean time to detect (MTTD)\n3. Lower total cost of ownership\n4. Cloud-native architecture\n5. SOC 2 Type II certified\n6. 24/7 SOC support\n7. Enterprise-grade security\n8. Easy to deploy\n---",
+      "expected_output": "Output should identify that this is NOT a Dunford-style positioning — it's a Mad-Libs positioning statement (the format Dunford calls 'pointless but potentially dangerous'). Specifically it should: (a) name that fill-in-the-blank templates flatten the 5-component decision; (b) flag that 'AI-powered' and 'next-generation' are trend-leading, not value-leading; (c) identify that most of the 'value props' are actually objection handling (SOC 2, 24/7 support, enterprise-grade) rather than differentiated value; (d) name that 'enterprise-grade' fails the coin-flip test — every enterprise vendor claims it; (e) point out that 'traditional SIEM tools are complex and expensive' is the frame every competitor uses, so it erases differentiation; (f) probably reference Dunford's Value vs. Objection Handling essay and the No Differentiation Illusion.",
+      "assertions": [
+        "Output identifies this as a Mad-Libs positioning statement and pushes back on the template as 'pointless but potentially dangerous' or equivalent",
+        "Output explicitly separates value from objection handling — naming SOC 2, 24/7 support, or 'enterprise-grade' as objection removals rather than differentiated value",
+        "Output flags 'AI-powered' as trend-leading and references Dunford's 'Positioning in the Age of AI' guidance (layer trend on top only if it makes value more obvious)",
+        "Output notes that 8 value props is too many and Dunford caps at 1-4 value themes",
+        "Output identifies that 'enterprise-grade' or similar generic claims fail the coin-flip test",
+        "Output cites at least one specific Dunford source (book, Substack essay, podcast episode)",
+        "Output offers concrete moves to fix (not just critique) — probably including a cross-functional workshop and revisiting competitive alternatives",
+        "Output does NOT propose a better positioning statement in the same Mad-Libs format"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-invokes-branding-confusion",
+      "prompt": "We need to reposition our product. Can you help me write a new tagline and think about our brand identity — new logo, colors, that kind of thing?",
+      "expected_output": "Output should push back on the framing warmly but directly — the user is conflating positioning with branding, messaging, and copywriting (three of the four confusions Dunford spends her career separating). Output should: (a) name the confusion and separate the concepts (positioning is strategic, upstream of both branding and messaging); (b) offer to help with positioning first, then use it as input to branding and messaging as downstream activities; (c) probably use Dunford's 'positioning is the opening scene of a movie' analogy or the elephant/blindfold parable; (d) reference Dunford's line about storytelling/messaging/tagline/vision/branding all being downstream of positioning; (e) NOT dive into logo design or color palettes. Voice should be warm + direct (Dunford-like), not stiff or condescending. Should invite the user to do the positioning work with them.",
+      "expected_output_notes": "This is a voice/framing test — Claude should catch the misapplication and redirect, not comply.",
+      "assertions": [
+        "Output pushes back on the framing rather than just producing a tagline and brand identity",
+        "Output explicitly separates positioning from branding and from messaging/copywriting",
+        "Output references Dunford's principle that branding, messaging, taglines are downstream of positioning (or uses her wording that they 'happen AFTER positioning')",
+        "Output offers to help with positioning first, then translate to messaging and branding as separate downstream activities",
+        "Output uses Dunford's specific vocabulary (at least 2 of: 'positioning', 'differentiated value', 'competitive alternatives', 'best-fit customers', 'market category')",
+        "Voice is warm but direct — not stiff, not condescending, not overly hedged (matches Dunford's practitioner-first register)",
+        "Output cites Dunford / Obviously Awesome or a specific essay at least once",
+        "Output does NOT produce a tagline or brand identity direction as the primary deliverable"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "sales-pitch-redesign-losing-to-no-decision",
+      "prompt": "We're a B2B AI-ops platform for enterprise data teams. Our sales team is closing about 15% of qualified opportunities. When we lose, we lose to 'no decision' twice as often as we lose to competitors. Our current pitch is: 5 slides on the AI market, 10 slides on our product features, 3 customer logos, then pricing. Deals stall in evaluation for months. Help me rebuild the pitch.",
+      "expected_output": "Output should: (a) anchor immediately on the 40-60% 'no decision' stat as the reframe; (b) diagnose the current pitch as a walkthrough / feature-list shape that Dunford critiques; (c) walk through the 8 steps of Dunford's Sales Pitch (Setup: Insight, Alternatives, Perfect World / Follow-Through: Introduction, Differentiated Value, Proof, Objections, Ask); (d) emphasize that the Insight step is the hardest and most crucial; (e) insist that Alternatives include status quo / DIY / doing nothing, not just competitors; (f) explain the shift from 'pitching product' to 'helping the buyer make a confident purchase decision'; (g) recommend the rollout test (reps stop requesting changes AND prefer new pitch to old deck); (h) probably reference Matt Dixon's JOLT Effect research as source of the no-decision stat; (i) cite Sales Pitch (2023) and/or the Lenny Rachitsky Oct 2023 episode.",
+      "assertions": [
+        "Output anchors on the 40-60% 'no decision' stat as the reframe",
+        "Output names all 8 steps of Dunford's Sales Pitch structure",
+        "Output diagnoses the current pitch shape (walkthrough / feature-list) as one of the failure modes Dunford critiques",
+        "Output includes status quo / DIY / doing-nothing as an alternative in the Alternatives step, not just competitors",
+        "Output emphasizes that the Insight step is 'the hardest and most crucial' or equivalent",
+        "Output explains the shift from pitching product to helping the buyer make a confident purchase decision",
+        "Output references Sales Pitch (2023) as the source, or the Lenny Rachitsky Oct 2023 episode, or Matt Dixon / JOLT Effect for the no-decision stat",
+        "Output includes a specific Ask at the end, not vague next steps"
+      ],
+      "files": []
+    }
+  ]
+}

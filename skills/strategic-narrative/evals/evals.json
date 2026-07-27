@@ -1,0 +1,73 @@
+{
+  "skill_name": "strategic-narrative",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "build-5-part-narrative-from-features-first-pitch",
+      "prompt": "We're a Series B B2B SaaS in the observability space. Our current sales deck opens with our logo, then a slide about our funding and investors, then 8 slides of features (dashboards, alerting, tracing, log search, AI-based anomaly detection, etc.), then a customer logo wall. Deals close but slowly, and prospects say 'looks cool, let me get budget approved next quarter.' Help me rebuild this using Andy Raskin's strategic narrative.",
+      "expected_output": "Output should: (a) diagnose the current deck as Chest Beater / features-first with story decoration; (b) walk through the 5 parts (Change in the World, Winners & Losers, Promised Land, Magic Gifts, Evidence) with the buyer's world entering first and the product entering only at step 4; (c) push back if the user's implicit shift is 'observability is important' — that's not a shift; (d) anchor in a case (probably Zuora or Gong given B2B SaaS); (e) name at least one Raskin anti-pattern with attribution; (f) reference the 'How quickly can we get started?' pattern-response as the test of a working narrative; (g) NOT default to StoryBrand or generic pitch advice; (h) NOT accidentally run Roger Martin's cascade at the user.",
+      "assertions": [
+        "Output names all 5 parts of the strategic narrative",
+        "Output diagnoses the current deck as Chest Beater, features-first, or Arrogant Doctor (at least one named anti-pattern)",
+        "Output places the change in the buyer's world at step 1, before any product/company mention",
+        "Output frames the product/features as entering only at step 4 (Magic Gifts)",
+        "Output distinguishes the Promised Land as buyer-defined rather than product-defined",
+        "Output references at least one Raskin case (Zuora, Uberflip, Gong, Salesforce, SpotMe, Zaius, Slack, OneTrust, etc.)",
+        "Output cites Andy Raskin, a specific Raskin essay, or the Lenny 2023 episode at least once",
+        "Output does NOT recommend StoryBrand as the primary framework",
+        "Output does NOT run the Playing to Win cascade at the user",
+        "Output ends with a specific question that forces the user to name the shift, not a checklist"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "diagnose-old-way-new-way-drift",
+      "prompt": "We just refreshed our sales narrative around 'the old way vs. the new way' of doing content marketing. Old way: batch-and-blast email. New way: personalized content experiences powered by our platform. The deck goes through 6 side-by-side comparisons (old-way feature / new-way feature). Sales likes it because it's clear, but conversion isn't lifting. Is this a Raskin strategic narrative?",
+      "expected_output": "Output should push back explicitly that Old Way / New Way is NOT the same as Old Game / New Game — Raskin has corrected this framing publicly. Should reference the 2023 LinkedIn post where he made this correction. Should diagnose the side-by-side feature-comparison structure as pushing toward product-vs-product thinking, not mindset shift. Should offer the Old Game / New Game reframe with buyer-mindset language. Should probably name Foxglove as the case where this reframe was applied (game vs. way).",
+      "assertions": [
+        "Output distinguishes Old Way / New Way from Old Game / New Game explicitly",
+        "Output attributes this distinction to Raskin (LinkedIn 2023 or his framework refinements)",
+        "Output diagnoses the side-by-side feature-comparison structure as anti-pattern",
+        "Output offers a reframe using Old Game / New Game or buyer-mindset language",
+        "Output references at least one Raskin case where the reframe was applied (Foxglove is the canonical one; others acceptable)",
+        "Output cites a specific Raskin source (essay, LinkedIn post, or podcast)",
+        "Response tone is direct — names the misconception before offering the fix (Raskin's anti-definition move)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "reject-competitor-as-enemy",
+      "prompt": "Our biggest competitor is HubSpot. Our whole narrative is going to be 'HubSpot is too generic and bloated; we're the focused alternative for [our vertical].' The pitch is 'the anti-HubSpot for X.' Help me sharpen this narrative.",
+      "expected_output": "Output should push back that naming a competitor as the enemy is a Raskin anti-pattern — reads petty and same-shaped, guarantees you look like a smaller version of them. Should quote or paraphrase Raskin's 2023 LinkedIn clarification that 'your buyer's enemy is not competitors… your buyer's enemy is an old mindset.' Should offer the reframe: what OLD MINDSET does HubSpot represent, and what NEW MINDSET is your movement? Should probably reach for Gong (Goodbye opinions, hello reality) as the case where the enemy is a mindset, not a competitor.",
+      "assertions": [
+        "Output explicitly rejects naming a competitor as the enemy",
+        "Output cites or paraphrases Raskin's 'enemy = old mindset, not competitor' clarification with attribution",
+        "Output reframes the exercise as: what old mindset does HubSpot represent, and what new mindset is the movement?",
+        "Output references a case where the enemy is a mindset (Gong is canonical — Goodbye opinions, hello reality — others acceptable)",
+        "Output warns that competitor-as-enemy makes you look same-shaped or petty",
+        "Response tone is direct but warm — Raskin's disagreement register, not attacking the user"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "distinguish-narrative-from-positioning-and-martin",
+      "prompt": "I've been working through April Dunford's positioning framework and Roger Martin's Playing to Win cascade. Now I want to write our strategic narrative. What's actually different? Am I just doing the same thing three times?",
+      "expected_output": "Output should NOT flatten the three into each other. Should distinguish: Dunford = internal, invisible positioning research (which market, competitive alternatives, unique attributes). Martin = internal set of strategic choices (winning aspiration, where to play, how to win, capabilities, management systems). Raskin = external narrative — the single top-level story the CEO owns that shows up publicly. Should explain how they stack (Dunford + Martin upstream → Raskin downstream) and cite Ben Horowitz's 'the company story is the company strategy' as the axiom Raskin operationalizes. Should NOT default to running Playing to Win at the user, and should NOT collapse strategic narrative into 'a summary of positioning.'",
+      "assertions": [
+        "Output distinguishes positioning (Dunford) from strategy choices (Martin) from external narrative (Raskin)",
+        "Output positions positioning and Playing to Win as upstream, strategic narrative as downstream/external",
+        "Output explains how the three stack in sequence rather than compete",
+        "Output does NOT run Roger Martin's cascade at the user",
+        "Output does NOT collapse strategic narrative into positioning or messaging",
+        "Output cites Ben Horowitz's 'the company story is the company strategy' or a related Raskin framing",
+        "Output cites at least one Raskin source (essay, podcast, or LinkedIn post)"
+      ],
+      "files": []
+    }
+  ]
+}

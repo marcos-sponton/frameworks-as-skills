@@ -1,0 +1,78 @@
+{
+  "skill_name": "thinking-in-bets",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "post-mortem-collapsed-DQ-and-OQ",
+      "prompt": "We launched a new pricing tier six months ago. Revenue is up 40%. Everyone's celebrating and the CEO wants me to write a retro on 'what we did right.' I have a nagging feeling we got lucky — a big competitor raised prices two weeks after our launch and we absorbed a lot of their spillover. How should I write this retro?",
+      "expected_output": "Output should (a) explicitly separate decision quality from outcome quality — praise the outcome without collapsing it into process validation; (b) name resulting as the trap the current 'what we did right' framing risks falling into; (c) reference Pete Carroll or a similar canonical resulting case; (d) suggest un-collapsing the two by asking what would have happened if the competitor hadn't raised prices; (e) recommend a decision-journal practice for future decisions so this reconstruction problem is smaller next time; (f) end with a concrete testable action (e.g., a specific reframing of the retro's opening question); (g) cite Duke / Thinking in Bets or How to Decide.",
+      "assertions": [
+        "Output explicitly names the distinction between decision quality (DQ) and outcome quality (OQ), or 'resulting' as a term",
+        "Output takes seriously the user's nagging feeling — treats it as signal, not doubt to be reassured away",
+        "Output references at least one Duke case (Pete Carroll canonical) OR names the general resulting pattern",
+        "Output challenges the CEO's 'what we did right' framing rather than accepting it uncritically",
+        "Output recommends a decision-journal or written-record practice",
+        "Output cites Annie Duke, Thinking in Bets, or How to Decide by name at least once",
+        "Output ends with a specific testable action, not a general homily",
+        "Output does NOT collapse into 'trust your gut' or generic post-mortem advice"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "kill-criteria-for-a-current-project",
+      "prompt": "I've been running a side product for 14 months. It has 200 paying users, $6k MRR, 20% MoM growth for the last three months. I keep telling myself 'if it's not clearly working by summer, I'll wind it down' but I know that's not real — summer will come and I'll rationalize whatever the numbers say. How do I set an actual kill criterion?",
+      "expected_output": "Output should (a) diagnose the 'clearly working' phrasing as unobservable and therefore not a real kill criterion; (b) walk through Duke's state + date format explicitly; (c) push for observable state (a specific metric with a specific threshold) and a binding date (specific calendar day); (d) name the precommitment gap — that setting the criterion isn't enough, needs a quitting coach and a written commitment; (e) reference Everest 1996 or a similar case where kill criteria failed under emotional load; (f) end with the user actually writing the criterion right now — not deferring; (g) cite Duke / Quit.",
+      "assertions": [
+        "Output names Duke's exact format for a kill criterion: state + date",
+        "Output diagnoses the user's current phrasing ('clearly working') as unobservable and therefore not a real kill criterion",
+        "Output pushes for a specific observable metric with a specific threshold",
+        "Output pushes for a binding calendar date, not a season or quarter",
+        "Output addresses the precommitment problem — that writing the criterion is not enough; needs a quitting coach or external accountability",
+        "Output references Everest 1996 OR another case where kill criteria failed under emotional load",
+        "Output cites Duke / Quit by name at least once",
+        "Output ends with the user writing the criterion right now, not later",
+        "Output takes seriously the user's meta-observation ('I know that's not real') rather than dismissing it"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-invokes-gut",
+      "prompt": "I have to make a call by end of week on whether to hire this senior candidate. I've been going back and forth. My gut says yes but I can't articulate why. Should I just trust my gut?",
+      "expected_output": "Output should push back on 'trust your gut' unqualified — but in Duke's specific register (not rejecting intuition, insisting it must be disciplined). Should offer specific speed-triage tests (10-10-10, only-option, two-way door) as an alternative that channels the intuition into structured form. Should probably force a percentage calibration on the current gut read. Voice should be warm and teacherly (not Martin-blunt). Should end with a concrete testable action the user can do before end of week.",
+      "assertions": [
+        "Output does NOT accept 'trust your gut' uncritically",
+        "Output does NOT reject intuition outright either — defends disciplined intuition (Duke's actual position)",
+        "Output introduces at least one of: 10-10-10, happiness test, only-option test, two-way door test",
+        "Output pushes for confidence calibration as a percentage",
+        "Output distinguishes reflex intuition (Nadal's forehand) from strategic-decision intuition (which needs discipline)",
+        "Output cites Duke or How to Decide by name",
+        "Output ends with a testable action the user can do this week",
+        "Response tone is warm and teacherly (not blunt/professorial) — matches Duke's voice not Martin's or Rumelt's"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "considering-a-pivot-quit-decision",
+      "prompt": "I've been building an AI legal-research tool for 2.5 years. Raised $3M seed, burned through most of it. We have 40 law firms paying but retention is bad (60% at 12mo). My cofounder wants to pivot to insurance underwriting — she says the tech transfers and the market is bigger. I keep thinking about all we've built and I don't want to abandon the customers we do have. What do I do?",
+      "expected_output": "Output should (a) explicitly attack sunk cost — the $3M and 2.5 years are gone regardless; (b) name identity capture if language suggests it ('all we've built', 'don't want to abandon customers' — the latter is arguable but the emotional weight is identity-adjacent); (c) reframe the question as prospective: is the next dollar better spent on legal-research or insurance-underwriting? (d) apply the 'quitting on time feels like quitting too early' test — the discomfort the user feels is exactly what a well-timed quit feels like; (e) probably reference Butterfield/Slack (successful quit) or Wilkinson/Flow (failure to quit); (f) suggest kill criteria for the NEW path so the pattern doesn't repeat; (g) end with a concrete testable action, likely writing a kill criterion or having a specific conversation with the cofounder this week.",
+      "assertions": [
+        "Output explicitly attacks sunk cost — names that the $3M and 2.5 years are gone regardless of the decision",
+        "Output reframes waste as prospective (what will the NEXT dollar produce) not retrospective",
+        "Output notices identity language OR emotional-commitment language and names it",
+        "Output applies 'quitting on time feels like quitting too early' or equivalent reframe",
+        "Output references at least one case: Butterfield/Slack, Wilkinson/Flow, Sears, or similar",
+        "Output does NOT simply recommend the pivot OR simply recommend continuing — takes seriously that this is a real hard call",
+        "Output suggests setting a kill criterion for the pivoted path so the pattern doesn't repeat",
+        "Output cites Duke / Quit by name at least once",
+        "Output ends with a specific testable action the user can take this week",
+        "Response tone is warm and non-judgmental about either path"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "skill_name": "escaping-the-build-trap",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "build-trap-symptom-diagnosis",
+      "prompt": "We ship a lot at my company. 200-person B2B SaaS, ~30 engineers, 6 PMs. Roadmap is packed for the next 3 quarters. Velocity is up 40% YoY. But NPS is flat, net revenue retention dropped from 115% to 102% last year, and two of our biggest customers churned citing 'we're not seeing the value we expected.' Our CEO says the answer is to hire more PMs and 'tighten execution.' What am I missing?",
+      "expected_output": "Output should: (a) diagnose the classic build-trap pattern by name (features shipped up, customer/business metrics flat = the definition); (b) push back on the CEO's diagnosis — the problem isn't more PMs or tighter execution, it's an upstream strategy/incentive issue; (c) walk one altitude up — likely no Strategic Intent deployed, roadmap-as-sales-contract, PMs as Waiters/order-takers, discovery skipped; (d) apply Perri's Four Dimensions or a subset as the audit lens; (e) name at least 2-3 anti-patterns with attribution (Waiter PM, feature factory, one-throat-to-choke, HIPPO, etc.); (f) cite Perri's specific sources (book, essay, or podcast episode); (g) NOT recommend generic 'do more discovery' without naming the structural cause.",
+      "assertions": [
+        "Output names the pattern as 'the build trap' with Perri's definition (outputs vs. outcomes)",
+        "Output pushes back on the CEO's 'hire more PMs / tighten execution' framing",
+        "Output locates the root cause one altitude up from the PM function (strategy vacuum, incentive structure, sales-driven roadmap, or similar)",
+        "Output names at least 2 of Perri's anti-patterns explicitly (Waiter PM, mini-CEO, roadmap-as-contract, feature factory, HIPPO, one-throat-to-choke, individual OKRs, Pet Projects)",
+        "Output cites at least one specific Perri source (book, blog post, podcast episode, or Substack essay)",
+        "Output does NOT default to 'do more discovery' as the answer without naming the structural cause",
+        "Output does NOT recommend adopting SAFe",
+        "Output uses at least one contrast list (outputs vs. outcomes, feature-driven vs. outcome-driven, Waiter vs. Strategic PM, sales-led vs. product-led, or similar)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "product-ops-readiness-check",
+      "prompt": "We're a 500-person fintech, 12 PMs across 4 pillars. Our exec team decided we need to stand up a Product Operations team. They've allocated headcount for a Head of Product Ops + 3 ICs. They want it running in 90 days. Where do we start? What should this team own on day one?",
+      "expected_output": "Output should apply Perri's Product Ops readiness diagnostic: (a) BEFORE saying 'start with the Three Pillars', ask/name the precondition — is Strategic Intent in place? If not, Product Ops will become a PMO in disguise; (b) map the Three Pillars (Data & Insights, Customer & Market Insights, Process & Governance) and ask which is the current pain, not build all three at once; (c) warn against the PMO-in-disguise anti-pattern with the specific test (removes obstacles vs. adds them); (d) recommend starting with one pillar, one person, one obstacle, not all three pillars at once; (e) cite Perri's 2019 blog post ('Product Operations: The Fuel...'), the 2023 book, or the Lenny's Ultimate Guide; (f) recommend using Perri's canonical definition ('the art of removing obstacles from evidence-based decision making').",
+      "assertions": [
+        "Output surfaces the precondition question — is Product Strategy / Strategic Intent in place? — before jumping to the Three Pillars",
+        "Output names all Three Pillars (Data & Insights, Customer & Market Insights, Process & Governance)",
+        "Output warns explicitly against the 'PMO in disguise' or 'process police' anti-pattern",
+        "Output recommends starting focused (one pillar / one pain) rather than building all three at once in 90 days",
+        "Output cites Perri's Product Operations book, the 2019 'Fuel for Winning Product Strategies' blog post, or the Lenny's Ultimate Guide",
+        "Output quotes or paraphrases Perri's definition of Product Ops as removing obstacles from evidence-based decision making",
+        "Output does NOT recommend adopting Cagan's Product Operating Model as the frame (Perri operates one level down)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-one-throat-to-choke",
+      "prompt": "Our CEO says our Head of Product needs to be the 'one throat to choke' for product outcomes. She wants to tie 80% of the HoP's comp to hitting our NRR and ARR targets. Sounds reasonable to me — someone has to own it. Am I missing something?",
+      "expected_output": "Output should push back firmly but empathetically on the 'one throat to choke' framing — Perri has written the canonical essay on this. Voice should be direct, use her exact vocabulary ('one throat to choke', 'mini-CEO myth', individual OKRs), and locate the pathology structurally (accountability without authority; individual OKRs vs. team-level; outcomes require multiple functions). Should cite the Substack Jun 2024 essay. Voice should be practitioner-authoritative, warm about the humans, cold about the pattern.",
+      "assertions": [
+        "Output pushes back on the 'one throat to choke' framing rather than accepting it uncritically",
+        "Output uses Perri's exact vocabulary — 'one throat to choke', 'mini-CEO' or 'mini-CEO myth', 'individual OKRs'",
+        "Output names the structural problem — accountability without authority, outcomes that require multiple functions",
+        "Output recommends team-level OKRs rather than individual",
+        "Output cites Perri's Substack essay 'Why are we making Product Managers the one throat to choke?' (Jun 2024) specifically",
+        "Response tone is direct + empathetic-but-firm (Perri-like) — not soft, not hostile",
+        "Output does NOT recommend firing or replacing the HoP as the answer"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "roadmap-critique-and-two-roadmap-fix",
+      "prompt": "Here's our current roadmap. It's shared with sales, customers, and internally. Please critique it against Perri's approach.\n\n---\nROADMAP FY2027 (as committed to top-10 accounts and included in enterprise contracts):\n\nQ1: SSO with Okta, SOC2 Type 2, bulk user import, API v3.0\nQ2: Custom fields, workflow builder v2, mobile app iOS/Android, Salesforce integration\nQ3: AI-powered auto-tagging, custom dashboards, HRIS integrations (Workday, ADP), advanced permissions\nQ4: Multi-region deployment, White-label option, API marketplace, AI copilot v1\n---",
+      "expected_output": "Output should identify that this is a Gantt-chart / roadmap-as-contract — the exact anti-pattern Perri's Problem Roadmap exists to replace. Should: (a) name the pattern explicitly (roadmap-as-contract, feature-driven roadmap without outcome framing); (b) call out the specific problem — this roadmap is committed externally with dates AND shared internally, conflating two audiences; (c) apply Perri's two-roadmap model (outcome-driven internal + feature-driven external with 'exploring' tag); (d) show what the internal version should look like (themes / hypotheses / outcomes for later; validated solutions for near-term); (e) show what the external version should look like (near-term commitments only, later items tagged 'exploring, subject to change'); (f) cite the 2014 blog post + the 2019+ two-roadmap refinement.",
+      "assertions": [
+        "Output names the pattern as roadmap-as-contract / Gantt-chart roadmap / feature-driven roadmap",
+        "Output identifies that shipping the same roadmap internally + externally + to sales is conflating audiences",
+        "Output introduces Perri's two-roadmap model (outcome-driven internal + feature-driven external)",
+        "Output shows a concrete restructure — what the internal version should contain (themes / hypotheses / outcomes) vs. what the external version should contain (committed near-term + 'exploring' later)",
+        "Output cites Perri's 2014 blog post 'Rethinking the Product Roadmap' or the 2019+ two-roadmap refinement",
+        "Output does NOT accept the current roadmap as a valid strategic artifact"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "skill_name": "7-powers",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "founder-claim-network-effects-stress-test",
+      "prompt": "I'm the founder of a Series A B2B SaaS. Our defensibility pitch is: we have strong network effects — every new customer makes our product more valuable to the others because we share benchmarking data across the customer base. Investors keep asking about our moat and I've been leading with this. Is this a real Network Economies Power in Helmer's sense, or something weaker? What would I have to prove for it to be Power?",
+      "expected_output": "Output should: (a) explicitly distinguish network effects from Network Economies (the single most important gotcha in the framework); (b) apply the Benefit + Barrier test — force the founder to name the specific mechanism that prevents competitors from copying the shared-benchmarking model; (c) apply the 3 S's; (d) reference the material + tipping requirement — is the value increase material, and is there a winner-take-most tipping point?; (e) probably suggest that at Series A, before takeoff, Network Economies as a locked-in Power is premature; (f) cite Helmer / 7 Powers / Chenyi Shi's Trium Group line on network effects being 'infrequently material'.",
+      "assertions": [
+        "Output explicitly distinguishes 'network effects' from 'Network Economies' in Helmer's sense",
+        "Output applies or references the Benefit + Barrier test",
+        "Output tests the claim against the material + tipping requirement (not just 'more users = more value')",
+        "Output references the 3 S's (Superior, Significant, Sustainable) at least in spirit",
+        "Output cites Hamilton Helmer, 7 Powers, Chenyi Shi, or a specific source (podcast/book/interview) at least once",
+        "Output does NOT declare Network Economies present without evidence of material value increase AND tipping",
+        "Output engages with the stage question (Series A / pre-takeoff) and the sequencing implication"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-strategy-doc-with-moat-claims",
+      "prompt": "Here's the moat section from our company's investor deck. Please critique it against Helmer's 7 Powers.\n\n---\nOUR MOAT\n\n1. Strong brand — we're the most recognized name in our category, with 82% brand awareness in our target segment.\n2. Network effects — every additional user makes our platform more valuable.\n3. Data moat — we've accumulated 5 years of proprietary usage data.\n4. Operational excellence — our NPS is 71, industry average is 42.\n5. First-mover advantage — we launched 3 years before our nearest competitor.\n6. Great team — our leadership has a combined 60+ years in the industry.\n---\n\nAre any of these actually Power in Helmer's sense?",
+      "expected_output": "Output should identify that MOST of these are look-alikes that fail Helmer's tests, and translate each into 7 Powers vocabulary. Specifically: (a) brand awareness ≠ Brand Power (recognition vs. willingness-to-pay premium at parity); (b) 'network effects' needs the material + tipping test; (c) data scale is not automatically Power — force the specific Barrier; (d) NPS-driven operational excellence ≠ Process Power (needs hysteresis + causal ambiguity); (e) first-mover per se is not a Power; (f) leadership team almost never qualifies as Cornered Resource (fails sufficiency + transferability). Should cite Helmer sources.",
+      "assertions": [
+        "Output diagnoses that most of the listed 'moats' are look-alikes rather than Powers",
+        "Output explicitly distinguishes brand recognition from Brand Power (willingness-to-pay premium)",
+        "Output challenges 'network effects' with the material + tipping test",
+        "Output challenges 'data moat' by demanding a specific Barrier mechanism",
+        "Output distinguishes operational excellence from Process Power (mentions hysteresis or the treadmill analogy)",
+        "Output notes that 'great team' almost never qualifies as Cornered Resource",
+        "Output notes that first-mover per se is not a Power",
+        "Output cites Hamilton Helmer, 7 Powers, or a specific source (podcast/book/interview) at least once",
+        "Output does NOT simply validate the deck's claims without testing"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-operational-excellence-vs-process-power",
+      "prompt": "We're a manufacturing company. We've spent 8 years building the most efficient operations in our category — highest yield, lowest scrap rate, fastest cycle times. Does that give us Process Power?",
+      "expected_output": "Output should push back with Helmer's exact distinction — operational excellence is not Process Power without hysteresis + causal ambiguity. Should reference the treadmill analogy from the Lenny 2024 episode. Should probably reference Toyota / NUMMI as the reference case for what Process Power looks like (documented but not replicable). Voice should be corrective (Helmer's register) rather than confrontational (Rumelt/Martin's register). Should apply the 3 S's, especially Sustainable.",
+      "assertions": [
+        "Output explicitly distinguishes operational excellence from Process Power",
+        "Output invokes hysteresis (or causal ambiguity) as the Barrier that operational excellence lacks",
+        "Output references the treadmill analogy or paraphrases Helmer's 'if you stop running you get creamed' line",
+        "Output references Toyota / TPS / NUMMI as the reference case for Process Power",
+        "Output cites Hamilton Helmer, 7 Powers, or a specific source (podcast/book/interview) at least once",
+        "Response tone is corrective (Helmer-like) rather than confrontational (Rumelt/Martin-like)",
+        "Output does NOT declare Process Power present without evidence of hysteresis"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "stage-appropriate-power-sequencing",
+      "prompt": "We're a 6-month-old startup with a novel business model in a category dominated by two incumbents. We think our model has 'counter-positioning' against them because they can't copy us without hurting their existing business. We're also trying to build a strong brand and lock in switching costs from day one. Are we thinking about this right?",
+      "expected_output": "Output should apply the three-stage sequencing model and note that: (a) at 6 months, they are in Origination, so Counter-Positioning + Cornered Resource are the Powers on the table; (b) Switching Costs, Scale Economies, and Network Economies are Takeoff-stage — trying to lock them in now is premature and possibly meaningless; (c) Branding is Stability-stage and requires hysteresis (years, not months); (d) the Counter-Positioning claim needs the specific incumbent-constraint test — what P&L would be cannibalized, by how much, and is that why the incumbents haven't responded; (e) Counter-Positioning is *partial* Power (protects only against constrained incumbents, not fresh entrants). Should cite Helmer.",
+      "assertions": [
+        "Output applies the three-stage sequencing (Origination / Takeoff / Stability)",
+        "Output identifies the company as being in Origination and names which Powers are available at that stage",
+        "Output pushes back on trying to build Branding at 6 months (hysteresis requirement)",
+        "Output pushes back on 'locking in switching costs from day one' as a Takeoff-stage move that's premature",
+        "Output engages with the Counter-Positioning claim specifically — tests it against the incumbent-constraint / collateral-damage mechanism",
+        "Output notes that Counter-Positioning is partial Power (only against constrained incumbents)",
+        "Output cites Hamilton Helmer, 7 Powers, or a specific source (podcast/book/interview) at least once"
+      ],
+      "files": []
+    }
+  ]
+}

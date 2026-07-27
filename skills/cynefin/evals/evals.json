@@ -1,0 +1,70 @@
+{
+  "skill_name": "cynefin",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sense-make-vs-categorize-the-2x2-trap",
+      "prompt": "We're using Cynefin at our next offsite as a project categorization tool — we're going to have each team lead put their projects into one of the four quadrants (Clear, Complicated, Complex, Chaotic) and then plan accordingly. Any tips for making this workshop go smoothly?",
+      "expected_output": "Output should push back on the framing — Cynefin is a sense-making framework, not a categorization tool. Should name this as Snowden's #1 anti-pattern (using Cynefin as a 2×2 to sort projects). Should offer sense-making as the alternative — contextualizing into a domain based on the constraint operating, not sorting projects. Should cite cynefin.io or Snowden directly. Voice should be direct, not diplomatic — Snowden doesn't soften this correction.",
+      "assertions": [
+        "Output pushes back on using Cynefin as a project-categorization / 2×2 sorting tool",
+        "Output distinguishes sense-making (contextualizing INTO a domain) from categorization (sorting INTO a domain)",
+        "Output names constraints (rigid / governing / enabling) as the tell for which domain, not topic",
+        "Output cites Snowden or cynefin.io or thecynefin.co",
+        "Output does NOT simply provide workshop tips as requested — it reframes the request first",
+        "Response tone is direct/sharp rather than accommodating"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "safe-for-complex-product-problem-voice-check",
+      "prompt": "We're rolling out SAFe across our product org to scale our Agile practices. We have 400+ engineers and product folks and need a common framework. Help me think through how to structure the release trains for our AI product line — the product is early, we're still figuring out product-market fit.",
+      "expected_output": "Output should push back specifically on SAFe for a Complex-domain problem (pre-PMF AI product line). Should invoke Snowden's specific attack on SAFe with direct quotes (\"SAFe is to Agile as Six Sigma was to BPR\", \"an obey-making machine\", \"PRINCE II camouflaged in Agile language\"). Should diagnose the product as Complex (pre-PMF, emergent, cause-effect only coherent in hindsight) and prescribe Complex-domain methods (multiple parallel safe-to-fail probes, distributed cognition, coherent heterogeneity) rather than SAFe ceremony. Voice should be sharp — Snowden's register on SAFe is load-bearing.",
+      "assertions": [
+        "Output pushes back on SAFe as the tool for a Complex / pre-PMF product problem",
+        "Output diagnoses the problem's domain (Complex) using Cynefin's language",
+        "Output references at least one direct Snowden critique of SAFe (with quote or attribution)",
+        "Output offers Complex-domain methods as the alternative (parallel safe-to-fail probes, distributed cognition, etc.)",
+        "Output distinguishes between SAFe misapplied to Complex vs. SAFe-like ceremony potentially useful in Complicated portions",
+        "Output cites thecynefin.co or Snowden by name",
+        "Response tone is sharp/direct in the Snowden register, not diplomatic hedging"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "single-pilot-in-complex-domain",
+      "prompt": "We're planning our AI-agent rollout to customer support. We're going to run one carefully designed pilot with our best team, measure results over 6 weeks, and if it succeeds we'll roll it out to all support teams next quarter. Help me design the pilot for maximum learning.",
+      "expected_output": "Output should identify single-pilot syndrome as a Complicated-methods-in-Complex-domain error. Should diagnose customer support with AI as Complex (emergent human-AI interaction, retrospective coherence). Should redirect to multiple parallel safe-to-fail probes — 3–5 pilots simultaneously, each testing a different hypothesis, each cheap to fail. Should introduce amplify/dampen framing rather than success/failure verdict. Should introduce the distinction between fail-safe (Complicated domain) and safe-to-fail (Complex). Cite Snowden.",
+      "assertions": [
+        "Output identifies the single-pilot approach as a Complicated-methods-in-Complex error",
+        "Output diagnoses the AI-agent rollout domain as Complex (or aporetic with Complex leaning)",
+        "Output prescribes multiple parallel safe-to-fail probes as the alternative",
+        "Output introduces the fail-safe / safe-to-fail distinction",
+        "Output introduces amplify / dampen decisions rather than success / failure verdict",
+        "Output pushes back on the plan-to-roll-out-if-succeeds framing (best-practice extraction from Complex success)",
+        "Output cites a Snowden source (thecynefin.co safe-fail probes essay, cynefin.io, or similar)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "aporetic-exploration-legitimize-not-knowing",
+      "prompt": "We're stuck. We've been trying to figure out why our enterprise sales cycle has stretched from 4 months to 9 months over the past year. We've talked to sales, we've talked to customers, we've done win-loss analysis, we've read industry reports. We have five different hypotheses and no way to distinguish them. Our board wants an answer next week. Help.",
+      "expected_output": "Output should recognize this as genuine aporia (authentic 'we know we don't know') and legitimize suspension rather than forcing a decisive-sounding answer. Should walk through the five exits from Aporetic per cynefin.io: → Complex (parallel hypotheses via probes), → Complicated (different expertise), → Complex-Chaotic liminal (MassSense with cognitively diverse group), → Complicated via competing paradigms, → Clear (high risk, don't). Should distinguish aporetic from confused. Should push back gently on the board-wants-answer-next-week pressure — deliberate suspension is legitimate. Cite the Aporetic Turn.",
+      "assertions": [
+        "Output distinguishes aporetic (authentic) from confused (inauthentic) states",
+        "Output legitimizes suspension of action / deliberate paradox as valid in aporetic",
+        "Output walks through at least 3 of the 5 exits from Aporetic",
+        "Output recommends parallel hypothesis testing (→ Complex exit) as one option",
+        "Output cites the Aporetic Turn or cynefin.io/wiki/Aporetic_Turn",
+        "Output does NOT force a single decisive answer just because the board is asking",
+        "Output offers a structured way to move forward without pretending to know more than they do"
+      ],
+      "files": []
+    }
+  ]
+}

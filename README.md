@@ -4,11 +4,25 @@ A growing collection of Claude Skills that package management and product framew
 
 **Why:** when I invoke a well-known framework by name (e.g., "let's do Playing to Win on this"), the response Claude gives me by default is thin — it knows the book but not the twelve years of refinements the author has published since. These skills close that gap: primary text + post-publication material + practitioner heuristics + the author's voice, structured so Claude can be a competent thinking partner in the framework, not just a summarizer.
 
-**What's here** — each skill packages one framework:
+**What's here** — 8 skills, each packages one framework:
 
+**Strategy**
 - ✅ **[Playing to Win](skills/playing-to-win/)** — Roger Martin's 5-question strategy cascade
-- ✅ **[Good Strategy Bad Strategy](skills/good-strategy-bad-strategy/)** — Richard Rumelt's kernel of strategy (diagnosis / guiding policy / coherent action)
-- more coming — see the roadmap below
+- ✅ **[Good Strategy Bad Strategy](skills/good-strategy-bad-strategy/)** — Richard Rumelt's kernel (diagnosis / guiding policy / coherent action) + The Crux + "action agenda" reframe
+- ✅ **[7 Powers](skills/7-powers/)** — Hamilton Helmer's taxonomy of durable competitive advantage (Benefit + Barrier, 3 S's, Statics vs. Dynamics)
+
+**Product & discovery**
+- ✅ **[Escaping the Build Trap](skills/escaping-the-build-trap/)** — Melissa Perri's product-org diagnostic (Four Dimensions + Three Pillars of Product Ops)
+
+**Positioning & narrative**
+- ✅ **[Obviously Awesome](skills/obviously-awesome/)** — April Dunford's positioning method (5 components + 8-step Sales Pitch)
+- ✅ **[Strategic Narrative](skills/strategic-narrative/)** — Andy Raskin's 5-part narrative structure (Change in the World → Promised Land → Magic Gifts)
+
+**Sensemaking & decisions**
+- ✅ **[Cynefin](skills/cynefin/)** — Dave Snowden's sensemaking framework (5 domains, constraints, aporetic turn, Estuarine)
+- ✅ **[Thinking in Bets](skills/thinking-in-bets/)** — Annie Duke's decision toolkit (resulting, kill criteria, calibration, monkeys & pedestals)
+
+More coming — see the roadmap below.
 
 ## How each skill is built
 
@@ -68,13 +82,17 @@ See `CONTRIBUTING.md` (coming soon) for how to structure additions.
 
 ## Roadmap
 
-**Next candidates** (order tentative, subject to change):
-- Escaping the Build Trap — Melissa Perri
+**Next candidates** (round 3+, order tentative):
+- Jobs to be Done — Bob Moesta (demand-side / Switch Interview / Forces of Progress)
 - Continuous Discovery Habits — Teresa Torres
 - Shape Up — Ryan Singer / Basecamp
 - Wardley Mapping — Simon Wardley
+- Product Management frameworks — Shreyas Doshi
+- North Star Framework / Product Operating Model — John Cutler
 
-**Kill criteria.** If two skills in a row after Playing to Win + Rumelt don't get meaningful traction (see the release posts for what "meaningful" means), I pause and reassess before shipping more. This isn't a catalog for its own sake.
+**Process behind each skill.** Every skill is built from a research dossier (see [`_research/`](_research/) directory). The dossier extracts live sources, method, voice & tone, heuristics, and adjacent frameworks. The build phase hydrates the dossier into the standard skill structure. If you want to contribute a candidate framework, start with a dossier PR against `_research/`.
+
+**Kill criteria.** If the batch of skills doesn't get meaningful traction (see release posts for what "meaningful" means), I pause and reassess before shipping more. This isn't a catalog for its own sake.
 
 ## License
 
