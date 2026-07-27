@@ -41,3 +41,43 @@
   title: Thinking in Bets
   tagline: Annie Duke's decision toolkit (resulting, kill criteria, calibration, monkeys & pedestals)
   theme: Sensemaking & decisions
+
+- slug: working-backwards
+  title: Working Backwards
+  tagline: Bill Carr + Colin Bryar's Amazon method (PR/FAQ, 6-pager, silent reading, Single-Threaded Leader, input metrics)
+  theme: Product & discovery
+
+- slug: radical-candor
+  title: Radical Candor
+  tagline: Kim Scott's Care Personally + Challenge Directly matrix — with an explicit guard against weaponization as "brutal honesty"
+  theme: Management & communication
+
+- slug: v2mom
+  title: V2MOM
+  tagline: Marc Benioff's Vision-Values-Methods-Obstacles-Measures — obstacles as the load-bearing element, order matters, individual/team/company cascade
+  theme: Strategy
+
+- slug: dora-accelerate
+  title: DORA / Accelerate
+  tagline: Nicole Forsgren's DORA metrics + capabilities + SPACE + DevEx — evidence-based, org-level (never individual performance)
+  theme: Engineering
+
+- slug: radical-focus
+  title: Radical Focus
+  tagline: Christina Wodtke's OKRs done right — weekly cadence, team-level, Team Health Monitor, one Objective at a time
+  theme: Management & communication
+
+- slug: four-fits
+  title: Four Fits
+  tagline: Brian Balfour's Product-Market-Channel-Model fit chain + growth loops (compounding, closed) as alternative to funnels
+  theme: Growth
+
+- slug: challenger-sale
+  title: Challenger Sale + JOLT
+  tagline: Matt Dixon's Challenger + JOLT Effect — Challenger earns the meeting, JOLT closes against no-decision; not aggression, not pressure
+  theme: Sales
+
+- slug: pattern-breakers
+  title: Pattern Breakers
+  tagline: Mike Maples Jr's inflections + insights + movements for breakthrough startups — non-consensus bets, backcasting, living in the future
+  theme: Strategy

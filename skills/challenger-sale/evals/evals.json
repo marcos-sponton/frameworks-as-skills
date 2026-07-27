@@ -1,0 +1,86 @@
+{
+  "skill_name": "challenger-sale",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "identify-deal-at-risk-of-no-decision",
+      "prompt": "I have a $180k enterprise deal that's been in late-stage for 5 weeks. My champion (Head of Ops) loves the product, our second call went great, and the CFO said the business case looks solid. But since the security review two weeks ago the deal has gone quiet — the champion is 'checking with the team internally', the CFO hasn't been on calls, and the buyer just asked for a fourth customer reference. Should I send them a limited-time discount to get this over the line before end of quarter?",
+      "expected_output": "Output should: (a) flag this as at very high risk of no-decision (not a competitive loss); (b) explicitly refuse or push back on the discount / urgency move using Dixon's FOMU-beats-FOMO finding and the ~87% backfire stat; (c) diagnose which of the three faces of indecision (valuation / information / outcomes) is most likely dominant given the signals (fourth reference request → probably information-face with a hint of outcomes-face); (d) prescribe JOLT moves that match — Judge with pings-and-echoes, Offer an opinionated recommendation, Limit exploration (kill the fourth reference), Take risk off with pilot / opt-out / cook's tour honesty; (e) probably also flag that the champion may be a Talker rather than a Mobilizer; (f) cite Dixon / The JOLT Effect / HBR 2022 as source.",
+      "assertions": [
+        "Output flags no-decision risk explicitly",
+        "Output refuses or pushes back on the FOMO/urgency/discount reflex and cites the ~87% backfire finding",
+        "Output diagnoses at least one face of indecision (valuation / information / outcomes) with specific reasoning",
+        "Output walks through JOLT moves (Judge / Offer / Limit / Take) tailored to the diagnosis",
+        "Output prescribes at least one take-risk-off move that is NOT a discount (pilot, opt-out, service wrap, cook's tour, etc.)",
+        "Output raises the Mobilizer vs. Talker question about the champion",
+        "Output cites Matt Dixon, The JOLT Effect, HBR 2022, or another specific Dixon source",
+        "Output does NOT recommend adding urgency or scarcity",
+        "Output does NOT recommend a discount as the primary move"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "apply-jolt-to-specific-outcomes-face-situation",
+      "prompt": "Here's a specific deal situation. Please walk me through what to do.\n\nEnterprise buyer, $500k ACV, we're ready to sign. But over the past three weeks the buyer has kept asking for additional protections — SLAs, penalty clauses, an executive-relationship commitment. The lawyers have been in the deal for 6 weeks and the last email from the buyer's CEO said 'my team is worried the platform won't hold up in Q4 when we're pushing peak volume through it.' What should I actually do this week?",
+      "expected_output": "Output should: (a) diagnose this as outcomes-face indecision explicitly (the CEO quote makes it unmistakable); (b) walk through the tailored JOLT sequence for outcomes-face — Judge (already done, the CEO named it), Offer (opinionated recommendation about the structure), Limit (kill low-value legal side-quests, not another security whitepaper), Take (this is the load-bearing move for outcomes fear); (c) prescribe SPECIFIC take-risk-off moves that address the actual fear — production pilot on Q3 volume, committed implementation support, written performance benchmark, cook's-tour honesty about year-1 including hard weeks; (d) explicitly warn against sending more optimistic security material or reference calls; (e) cite Dixon / JOLT.",
+      "assertions": [
+        "Output diagnoses outcomes-face indecision explicitly",
+        "Output prescribes at least two specific take-risk-off moves (e.g., pilot, opt-out, guarantee, service wrap, cook's-tour)",
+        "Output does NOT recommend more security whitepapers or additional reference calls as the primary move",
+        "Output does NOT recommend a discount as the way to address the fear",
+        "Output includes cook's-tour honesty or equivalent (naming the year-1 hard parts openly) as a trust-building move",
+        "Output cites Dixon, The JOLT Effect, or HBR 2022",
+        "Output ends with something the user can do this week, not a checklist"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "coach-relationship-builder-toward-challenger",
+      "prompt": "I have a rep who's been on my team for two years. Great personality, customers love her, huge network of relationships in her territory. But her win rate on complex deals (>$100k ACV, multi-stakeholder) is way below the team average — 18% vs. team 34%. She's a top performer in mid-market (<$50k ACV) where deals close on rapport, but the bigger deals she's been given keep dying in committee. How should I coach her?",
+      "expected_output": "Output should: (a) diagnose her as a classic Relationship Builder — the profile that performs fine in transactional but is the LOWEST-performing profile in complex sales (7% of top performers); (b) cite the specific Challenger research finding; (c) NOT recommend a personality transplant (Dixon anti-pattern); (d) prescribe coaching TOWARD Challenger BEHAVIORS from where she is — specifically Teach with Commercial Insight, ability to sit with tension instead of resolving it, and Take Control of the process; (e) probably flag that she may be selling through Talkers in the complex accounts because Talkers are the most relationship-friendly buyers; (f) suggest specific coaching moves (Commercial Insight training first, tension-role-play, Mobilizer identification exercise); (g) NOT recommend she stop building relationships — relationships aren't bad, they're insufficient.",
+      "expected_assertions": [
+        "Output diagnoses her as Relationship Builder profile and cites the 7% of top performers finding",
+        "Output explicitly warns against personality transplant / identity replacement",
+        "Output prescribes coaching toward at least two of the three Ts (Teach / Tailor / Take Control)",
+        "Output specifically calls out Commercial Insight as the highest-leverage skill to build",
+        "Output raises the Mobilizer vs. Talker question about how she's mapping her complex accounts",
+        "Output does NOT tell her to stop building relationships",
+        "Output does NOT recommend she become a Lone Wolf or 'be more aggressive'",
+        "Output cites Matt Dixon or The Challenger Sale",
+        "Output includes a specific first coaching move the manager can run next week"
+      ],
+      "assertions": [
+        "Output diagnoses her as Relationship Builder profile and cites the 7% of top performers finding",
+        "Output explicitly warns against personality transplant / identity replacement",
+        "Output prescribes coaching toward at least two of the three Ts (Teach / Tailor / Take Control)",
+        "Output specifically calls out Commercial Insight as the highest-leverage skill to build",
+        "Output raises the Mobilizer vs. Talker question about how she's mapping her complex accounts",
+        "Output does NOT tell her to stop building relationships",
+        "Output does NOT recommend she become a Lone Wolf or 'be more aggressive'",
+        "Output cites Matt Dixon or The Challenger Sale",
+        "Output includes a specific first coaching move the manager can run next week"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-user-reaches-for-fomo",
+      "prompt": "The buyer has gone silent for two weeks. I'm thinking of sending them this email to create urgency:\n\n'Hi [Buyer], just a heads up — our Q4 pricing tier expires this Friday. If we don't have signed paperwork by EOD Friday, we'll need to reprice you at our new January rates, which are 15% higher. Also, our roadmap update coming in January will affect the tier structure — the package you're looking at may not be available in its current form. Let me know if you want to jump on a call today or tomorrow to make this happen.'\n\nGood email?",
+      "expected_output": "Output should push back firmly (but not aggressively) using Dixon's FOMU-beats-FOMO finding. It should: (a) diagnose this as the classic FOMO reflex on a silent / stalled deal — probably an indecision situation, not a status-quo situation; (b) cite the ~87% backfire finding from the JOLT research; (c) explain WHY the email backfires: it raises fear-of-being-wrong on a buyer whose fear is already fear-of-being-wrong; (d) offer a specific rewrite in the JOLT register — takes work off the buyer's plate, offers to help with the actual internal blocker, models honesty; (e) tone should be direct/data-anchored (Dixon-like), not soft. Should cite Dixon.",
+      "assertions": [
+        "Output pushes back on the FOMO/urgency email rather than approving it",
+        "Output cites the FOMU-beats-FOMO finding and/or the ~87% backfire statistic",
+        "Output diagnoses probable indecision (FOMU) rather than probable status-quo bias",
+        "Output offers a specific rewrite of the email in a FOMU-appropriate register",
+        "Output does NOT accept the premise that urgency is the right move here",
+        "Response tone is direct/data-anchored (Dixon-like) rather than hedged or soft",
+        "Output cites Matt Dixon, The JOLT Effect, or HBR 2022"
+      ],
+      "files": []
+    }
+  ]
+}

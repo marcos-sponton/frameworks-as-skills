@@ -1,0 +1,69 @@
+{
+  "skill_name": "radical-focus",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "draft-team-okrs-from-scratch",
+      "prompt": "I'm the head of product at a 12-person B2B SaaS in the DevOps space. We're at ~$3M ARR, growing but retention is our weak spot (~78%). Our engineering team of 5 needs OKRs for next quarter. Our company Objective this quarter is 'Prove we're the retention winner in our category.' Help me draft the engineering team's OKRs using Wodtke's Radical Focus.",
+      "expected_output": "Output should: (a) propose ONE Objective (not multiple) that's qualitative + inspirational + time-bound + actionable by engineering alone; (b) draft ~3 outcome KRs (not output KRs like 'ship feature X'), with balance to prevent gaming; (c) propose ~2 Health Metrics the team should protect while pushing; (d) sketch the weekly cadence (Monday 4-quadrant + Friday celebrations); (e) cite Wodtke as source; (f) NOT default to individual OKRs, output KRs, or cascading.",
+      "assertions": [
+        "Output proposes ONE Objective, not multiple",
+        "The Objective is qualitative and inspirational, not a KPI or baseline state",
+        "Key Results are outcomes (measurable change), not outputs (things to ship)",
+        "Output proposes Health Metrics as a separate layer from Objective + KRs",
+        "Output includes weekly cadence (Monday commitments AND Friday celebrations)",
+        "Output cites Christina Wodtke, Radical Focus, or a specific essay/podcast at least once",
+        "Output does NOT propose individual OKRs for each engineer",
+        "Output does NOT propose cascading (engineering KRs derived directly from the company KRs one-to-one)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-individual-okr-proposal",
+      "prompt": "Our new VP of People wants every employee to have their own 3-5 personal OKRs each quarter, tied to their performance review. She says it will improve accountability. My gut says this is wrong but I can't articulate why. Help me push back with a concrete argument based on Wodtke's Radical Focus.",
+      "expected_output": "Output should: (a) explicitly reject individual OKRs using Wodtke's specific critique — not a generic 'OKRs shouldn't be tied to performance' argument; (b) name that individual OKRs collapse into performance-review theater and kill team accountability; (c) offer the Wodtke alternative (team OKRs + individual development in 1:1s); (d) cite a Wodtke source (essay or podcast); (e) give the user language they can use in the conversation with the VP.",
+      "assertions": [
+        "Output explicitly rejects individual OKRs (does not accommodate the request)",
+        "Output names Wodtke's specific critique (performance-review theater, kills team accountability, cascading pathology)",
+        "Output offers the Wodtke alternative of team OKRs + separate 1:1 development goals",
+        "Output cites a specific Wodtke source (Elegant Hack essay, Medium post, podcast, or book)",
+        "Output gives the user concrete language or framing for the conversation, not just abstract principle",
+        "Response tone is direct and specific (Wodtke-like), not hedged"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-quarterly-only-okrs",
+      "prompt": "Our leadership team wants to set OKRs at the start of each quarter, check in at end of quarter, and skip anything weekly because we're all too busy. Sounds efficient. Thoughts?",
+      "expected_output": "Output should push back — NOT accept the framing. Should name that quarterly-only OKRs without weekly cadence are a goal fantasy per Wodtke. Should propose the minimum viable cadence (Monday commitments + Friday celebrations) and frame it as the actual method — not an optional add-on. Voice should be direct and specific with a wry Wodtke edge. Should cite Wodtke.",
+      "assertions": [
+        "Output pushes back on quarterly-only OKRs rather than accommodating them",
+        "Output names the weekly cadence (Monday commitments + Friday celebrations) as core method, not optional",
+        "Output frames 'we're too busy' as a signal, not a valid constraint (Wodtke-style)",
+        "Output cites Radical Focus, Elegant Hack, or a specific Wodtke source",
+        "Response tone is direct (Wodtke-like), potentially wry, not softly agreeable",
+        "Output does NOT offer a compromise like 'just monthly check-ins' — holds the line on weekly"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "add-health-metric-to-guard-against-gaming",
+      "prompt": "Our growth team has this OKR:\n\nObjective: Become the fastest-growing product in our category.\nKR1: Reach 50k weekly active users (from 22k).\nKR2: Get to 4.5% week-over-week growth for 8 straight weeks.\nKR3: Achieve 60% activation rate (from 45%).\n\nI'm nervous. Feels like we could hit all of these and destroy the product. Apply Wodtke's Health Metric method.",
+      "expected_output": "Output should: (a) validate the concern — this is exactly the gaming problem Health Metrics guard against; (b) propose 2 Health Metrics to protect (candidates: retention/churn, NPS or satisfaction, support ticket rate, engagement depth, revenue per user); (c) define what 'red' looks like for each — the code red trigger; (d) reference the OpenAI 2025 code red case if relevant; (e) cite Wodtke sources; (f) explain the push vs. protect distinction using her framing.",
+      "assertions": [
+        "Output introduces Health Metrics as a separate layer, distinct from Objective + KRs",
+        "Output proposes at least 2 concrete Health Metrics appropriate to the growth-metric-gaming risk",
+        "Output defines what 'red' or 'code red' means for each Health Metric",
+        "Output uses Wodtke's push vs. protect framing explicitly",
+        "Output cites a Wodtke source (the OpenAI 2025 essay, or another Health Metric reference)",
+        "Output does NOT just rewrite the KRs — it adds the Health Metric layer alongside them"
+      ],
+      "files": []
+    }
+  ]
+}

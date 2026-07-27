@@ -1,0 +1,68 @@
+{
+  "skill_name": "dora-accelerate",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with a skill eval harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "first-time-dora-baseline-from-scratch",
+      "prompt": "I run engineering at a Series B B2B SaaS. ~60 engineers across 8 teams. We've never measured DORA. Our CEO just read Accelerate and wants us to 'become an Elite performer' this year. Help me stand up DORA measurement. Where do I start?",
+      "expected_output": "Output should: (a) walk through the four (or five) DORA keys with brief definitions; (b) translate 'become Elite' into concrete tier language and warn that going Low → Elite in a year is aggressive; (c) point at the DORA Quick Check as the low-effort baseline (rather than starting with an instrumentation project); (d) recommend investing in 1-2 specific capabilities based on typical Series B bottlenecks (small batches, trunk-based dev, test automation are common); (e) explicitly warn against turning DORA into a per-team or per-individual scorecard; (f) cite Forsgren / Accelerate / dora.dev as source.",
+      "assertions": [
+        "Output names the four DORA keys (Deployment Frequency, Lead Time for Changes, Change Failure Rate, MTTR or Failed Deployment Recovery Time)",
+        "Output uses the tier language (Elite / High / Medium / Low) with at least one concrete threshold",
+        "Output recommends the DORA Quick Check or a survey-based baseline rather than starting with instrumentation",
+        "Output recommends investing in at least one specific DORA capability (not just 'measure more')",
+        "Output warns explicitly against using DORA for individual performance evaluation",
+        "Output cites Forsgren, Accelerate, dora.dev, or a specific source at least once",
+        "Output does NOT recommend lines-of-code, story-point velocity, or commits as productivity metrics"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "push-back-on-individual-dora-performance-review",
+      "prompt": "Our VP of Engineering wants to add DORA metrics to individual performance reviews next quarter. He wants each developer scored on their contribution to Deploy Frequency and Lead Time, and the top 20% get a bonus. He heard about DORA from a friend at another company doing the same thing. Help me push back — or if I'm wrong, help me build it.",
+      "expected_output": "Output should push back immediately and cleanly. It should: (a) state the Forsgren / DORA position explicitly (DORA is not for individual performance evaluation); (b) explain the gaming dynamic in concrete terms — devs will make artificially small commits, rush reviews, avoid risky changes, sandbag estimates; (c) predict the timeline (signal degradation within 1-2 quarters); (d) redirect to the correct alternatives (competency framework, growth ladder) for the underlying question; (e) offer a script for the conversation with the VP; (f) NOT capitulate or offer to help build the individual-scoring dashboard as a compromise.",
+      "assertions": [
+        "Output pushes back on the individual-scoring proposal rather than helping implement it",
+        "Output cites the explicit Forsgren / DORA team position that DORA is not an individual performance metric",
+        "Output names at least two specific gaming behaviors (small commits, rushed reviews, avoided risky changes, sandbagged estimates, etc.)",
+        "Output offers an alternative for the underlying performance-evaluation question (competency framework, growth ladder, 360, or similar)",
+        "Output does NOT offer to compromise and build a partial individual-scoring version",
+        "Response tone is direct and evidence-based rather than hedged"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-ai-productivity-paradox",
+      "prompt": "Our developers say AI coding tools have made them 2x more productive. Leadership is celebrating. But our releases feel about the same. What's going on? Should we be doing something differently?",
+      "expected_output": "Output should recognize this as the 2024 DORA AI productivity paradox and respond with research-consistent framing. Specifically: (a) name the 2024 State of DevOps finding — devs report higher productivity with AI, but team throughput dropped ~1.5% and stability dropped ~7.2%; (b) distinguish perception from measurement without dismissing either (perception matters, but perception ≠ delivered value); (c) diagnose the mechanism: AI accelerates coding but doesn't shrink deploy pipelines, fix test flakiness, or improve documentation, so the acceleration piles up at the release gate; (d) recommend investing in Small Batches, Test Automation, and Documentation Quality as the capabilities that convert AI's keyboard speed into shipped value; (e) cite DORA 2024 report as source; (f) NOT tell the user to disable AI or that AI is 'bad'.",
+      "assertions": [
+        "Output recognizes this as the AI productivity paradox and names the 2024 DORA State of DevOps finding",
+        "Output distinguishes developer perception from delivery signal without dismissing perception",
+        "Output diagnoses the mechanism (AI speed at keyboard vs. bottlenecks downstream) rather than accepting perception as delivery signal",
+        "Output recommends investing in at least one specific capability (Small Batches, Test Automation, Documentation, etc.) rather than turning AI off",
+        "Output cites DORA 2024 report or Forsgren directly",
+        "Output does NOT recommend measuring individual AI adoption rates as a productivity signal"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "framework-choice-space-vs-devex-vs-dora",
+      "prompt": "My team's DORA numbers look pretty good — we're solidly High tier, moving toward Elite. But engineers are frustrated. Retention is worse than last year. Standups feel heavy. I'm not sure whether the problem is developer experience, productivity broadly, or something else entirely. Which framework should I reach for and why?",
+      "expected_output": "Output should recognize this is not a DORA-shaped question and redirect appropriately. It should: (a) name that DORA measures delivery outcomes, not developer experience or satisfaction, so 'good DORA + frustrated devs' is a common pattern that DORA cannot diagnose; (b) recommend DevEx as the primary lens (feedback loops, cognitive load, flow state) because the symptoms — frustration, heavy standups — sound like friction; (c) recommend SPACE Satisfaction & Well-being as a complementary lens for the retention signal; (d) explain what each would reveal that DORA doesn't; (e) suggest specific instrumentation (perceptual surveys plus system data for DevEx); (f) cite Noda / Forsgren / DevEx paper.",
+      "assertions": [
+        "Output recognizes that DORA is not the right frame for the presented symptoms and says so explicitly",
+        "Output recommends DevEx as the primary reach with specific reasoning about which dimension (feedback loops / cognitive load / flow state) applies",
+        "Output recommends SPACE Satisfaction & Well-being for the retention signal, or explicitly discusses it as complementary",
+        "Output distinguishes the questions that each framework answers (DORA = delivery, SPACE = productivity, DevEx = experience)",
+        "Output recommends both perceptual and system data for DevEx measurement",
+        "Output cites at least one specific Forsgren / Noda / DX source"
+      ],
+      "files": []
+    }
+  ]
+}

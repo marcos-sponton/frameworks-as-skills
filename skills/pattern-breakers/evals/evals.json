@@ -1,0 +1,72 @@
+{
+  "skill_name": "pattern-breakers",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "distinguish-inflection-from-trend-ai-legal-tech",
+      "prompt": "I'm building an AI-powered contract review tool for mid-market law firms. My pitch: 'The legal-tech market is huge, AI is exploding, and everyone hates contract review — this is a $10B opportunity.' Help me stress-test this with Pattern Breakers.",
+      "expected_output": "Output should: (a) name the pitch as a trend/macro invocation, not an inflection identification; (b) push the founder to specify the EXACT new capability AI enables now that wasn't possible before (context windows, cost per token, tool use, reliability threshold, etc.); (c) surface that 'AI is exploding' + 'market is big' is exactly the consensus AI-wrapper trap Maples warns against; (d) run the non-consensus-and-right 2x2 on the insight — is the insight actually non-consensus given how many law-firm-AI tools launched in the past 12 months?; (e) cite Maples and probably reference the 'why now?' test; (f) end with a specific question that forces the founder to name a real mechanism or admit they don't have one.",
+      "assertions": [
+        "Output distinguishes trend from inflection with attribution to Maples",
+        "Output pushes back on 'AI is big / market is big' as insufficient for a real inflection",
+        "Output forces specificity — asks for the specific new capability, cost point, moment, or mechanism",
+        "Output runs or references the non-consensus-and-right 2x2 (or names Andy Rachleff)",
+        "Output names the AI-wrapper / Uber-for-X derivative trap or its equivalent",
+        "Output cites Mike Maples, Pattern Breakers, Floodgate, or a specific source at least once",
+        "Output does NOT accept 'the market is big' as an inflection",
+        "Output ends with a question that the founder has to answer with specificity"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-iterate-to-pmf-pitch",
+      "prompt": "We're a B2B SaaS startup building expense management software. We think our approach is better than Expensify. We've been iterating for 18 months, tried three positioning changes, still haven't hit PMF. Our plan is to keep iterating — 'lean startup', find the pain point that resonates. Critique this using Pattern Breakers.",
+      "expected_output": "Output should: (a) diagnose that iterating without a real insight rarely produces a breakthrough — iteration compounds a strong insight, doesn't manufacture one; (b) push the founder to name the STARTING insight, not the current product iteration — was that starting insight non-consensus AND right?; (c) probably challenge whether this is a breakthrough attempt or an incremental-improvement business (both can be fine, but they shouldn't be confused); (d) name that 'better than Expensify' is a consensus positioning — the market is saturated; (e) not attack Lean Startup outright but note the sequencing (Pattern Breakers upstream, Lean downstream, per Steve Blank's own endorsement of the book); (f) probably raise Founder-Future Fit or the Delta 4 test; (g) offer honest options — pivot on the insight, accept this as a fine business (not a breakthrough), or find the specific inflection that would justify continuing.",
+      "assertions": [
+        "Output identifies that iterating on a weak starting insight rarely produces a breakthrough",
+        "Output pushes the founder to name the STARTING insight, not just the current product",
+        "Output engages with the Lean Startup framing constructively (complementary at different phases, not opposite)",
+        "Output notes that 'better than Expensify' is a consensus positioning",
+        "Output names or applies at least one specific Maples device (Delta 4, Founder-Future Fit, non-consensus-and-right, Refusal/Heresy/Inflection/Demo)",
+        "Output cites Maples or a specific source",
+        "Output offers honest options rather than false optimism (may include: pivot on insight / accept as incremental business / find the real inflection)",
+        "Output does NOT default to generic 'keep iterating' advice"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-invokes-contrarian",
+      "prompt": "I've got a contrarian bet. Everyone thinks vertical AI agents will win in customer support. I'm building a horizontal orchestration layer instead. Contrarianism is where alpha lives, right?",
+      "expected_output": "Output should push back on 'contrarianism' in a Maples-consistent way — invoking the Heresy vs. Contrarianism distinction (contrarianism disagrees; heresy replaces the crowd's assumption with a better explanation), citing Maples, and forcing the founder to name their better explanation. Voice should be direct and specific, not soft. Should probably run the non-consensus-and-right 2x2 — being contrarian is only half the equation; being right is the other half. Should probably cite the Heresy essay or Pattern Breakers directly.",
+      "assertions": [
+        "Output invokes the Heresy vs. Contrarianism distinction from Maples",
+        "Output does NOT accept 'contrarianism = alpha' as sufficient — pushes for the better explanation",
+        "Output runs or references non-consensus AND right (both halves, not just contrarian)",
+        "Output cites Maples's Heresy essay or Pattern Breakers explicitly",
+        "Response tone is direct (Maples-like) — warm on the founder, cold on the framing",
+        "Output ends with a question or a specific ask (name the better explanation, or the earned evidence you're right)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "investor-side-pattern-match-check",
+      "prompt": "I'm a seed investor. Two founders pitched me a stealth AI startup this week. Their pitch reminded me strongly of Stripe circa 2011 — dev-first tool, elegant API, category-defining ambition. Should I invest based on the pattern match?",
+      "expected_output": "Output should: (a) explicitly flag that 'pattern matching to Stripe' is the exact investor default Maples's whole thesis is a rebuttal to; (b) force the investor to kill the analogy and evaluate on substance — what's the specific inflection, insight, and movement HERE, independent of Stripe's story?; (c) note that Stripe's success came from a specific inflection (developer-first infrastructure adoption in 2010s) — the pattern isn't transferable, the substance is what matters; (d) probably reference Pattern Breakers vs. Pattern Matching directly; (e) ask about Founder-Future Fit — do THESE founders bring the right earned expertise, or is 'they seem like the Collisons' the whole thesis?; (f) end with the specific questions to actually evaluate the bet.",
+      "assertions": [
+        "Output explicitly names pattern-matching (to Stripe) as the trap Maples warns against",
+        "Output forces the investor to evaluate on substance independent of the Stripe analogy",
+        "Output names or engages with Founder-Future Fit or its equivalent (right founder for THIS future)",
+        "Output cites Maples, Pattern Breakers, or Floodgate at least once",
+        "Output does NOT validate the pattern-match as a reason to invest",
+        "Output ends with concrete questions for the investor to answer or ask the founders",
+        "Response tone treats the investor as a peer of Maples (investor cadence, not consultant cadence)"
+      ],
+      "files": []
+    }
+  ]
+}

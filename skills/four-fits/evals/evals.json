@@ -1,0 +1,73 @@
+{
+  "skill_name": "four-fits",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "diagnose-which-fit-is-broken-stalled-saas",
+      "prompt": "We're a Series B B2B SaaS at $25M ARR, growing 40% YoY (down from 90% last year). ARPU is $600/user/year, mostly SMB. We're spending heavily on paid ads with CAC around $900 and 18-month payback. Sales cycle is short (self-serve + light inside sales). Retention is decent (~85% net). Growth is definitely slowing and we don't know why. Help me figure out which of the Four Fits is broken.",
+      "expected_output": "Output should: (a) score each of the four fits with specific evidence pulled from the scenario; (b) diagnose that this is a classic ARPU-CAC Danger Zone situation — ARPU $600 sits in the mid-zone where neither viral/UGC channels nor paid channels have clean fit; (c) name that CAC $900 on ARPU $600 is upside-down; (d) propose moving up-market or down-market as the coordinated fix; (e) cite Balfour's Channel-Model Fit essay or the Danger Zone concept; (f) NOT propose tactical fixes ('better ad copy', 'more paid channels') as the answer.",
+      "assertions": [
+        "Output names all 4 fits (Product-Market, Product-Channel, Channel-Model, Model-Market) and scores or diagnoses each",
+        "Output identifies Channel-Model Fit as the broken link (or as the most likely broken link)",
+        "Output explicitly names the ARPU Danger Zone concept",
+        "Output points out the CAC:ARPU math is upside-down",
+        "Output proposes moving up-market or down-market as the structural move (not tactical fixes)",
+        "Output cites Brian Balfour, Four Fits, or a specific essay at least once",
+        "Output does NOT recommend hiring a growth marketer as the primary fix",
+        "Output does NOT recommend copying another company's playbook"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "design-growth-loop-from-scratch",
+      "prompt": "I'm building a productivity tool for developers — a CLI + web dashboard that helps them track and improve their coding metrics. ~5,000 active users, mostly individual devs, freemium with a $10/mo pro tier. Growth is entirely from word of mouth and Hacker News posts, feels random and non-compounding. Help me design a growth loop that will actually compound.",
+      "expected_output": "Output should: (a) diagnose the current state as a funnel or intermittent word-of-mouth, NOT a loop; (b) walk through Balfour's 5 loop types (viral, content, paid, sales, UGC/SEO) and identify which fit this product's shape; (c) sketch a specific loop diagram with input → action → output → back to input; (d) force the arrow to close via a specific product mechanism (e.g., users sharing metrics dashboards publicly, or shareable coding reports indexed by SEO, or team-invitation viral loop, or content/UGC generated from usage); (e) estimate amplification factor and cycle time; (f) cite Balfour's growth-loops essay.",
+      "assertions": [
+        "Output diagnoses the current acquisition pattern as funnel/intermittent, not a compounding loop",
+        "Output references at least 2 of Balfour's 5 loop types (viral, content, paid, sales, UGC/SEO)",
+        "Output sketches a specific loop with input → action → output → back-to-input structure",
+        "Output names a specific product mechanism that closes the loop (not a marketing tactic)",
+        "Output mentions amplification factor or cycle time (or both) as diagnostics",
+        "Output cites Balfour, Reforge, or 'Growth Loops are the New Funnels'",
+        "Output does NOT default to 'do more content marketing' or 'run paid ads' as the answer"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "critique-funnel-only-growth-plan",
+      "prompt": "Here's the growth section of our board deck. Please critique it against Balfour's Four Fits + Growth Loops.\n\n---\nGROWTH PLAN (H2 2026)\n\nStrategy: Copy Notion's playbook — bottoms-up PLG.\n\nTactics:\n1. Launch a free tier to drive top-of-funnel signups\n2. Improve activation with better onboarding\n3. Optimize retention with a weekly digest email\n4. Convert free users to paid via in-product upgrade prompts\n5. Hire a Head of Growth Marketing to lead paid acquisition\n6. Ship AI features to keep up with competitors\n\nMetrics:\n- Signups: 5,000/mo → 20,000/mo\n- Free-to-paid conversion: 2% → 5%\n- MAU (North Star): 40k → 100k\n- CAC via paid: assume $200 acceptable\n\nOur ARPU is $400/user/year. TAM is 'all knowledge workers globally'.\n---",
+      "expected_output": "Output should identify multiple Balfour anti-patterns: (a) copying Notion's playbook without matching fit chains; (b) funnel-only structure with no loops; (c) MAU as single-leg North Star; (d) ARPU $400 sits in Danger Zone with $200 CAC — upside-down math; (e) 'all knowledge workers globally' TAM without threshold check; (f) hiring a 'Head of Growth Marketing' as marketing-sub-function framing; (g) no Product-Channel Fit specified. Output should cite specific Balfour essays and propose a proper reframe.",
+      "assertions": [
+        "Output identifies at least 3 of Balfour's anti-patterns explicitly (copy-the-playbook, funnel-only, single-leg North Star, Danger Zone ARPU, TAM-without-math, growth-marketer-as-solution)",
+        "Output diagnoses the ARPU/CAC as Danger Zone math",
+        "Output challenges the 'copy Notion's playbook' framing",
+        "Output identifies MAU as a single-leg North Star trap",
+        "Output notes that no growth loops are specified — only a funnel",
+        "Output cites Balfour or specific essays (Four Fits, Growth Loops, Danger Zone, or North Star)",
+        "Output offers concrete reframes (not just critique)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-growth-hacks-framing",
+      "prompt": "What are the top growth hacks we should try to unlock faster growth? Give me a list of tactical things that have worked for other companies.",
+      "expected_output": "Output should push back on the 'growth hacks' framing in a Balfour-consistent way — either mentioning that Balfour explicitly rejects the tactics-first framing, that growth is a system, that copying tactics from other companies doesn't work when fit chains differ, and redirecting to a Four Fits diagnostic. Voice should be patient and analytical (Balfour-like), not combative. Should cite Balfour.",
+      "expected_output_notes": "This is the voice-guard test — the skill should NOT hand over a list of growth hacks. It should reframe.",
+      "assertions": [
+        "Output pushes back on the 'growth hacks' framing rather than delivering a hacks list",
+        "Output introduces the systems framing (Four Fits + Growth Loops) as the alternative",
+        "Output explicitly names that copying tactics from other companies doesn't transfer when fit chains differ",
+        "Output redirects the user to run a Four Fits diagnostic on their own situation",
+        "Output cites Balfour, Reforge, or specific essays",
+        "Response tone is analytical/patient (Balfour-like) rather than combative",
+        "Output does NOT deliver a list of tactical growth hacks"
+      ],
+      "files": []
+    }
+  ]
+}

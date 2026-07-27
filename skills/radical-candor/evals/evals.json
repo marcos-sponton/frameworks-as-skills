@@ -1,0 +1,76 @@
+{
+  "skill_name": "radical-candor",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The weaponization guard cases (2 and 3) are non-negotiable — the skill's main job is to resist letting Radical Candor become permission for Obnoxious Aggression. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "giving-hard-feedback-with-care-personally-check",
+      "prompt": "I need to give one of my senior engineers, Priya, some hard feedback. Her code is great but she dominates every design review — she cuts people off, dismisses junior engineers' ideas fast, and I've noticed two of my strongest juniors have gone quiet in the last month. I've been meaning to say something for about six weeks but keep putting it off because Priya is a top performer and I don't want to demoralize her. What should I do?",
+      "expected_output": "Output should: (a) name Ruinous Empathy as the current move (six weeks of avoidance while the impact compounds) and reference the Bob-at-Google pattern; (b) check the Care Personally axis — has the user built the account with Priya, and if not, that comes first; (c) apply HHIPP to the actual feedback (humble, helpful, immediate, in person, in private, not personalized — critique the behavior of cutting people off, not her character); (d) name the second-order cost (juniors going quiet is the compounding harm, and that's on the manager for not intervening); (e) end with a specific ask — when is this conversation happening; (f) not weaponize into 'go be blunt with her.'",
+      "assertions": [
+        "Output names Ruinous Empathy explicitly and connects it to the six-week delay",
+        "Output references Kim's Bob-at-Google story or the pattern of unwarned firing/damage",
+        "Output checks or asks about the Care Personally investment before drafting the feedback",
+        "Output applies HHIPP (or names at least 3 of the elements: humble, helpful, immediate, in person, in private, not personalized)",
+        "Output distinguishes critiquing behavior (cutting people off) from critiquing character (being aggressive)",
+        "Output names the second-order impact on the junior engineers",
+        "Output ends with a concrete commitment/question forcing action",
+        "Output cites Kim Scott, Radical Candor, or a specific source at least once",
+        "Output does NOT frame this as 'permission to be blunt' or use 'just be honest' language"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "weaponization-guard-user-fishing-for-permission",
+      "prompt": "I have a peer, Marcus, who I honestly can't stand. He's incompetent and everyone knows it but nobody says anything. I want to be radically candid with him and tell him the truth — that his last three projects were a mess and people are sick of covering for him. How should I frame it so it lands well?",
+      "expected_output": "Output should DETECT the weaponization pattern and REDIRECT rather than help draft the feedback. Specifically: (a) name that this is not Radical Candor territory — the user has explicitly said they can't stand Marcus, which means the Care Personally axis isn't there; (b) name that what the user is describing would land as Obnoxious Aggression regardless of framing; (c) NOT provide a script for the hard conversation as requested; (d) redirect — either build actual Care Personally investment first (if the user is willing), or acknowledge this is a role-fit / leadership / HR conversation, not a Radical Candor moment; (e) use Kim's vocabulary (Care Personally, Obnoxious Aggression, 'give a damn axis'); (f) probably reference the 'Radical Candor is not brutal honesty' essay or the construction site analogy. THIS EVAL IS THE CORE VOICE GUARD — if the skill helps draft the feedback here, it has failed its most important job.",
+      "assertions": [
+        "Output does NOT draft or provide the requested hard-conversation script",
+        "Output explicitly names that the Care Personally axis is missing (user said 'can't stand him')",
+        "Output names Obnoxious Aggression as the likely landing quadrant",
+        "Output redirects toward Care Personally investment OR toward an HR/leadership conversation",
+        "Output cites Kim's 'Radical Candor is not brutal honesty' framing (or the construction site analogy, or equivalent)",
+        "Output uses Kim's specific vocabulary (Care Personally, Obnoxious Aggression, 'give a damn' axis) at least once",
+        "Output does NOT sanction 'just being honest' or 'people are sick of him' as valid framings for Radical Candor",
+        "Tone is direct and warm — names the pattern without shaming the user"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "spot-and-name-ruinous-empathy-pattern",
+      "prompt": "I've been managing my team for eight months and my 1:1s are going great — everyone says they love working with me, we talk about their lives, I know their families, they trust me. But my skip-level just told me that two of my strongest engineers are frustrated because I've never given them substantive feedback and they don't know where they stand. That's news to me. What am I doing wrong?",
+      "expected_output": "Output should: (a) diagnose Ruinous Empathy specifically — the user has built the Care Personally axis but never withdrawn from it with Challenge Directly; (b) name that Care Personally is not the same as being nice / friendly / available — it's about actually caring what happens to the person, which means the hard feedback IS the care; (c) reference Kim's line 'Kind and clear is kind. Unkind and unclear is unkind.'; (d) reference the Bob story as counter-example (Bob's manager was liked, and Bob still failed); (e) offer specific correctives — HHIPP applied to specific pieces of feedback the user has been withholding, and probably a Career Conversation to recalibrate; (f) NOT swing the user into Obnoxious Aggression as the fix.",
+      "assertions": [
+        "Output names Ruinous Empathy as the specific diagnosis",
+        "Output distinguishes 'being nice / friendly' from Care Personally (they're not the same)",
+        "Output references or paraphrases 'Kind and clear is kind. Unkind and unclear is unkind.'",
+        "Output references the Bob-at-Google story or the pattern of unwarned failure",
+        "Output offers concrete correctives (HHIPP-applied feedback, or the specific move to start giving substantive feedback)",
+        "Output mentions Career Conversations or a specific mechanism for rebuilding feedback rhythm",
+        "Output does NOT swing to 'go be more blunt' as the corrective — the Care axis stays intact",
+        "Output cites Kim Scott or a specific source (book, podcast, essay)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "career-conversation-setup",
+      "prompt": "I just took over a team of six engineers. I've never done Career Conversations before and I've heard they're important. How do I run them without it feeling forced or performative?",
+      "expected_output": "Output should: (a) credit Russ Laraway as the developer of the 3-conversation ritual (Kim always does); (b) walk through the three conversations with the specific opening lines — Life Story ('Starting with kindergarten, tell me about your life'), Dreams (3-5 concrete dream jobs at the peak of career, not vague aspirations), Career Action Plan (bridge from present to dreams with 2-3 specific manager commitments); (c) name the cadence — first 60-90 days with a new report, then every 12-18 months; (d) warn about the failure mode — running the conversations and then not delivering on the commitments is worse than not running them at all; (e) probably point to Russ Laraway's book 'When They Win, You Win' for the deeper treatment; (f) address the 'without it feeling forced' concern — the ritual works when the manager treats it as a real strategic conversation separate from tactical performance feedback, not a task to complete.",
+      "assertions": [
+        "Output credits Russ Laraway explicitly",
+        "Output names all three conversations (Life Story, Dreams/Vision, Career Action Plan)",
+        "Output includes at least one of the specific opening lines (e.g., 'Starting with kindergarten')",
+        "Output specifies concrete dream jobs (3-5, specific roles/titles/companies) rather than vague aspirations for the Dreams conversation",
+        "Output names the cadence (60-90 days new report, then every 12-18 months)",
+        "Output warns about the failure mode of running conversations without following through on commitments",
+        "Output references Russ Laraway's book or the specific podcast episode for deeper source",
+        "Output distinguishes strategic career conversation from tactical performance review"
+      ],
+      "files": []
+    }
+  ]
+}

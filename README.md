@@ -7,15 +7,18 @@ A growing collection of agent skills that package management and product framewo
 **Why:** when I invoke a well-known framework by name (e.g., "let's do Playing to Win on this"), the response the assistant gives me by default is thin — it knows the book but not the twelve years of refinements the author has published since. These skills close that gap: primary text + post-publication material + practitioner heuristics + the author's voice, structured so the assistant can be a competent thinking partner in the framework, not just a summarizer.
 
 <!-- SKILLS_INDEX_START -->
-**What's here** — 8 skills, each packages one framework:
+**What's here** — 16 skills, each packages one framework:
 
 **Strategy**
 - ✅ **[7 Powers](skills/7-powers/)** — Hamilton Helmer's taxonomy of durable competitive advantage (Benefit + Barrier, 3 S's, Statics vs. Dynamics)
 - ✅ **[Good Strategy Bad Strategy](skills/good-strategy-bad-strategy/)** — Richard Rumelt's kernel (diagnosis / guiding policy / coherent action) + The Crux + "action agenda" reframe
+- ✅ **[Pattern Breakers](skills/pattern-breakers/)** — Mike Maples Jr's inflections + insights + movements for breakthrough startups — non-consensus bets, backcasting, living in the...
 - ✅ **[Playing to Win](skills/playing-to-win/)** — Roger Martin's 5-question strategy cascade
+- ✅ **[V2MOM](skills/v2mom/)** — Marc Benioff's Vision-Values-Methods-Obstacles-Measures — obstacles as the load-bearing element, order matters, individual/team...
 
 **Product & discovery**
 - ✅ **[Escaping the Build Trap](skills/escaping-the-build-trap/)** — Melissa Perri's product-org diagnostic (Four Dimensions + Three Pillars of Product Ops)
+- ✅ **[Working Backwards](skills/working-backwards/)** — Bill Carr + Colin Bryar's Amazon method (PR/FAQ, 6-pager, silent reading, Single-Threaded Leader, input metrics)
 
 **Positioning & narrative**
 - ✅ **[Obviously Awesome](skills/obviously-awesome/)** — April Dunford's positioning method (5 components + 8-step Sales Pitch)
@@ -24,6 +27,19 @@ A growing collection of agent skills that package management and product framewo
 **Sensemaking & decisions**
 - ✅ **[Cynefin](skills/cynefin/)** — Dave Snowden's sensemaking framework (5 domains, constraints, aporetic turn, Estuarine)
 - ✅ **[Thinking in Bets](skills/thinking-in-bets/)** — Annie Duke's decision toolkit (resulting, kill criteria, calibration, monkeys & pedestals)
+
+**Sales**
+- ✅ **[Challenger Sale + JOLT](skills/challenger-sale/)** — Matt Dixon's Challenger + JOLT Effect — Challenger earns the meeting, JOLT closes against no-decision; not aggression, not pres...
+
+**Management & communication**
+- ✅ **[Radical Candor](skills/radical-candor/)** — Kim Scott's Care Personally + Challenge Directly matrix — with an explicit guard against weaponization as "brutal honesty"
+- ✅ **[Radical Focus](skills/radical-focus/)** — Christina Wodtke's OKRs done right — weekly cadence, team-level, Team Health Monitor, one Objective at a time
+
+**Growth**
+- ✅ **[Four Fits](skills/four-fits/)** — Brian Balfour's Product-Market-Channel-Model fit chain + growth loops (compounding, closed) as alternative to funnels
+
+**Engineering**
+- ✅ **[DORA / Accelerate](skills/dora-accelerate/)** — Nicole Forsgren's DORA metrics + capabilities + SPACE + DevEx — evidence-based, org-level (never individual performance)
 
 More coming — see the roadmap below.
 <!-- SKILLS_INDEX_END -->

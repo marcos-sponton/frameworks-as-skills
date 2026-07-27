@@ -1,0 +1,78 @@
+{
+  "skill_name": "v2mom",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "draft-company-v2mom-from-scratch",
+      "prompt": "I'm the CEO of a 30-person Series A dev-tools startup, $4M ARR, growing 200% YoY. Fiscal year starts next month. I've never written a V2MOM before and my team is asking me for one. Help me draft it. We build an open-source-first observability platform for AI-native applications; our wedge is that we handle LLM traces natively where Datadog and Honeycomb don't. Our biggest tension is that half the team wants to double down on the open-source community and half wants to focus on enterprise sales conversion. Hiring is our permanent bottleneck.",
+      "expected_output": "Output should: (a) walk through the 5 elements in Benioff's order (V → V → M → O → M) — never rearranging; (b) explicitly rank the values, not present a flat list; (c) name Obstacles as a first-class section (not skip it), and pair each obstacle to a countermeasure/method; (d) pair every measure to a method; (e) address the OSS-vs-enterprise tension directly through the ranked values (which wins when they conflict?); (f) name hiring as an obstacle with a specific countermeasure; (g) cite Benioff or Salesforce at least once; (h) keep the total draft roughly one page; (i) end by naming refresh cadence (quarterly + mid-year).",
+      "assertions": [
+        "Output includes all 5 elements: Vision, Values, Methods, Obstacles, Measures — in that exact order",
+        "Values are explicitly ranked/numbered, not presented as a flat list",
+        "Obstacles section is present and non-empty",
+        "Every obstacle has a paired countermeasure or is linked to a specific method that addresses it",
+        "Every measure is linked to a method (not floating)",
+        "Output addresses the OSS-vs-enterprise tension through the ranked values, not by picking one arbitrarily",
+        "Output cites Marc Benioff, Salesforce, Behind the Cloud, Trailblazer, or Salesforce Trailhead at least once",
+        "Output mentions refresh cadence (quarterly refresh or mid-year review) at least once",
+        "Output does NOT recommend running V2MOM in parallel with OKRs as two authoritative docs",
+        "Output does NOT rearrange the order (e.g., putting Measures/Metrics before Methods)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-doc-that-skipped-obstacles",
+      "prompt": "Here's the 'strategy doc' our leadership team wrote at the offsite last week. Please critique it against V2MOM.\n\n---\nOUR PLAN — FY27\n\nVision: Be the leading platform for AI-native RevOps.\n\nValues: Customer obsession. Innovation. Speed. Craft. Diversity. Ownership.\n\nMethods:\n1. Launch Enterprise tier by Q2\n2. Expand into EMEA\n3. Ship AI copilot\n4. Improve onboarding NPS\n5. Reduce churn\n6. Grow ARR to $40M\n7. Build brand awareness\n\nMeasures:\n- ARR: $20M → $40M\n- NPS: 35 → 55\n- Churn: 15% → 8%\n- Enterprise deals: 5 → 30\n---",
+      "expected_output": "Output should diagnose that this is not a V2MOM — it's a mission-and-goals list wearing the framework's headings. Specifically it should: (a) name that Obstacles is entirely missing (the load-bearing element V2MOM was built to include); (b) name that Values are a flat list of six words with no ranking, no descriptions, and no decision guidance; (c) name that Vision fails the specificity test ('leading platform' is not customer-recognizable); (d) name that some 'methods' are actually measures (grow ARR to $40M is a measure, not a method); (e) name that some methods conflict (grow fast AND reduce churn AND improve NPS may pull against each other); (f) offer to convert to a real V2MOM with the ordering restored and Obstacles added; (g) reference Benioff or Salesforce Trailhead at least once.",
+      "assertions": [
+        "Output diagnoses this as not a V2MOM (or as an incomplete/degraded V2MOM)",
+        "Output explicitly names that Obstacles section is missing and calls this out as the distinctive failure",
+        "Output names that Values are unranked and gives a reason why ranking matters (decision guidance when values conflict)",
+        "Output identifies that at least one 'method' is actually a measure/outcome in disguise",
+        "Output names that Vision lacks specificity or fails a recognizability test",
+        "Output cites Benioff, Salesforce, Trailhead, Behind the Cloud, or Trailblazer at least once",
+        "Output offers concrete moves to fix, not just critique",
+        "Output does NOT recommend adding more values without insisting on ranking"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-defaults-to-OKRs",
+      "prompt": "We've been running OKRs for 3 years. It's mostly fine but it feels mechanical and no one references the objectives, they just look at the KRs. Should I just switch to V2MOM?",
+      "expected_output": "Output should apply V2MOM's opinionated voice and heuristics — not act as neutral consultant. Specifically it should: (a) diagnose that the user's real problem is OKRs missing Values (context for why the objectives matter) and Obstacles (nowhere to name what's blocking); (b) explain that V2MOM subsumes OKRs (Measures ≈ KRs); (c) explicitly warn against running both in parallel as authoritative docs; (d) reference Benioff's framing (biggest secret of Salesforce's success, values create value, etc.); (e) NOT be neutral 'here are the pros and cons of each' consultant-speak — the skill is opinionated in favor of V2MOM's completeness; (f) still acknowledge switching cost and give an honest recommendation grounded in the specific user context; (g) touch on cadence — V2MOM only works if referenced weekly in 1:1s and refreshed quarterly.",
+      "expected_output_notes": "Voice should be warm-but-firm in Benioff's register. Not saccharine (no 'Values matter!' without a specific decision implication). Not neutral-consultant either.",
+      "assertions": [
+        "Output diagnoses the user's OKR fatigue as specifically missing Values and Obstacles",
+        "Output explains that V2MOM subsumes OKRs and warns against running both in parallel",
+        "Output cites Marc Benioff, Salesforce, or a specific Benioff quote/source at least once",
+        "Output mentions cadence (weekly reference in 1:1s, quarterly refresh, or mid-year review)",
+        "Output is opinionated in favor of V2MOM's completeness rather than presenting as neutral pros/cons",
+        "Output acknowledges switching cost or team-specific context honestly (not blind advocacy)",
+        "Output ends with a specific next action the user can take"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "cascade-individual-team-company",
+      "prompt": "Our CEO just published the company V2MOM. Here it is:\n\n---\nVISION: Become the default platform for RevOps teams in 200-2000-person SaaS orgs adopting AI-native workflows in FY27.\n\nVALUES:\n1. Trust — customers' data is sacred; we ship secure or we don't ship.\n2. Customer intimacy — every product decision starts from a real customer conversation.\n3. Speed with judgment — we ship fast, but not faster than we can explain.\n4. Craft — code, docs, design.\n\nMETHODS:\n1. Ship AI copilot GA by end of Q2.\n2. Grow ARR from $30M to $60M with 60/40 mid-market/enterprise mix.\n3. Publish 30 case studies from real customers by end of Q4.\n4. Migrate the platform to the new agent-native architecture.\n5. Hire 30 engineers, 10 sales, 6 CS.\n\nOBSTACLES:\n- The AI-native RevOps segment is being crowded by three well-funded competitors in H2.\n- Our platform migration will slow feature velocity for 4 months.\n- Enterprise sales cycle is unclear given we've mostly sold mid-market.\n\nMEASURES:\n- $60M ARR by end of FY27.\n- AI copilot: 60% of active accounts using it monthly by end of Q3.\n- 30 published case studies by end of Q4.\n- Migration complete without customer-facing regression by end of Q3.\n- Headcount plan on schedule ± 10%.\n---\n\nI lead Engineering (35 people, growing to 65). Help me draft my team's V2MOM cascading from this. Then help me draft my own personal V2MOM as VP Eng.",
+      "expected_output": "Output should produce TWO V2MOMs: (1) an Engineering team V2MOM that visibly cascades from corporate (advances specific corporate methods, translates corporate values into eng-team-specific working values, names eng-specific obstacles, and measures that roll up to corporate measures), and (2) a personal VP Eng V2MOM that is specifically about the VP Eng's role in advancing the team's methods, not a clone of the team V2MOM. Both should: (a) preserve the V-V-M-O-M order; (b) have ranked values; (c) pair every obstacle to a countermeasure; (d) pair every measure to a method; (e) reference Benioff/Salesforce; (f) explicitly note the cascade — how each level advances the level above; (g) not copy-paste from the corporate V2MOM.",
+      "assertions": [
+        "Output produces both a Team V2MOM AND an Individual/VP V2MOM (two distinct artifacts)",
+        "Team V2MOM's methods visibly advance specific corporate methods (with references)",
+        "Team V2MOM's measures roll up into corporate measures without merely duplicating them",
+        "Individual VP V2MOM is distinct from the Team V2MOM (not a clone or paste)",
+        "Both V2MOMs preserve V-V-M-O-M order",
+        "Both V2MOMs have ranked/numbered values",
+        "Both V2MOMs pair obstacles to countermeasures or specific methods",
+        "Output cites Benioff, Salesforce, or Trailhead at least once",
+        "Output explicitly notes the cascade principle (either by referencing Salesforce cascade or by making the alignment explicit)"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "skill_name": "working-backwards",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "draft-a-pr-faq-from-scratch",
+      "prompt": "I'm a PM at a Series C fintech (~250 people, $30M ARR). We're considering building an in-app expense-approval workflow for our SMB customers. Right now they export a CSV, upload to their accounting tool, and someone manually approves each line. Our engineering team is excited because we already have the transaction data and could ship an MVP in 6 weeks. Help me think about whether we should build this using Bill Carr and Colin Bryar's Working Backwards method — help me draft the PR/FAQ.",
+      "expected_output": "Output should: (a) push back on the skills-forward framing (starting from 'we already have the data' is exactly the failure mode the PR/FAQ is designed to prevent); (b) force the customer question to be answered specifically before drafting anything (who exactly, what atomic need, why now, how would we know we solved it); (c) walk through the Press Release structure (heading, subheading, summary, problem, solution, quotes, getting started); (d) prompt for both External and Internal FAQ sections; (e) name the risk that most PR/FAQs get rejected and that's the point; (f) cite Carr, Bryar, or the book at least once; (g) NOT jump straight to writing the doc without first testing the customer-need articulation.",
+      "assertions": [
+        "Output challenges the skills-forward framing ('engineering is excited because we already have the data') using attribution",
+        "Output forces the customer question to be answered specifically before drafting the press release",
+        "Output names all Press Release sections (heading, subheading, summary, problem, solution, quotes, getting started)",
+        "Output distinguishes External FAQ from Internal FAQ and names what belongs in each",
+        "Output explicitly notes that most PR/FAQs are and should be rejected",
+        "Output cites Bill Carr, Colin Bryar, the book, workingbackwards.com, or a specific podcast/blog source at least once",
+        "Output does NOT jump straight to drafting the press release without validating the customer-need articulation",
+        "Output uses the term 'PR/FAQ' (uppercase, with slash) — not 'PRFAQ' or 'PR faq'"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-a-doc-that-is-really-a-feature-announcement",
+      "prompt": "Please critique this PR/FAQ I wrote against the Working Backwards method.\n\n---\n\nPRESS RELEASE: Introducing SmartApprove, the World's Most Advanced Expense Approval Engine\n\nToday we're excited to announce SmartApprove, a revolutionary AI-powered expense approval workflow that will transform how businesses handle their finances. Built on our industry-leading transaction data platform, SmartApprove leverages cutting-edge machine learning to deliver unparalleled efficiency gains.\n\nSmartApprove seamlessly integrates with our existing platform to deliver a world-class expense management experience. Customers will love the intuitive interface, powerful automation, and best-in-class security.\n\n\"SmartApprove is a game-changer,\" said our CEO. \"It's the future of expense management.\"\n\nFAQ:\n\nQ: When is it available?\nA: Q3 2026.\n\nQ: How much does it cost?\nA: Included in Premium tier.\n\nQ: What's the technology stack?\nA: Python, React, PostgreSQL, GPT-4.\n\n---\n\nReview this against Working Backwards.",
+      "expected_output": "Output should identify that this is NOT a PR/FAQ — it's a marketing announcement with a hyperbole-riddled press release, a wishy-washy FAQ, and no actual customer-need articulation. Specifically it should: (a) name the hyperbole ('revolutionary', 'world's most advanced', 'game-changer', 'world-class', 'best-in-class') and cite Carr's rule about factual writing without hyperbole; (b) note there is no problem paragraph — the customer's specific problem is not named; (c) note the customer is not named specifically at all; (d) note the solution starts from company capabilities ('built on our platform') not customer need; (e) note there is no Internal FAQ (finance, ops, technical strategic concerns are missing); (f) note the External FAQ is thin — no comparison to alternatives, no adoption question, no TAM; (g) probably cite Carr's Lenny 2023 quote about being factual and data-rich, not hyperbolic.",
+      "assertions": [
+        "Output identifies this as a marketing announcement / feature pitch rather than a real PR/FAQ",
+        "Output names the hyperbole problem with at least 2 specific examples ('revolutionary', 'world-class', 'game-changer', 'best-in-class', 'unparalleled')",
+        "Output cites Bill Carr's rule about factual, non-hyperbolic writing (with attribution)",
+        "Output identifies that the customer is not named specifically",
+        "Output identifies that the problem paragraph is missing or vague",
+        "Output identifies that the solution is skills-forward (starts from company capabilities, not customer need)",
+        "Output identifies that the Internal FAQ is missing or that the FAQs don't do the interrogation job",
+        "Output cites at least one specific source (book, blog post, or podcast episode)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-wants-shortcut",
+      "prompt": "We're a fast-moving team and we don't have three months to write a PR/FAQ before shipping. Can you just help me put together an Amazon-style memo template we can drop into our team? We already do customer research so the customer-first thing is covered.",
+      "expected_output": "Output should push back on the shortcut framing in a Carr-consistent way — measured, not preachy, but firm. Specifically it should: (a) name that 'template alone' isn't the mechanism (the review discipline is); (b) reference Carr's 'slow is smooth and smooth is fast' tagline; (c) name that customer research feeding into a document is not the same as the PR/FAQ review discipline; (d) redirect the user toward either committing to the mechanism honestly (with CEO air cover) or considering a lighter shape more appropriate for their team's stage (Continuous Discovery / Lean Startup); (e) NOT sell adoption as easy or offer a 'lite' version that dilutes the mechanism.",
+      "assertions": [
+        "Output pushes back on the 'just give me the template' framing rather than complying with it",
+        "Output cites Bill Carr's 'slow is smooth and smooth is fast' or an equivalent shortcut-resistant quote",
+        "Output distinguishes the template from the mechanism (review discipline, silent reading, most PR/FAQs rejected)",
+        "Output either redirects to a lighter framework (Lean Startup, Continuous Discovery) OR names what full-mechanism commitment would require",
+        "Output does NOT sell adoption as easy or promise a frictionless transformation",
+        "Response tone is measured and operator-like (not preachy or contrarian)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "diagnose-fractional-stl",
+      "prompt": "We just named a Single-Threaded Leader for our new AI-powered onboarding initiative. Sarah is going to lead it — she's a fantastic senior PM. She'll continue leading her current two product areas (about 60% of her time) and take on the AI onboarding initiative (about 40%). We've assigned two engineers and a designer to help, though they're also supporting other teams. I think we're set up well — thoughts?",
+      "expected_output": "Output should identify that this is NOT a Single-Threaded Leader — it's a fractionally-threaded lead with a fancy title. Specifically it should: (a) name that STL requires zero competing responsibilities; (b) name that STL requires dedicated (not matrixed) cross-functional resources; (c) reference Bill Carr's quote about creating teams that can stand alone with dedicated cross-functional resources; (d) name that this is the pre-STL state Amazon rejected around 2004-2005; (e) offer the choice honestly — either dedicate Sarah fully (and dedicate the eng/design resources), or don't call it an STL; (f) probably reference the coordination-tax framing from the March 2026 firm blog.",
+      "assertions": [
+        "Output identifies that this is NOT a real STL",
+        "Output names at least 2 of the mandatory STL conditions being violated (one leader / zero competing / dedicated resources / separable structure)",
+        "Output cites Bill Carr, the book, or a specific firm source when explaining the STL mechanism",
+        "Output offers a specific concrete choice (dedicate Sarah fully OR don't call it STL)",
+        "Output does NOT congratulate the user or accept the fractional-STL as 'set up well'",
+        "Output uses the STL terminology correctly (STL / STO distinction if relevant)"
+      ],
+      "files": []
+    }
+  ]
+}
