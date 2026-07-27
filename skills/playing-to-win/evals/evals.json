@@ -1,0 +1,53 @@
+{
+  "skill_name": "playing-to-win",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "startup-strategy-cascade-from-scratch",
+      "prompt": "I run a Series A B2B SaaS in the RevOps space. ~40 people, $8M ARR, growing 100% YoY but retention is ~85% (leaky). We're deciding between doubling down on mid-market (200-1000 employees) where we've had traction, or moving up-market to Fortune 1000 where a few champions are pulling us. Help me think through this using Playing to Win. My cofounder wants to do both.",
+      "expected_output": "Output should: (a) walk through the 5 questions with the mid-market vs. up-market decision as a matched WTP–HTW pair, not sequentially; (b) explicitly challenge the 'do both' impulse using Martin's stuck-in-the-middle critique; (c) apply the can't/won't test to each HTW candidate; (d) probably suggest running WWHTBT on both options + status quo; (e) cite Martin/Playing to Win as source; (f) NOT default to SWOT or generic advice.",
+      "assertions": [
+        "Output names all 5 questions of the cascade (winning aspiration, where to play, how to win, capabilities, management systems)",
+        "Output treats WTP and HTW as a matched pair rather than sequential",
+        "Output challenges the 'do both' framing using Martin's stuck-in-the-middle or focus critique with attribution",
+        "Output applies or references the can't/won't test for how-to-win",
+        "Output cites Roger Martin, Playing to Win, or a specific source (essay/podcast/book) at least once",
+        "Output does NOT recommend SWOT",
+        "Output does NOT recommend OKRs as the strategic answer",
+        "Output ends with a question that forces the user to make a choice"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-existing-strategy-doc-with-anti-patterns",
+      "prompt": "Here's the strategy section from our company's annual planning doc. Please critique it against Playing to Win.\n\n---\nOUR STRATEGY (FY 2027)\n\nVision: To be the most innovative platform in our category.\n\nMission: Empower every business to unlock their data potential.\n\nStrategic priorities:\n1. Accelerate growth in North America\n2. Expand into EMEA\n3. Launch enterprise tier\n4. Improve customer NPS\n5. Reduce churn\n6. Invest in AI capabilities\n7. Build a stronger brand\n8. Achieve profitability\n\nKey metrics:\n- ARR: $50M → $100M\n- NPS: 30 → 50\n- Gross margin: 65% → 75%\n---",
+      "expected_output": "Output should identify that this is NOT a Playing to Win strategy — it's a mission statement + a priority list + KPI targets. Specifically it should: (a) name that 'most innovative' fails the coin-flip test; (b) name that 8 priorities = 0 priorities; (c) name growth-AND-profitability as conflicting; (d) name that all 5 cascade questions are effectively unanswered — no WTP specificity, no HTW theory, no capabilities, no management systems; (e) probably reference Martin's 'Big Lie of Strategic Planning' or 'Stop Letting OKRs Masquerade as Strategy'.",
+      "assertions": [
+        "Output diagnoses this as strategic planning / a priority list rather than a strategy in Martin's sense",
+        "Output explicitly names at least 2 of these anti-patterns: 'most innovative' coin-flip test failure, 8+ priorities pathology, growth AND profitability conflict, mission-as-strategy substitute",
+        "Output identifies that WTP is missing specificity",
+        "Output identifies that HTW is missing (no theory of how they'd win)",
+        "Output cites at least one specific Martin source (book, essay, podcast, or HBR piece)",
+        "Output offers concrete moves to fix (not just critique)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "voice-check-user-invokes-execution",
+      "prompt": "We've done the strategy. Now the hard part is execution. Help me think about how to execute this well.",
+      "expected_output": "Output should push back on the word 'execution' in a Martin-consistent way — either mentioning that Martin explicitly rejects the term, offering the alternative (distributed strategy choices / chartering), and walking the user through the chartering method. Voice should be direct and specific, not soft. Should cite Martin.",
+      "assertions": [
+        "Output pushes back on the word 'execution' rather than accepting it uncritically",
+        "Output introduces chartering or distributed strategy choices as Martin's alternative",
+        "Output walks through the six elements of chartering, or the Responsibility Ladder, or at least names them",
+        "Output cites Martin's chartering essays or the specific Medium essay",
+        "Response tone is direct/blunt (Martin-like) rather than hedged"
+      ],
+      "files": []
+    }
+  ]
+}

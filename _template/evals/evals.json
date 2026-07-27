@@ -1,0 +1,19 @@
+{
+  "skill_name": "{{skill-slug}}",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "{{descriptive-name-e-g-startup-strategy-cascade}}",
+      "prompt": "{{a realistic user prompt — 3-5 sentences of situation + a task involving the framework}}",
+      "expected_output": "{{a description of what a good output looks like — key elements that should appear, tone, structure}}",
+      "assertions": [
+        "{{objectively verifiable element 1 — e.g., 'output names all 5 questions of the cascade'}}",
+        "{{element 2 — e.g., 'output challenges the user's answer to at least one question using an anti-pattern from HEURISTICS.md'}}",
+        "{{element 3 — e.g., 'output cites Roger Martin as source when introducing a framework element'}}"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.drafts/
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local

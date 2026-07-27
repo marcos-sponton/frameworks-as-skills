@@ -1,0 +1,70 @@
+{
+  "skill_name": "good-strategy-bad-strategy",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "diagnose-when-user-brings-a-goal",
+      "prompt": "Our board wants us to double ARR next year from $20M to $40M. Help me build the strategy to get there.",
+      "expected_output": "Output should refuse to accept the target as the strategy. It should redirect to diagnosis: what's the challenge that makes doubling ARR hard? Repeat 'why is that hard?' at least once. Should introduce the kernel (diagnosis / guiding policy / coherent action), find the crux, and probably distinguish 'action agenda' from 'goal'. Tone should be patient-professor Rumelt, not aggressive.",
+      "assertions": [
+        "Output does NOT accept 'double ARR' as the strategy",
+        "Output redirects to diagnosis: what's the challenge that makes doubling ARR hard",
+        "Output uses the phrase 'why is that hard' or an equivalent Rumelt-style diagnostic prompt",
+        "Output introduces the kernel (diagnosis / guiding policy / coherent action)",
+        "Output cites Rumelt (Good Strategy Bad Strategy, The Crux, or a specific source)",
+        "Response tone is patient and diagnostic rather than jumping to prescription",
+        "Output does NOT default to OKRs, SWOT, or a 5F template"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-fluff-strategy-doc",
+      "prompt": "Here's the strategy section from our annual planning doc:\n\n---\nOUR FY27 STRATEGY\n\nWe are pursuing customer-centric intermediation, leveraging our differentiated capabilities to unlock synergistic growth opportunities across the value chain.\n\nOur strategic priorities:\n1. Accelerate revenue growth\n2. Expand our addressable market\n3. Improve customer satisfaction\n4. Enhance operational excellence\n5. Invest in innovation\n6. Build talent capabilities\n7. Strengthen ESG posture\n\nKey metrics:\n- Revenue: 2× in 3 years\n- Gross margin: +500 bps\n- Employee NPS: >50\n---\n\nPlease critique this against Rumelt's framework.",
+      "expected_output": "Output should call out this as textbook 'bad strategy' per Rumelt. Should perform the fluff-translation move on 'customer-centric intermediation'. Should name the '7 priorities = 0 priorities' pathology. Should identify the growth AND margin conflict. Should point out no diagnosis, no guiding policy, no coherent action — just goals and buzzwords. Should cite specific Rumelt sources (GSBS chapters on fluff, priorities, bad strategy).",
+      "assertions": [
+        "Output performs a fluff-translation move (translates 'customer-centric intermediation' or similar to plain content)",
+        "Output identifies the '7 priorities' as the priority-list anti-pattern with attribution",
+        "Output identifies growth AND margin as conflicting objectives (null-set / bundle-of-ambitions pattern)",
+        "Output identifies missing diagnosis (no explanation of why any of this is hard)",
+        "Output identifies missing guiding policy (goals are not policy)",
+        "Output cites Rumelt or GSBS at least once with specific reference",
+        "Output offers a concrete alternative — how to rewrite this as an action agenda"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "find-crux-among-many-challenges",
+      "prompt": "I run a 60-person Series B startup. We're facing: (1) churn is climbing from 6% to 9% quarterly, (2) our CTO is burning out, (3) two enterprise customers are threatening to leave, (4) our AI-powered competitor just raised $50M, (5) we're behind on our sales pipeline, (6) our top engineer is being aggressively recruited, (7) our CFO wants to raise a bridge round. Help me figure out where to focus.",
+      "expected_output": "Output should apply the crux-finding method — not just pick the loudest challenge. Should apply the importance × addressability filter. Should probably identify that the churn + enterprise customer threats might be connected symptoms of the same underlying crux (product/positioning/onboarding failure), and that treating them as separate items misses the pattern. Should refuse to enumerate priorities without diagnosing structural relationships. Should probably invoke 'why is that hard' on the top candidates. Should cite The Crux or GSBS.",
+      "assertions": [
+        "Output applies importance × addressability filter, not just importance",
+        "Output looks for underlying structural relationships between the listed challenges",
+        "Output does NOT produce a ranked list of all 7 items as the answer",
+        "Output identifies at least one candidate crux and explains why it's pivotal AND addressable",
+        "Output uses 'why is that hard' or equivalent diagnostic probe on the top candidate",
+        "Output cites Rumelt / The Crux / GSBS at least once",
+        "Output does NOT produce a management-consultant style 'here are your 3 priorities' output"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-user-pushes-for-forecast",
+      "prompt": "Give me a strategic forecast for our industry over the next 5 years and tell me what strategy will win.",
+      "expected_output": "Output should push back on the forecasting frame in a Rumelt-consistent way — 'he who forecasts the future lies, even if he tells the truth' or equivalent. Should reframe from prediction to diagnosis of current structural challenges. Voice should be patient-professor, dry, allergic to prediction-as-strategy. Should NOT actually produce a five-year forecast dressed as strategy.",
+      "assertions": [
+        "Output pushes back on forecast-as-strategy rather than delivering one",
+        "Output uses Rumelt's framing (prediction ≠ strategy, or the Arab proverb about forecasting) or equivalent",
+        "Output reframes to diagnosis of current structural conditions",
+        "Response tone is patient and professorial, not aggressive",
+        "Output does NOT produce a 5-year prediction dressed as strategy",
+        "Output cites Rumelt or a specific source"
+      ],
+      "files": []
+    }
+  ]
+}
