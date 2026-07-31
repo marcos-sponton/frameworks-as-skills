@@ -1,0 +1,92 @@
+{
+  "skill_name": "inspired",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval. The specific failure this skill guards against is defaulting to *Inspired* alone (2008/2018 book) and ignoring the sixteen years of subsequent SVPG material (*Empowered* 2020, *Transformed* 2024, and the 2024–2026 essay stream).",
+  "evals": [
+    {
+      "id": 1,
+      "name": "feature-team-diagnosis-and-fix",
+      "prompt": "Our 12-person product team shipped 47 features last quarter — a record. Velocity is up. But retention dropped 4 points, activation dropped 8 points, and our top-tier accounts are asking why we're not solving their problems. Our CEO wants me to hire two more PMs and add discipline. I'm the VP Product. What's going on and what do I do?",
+      "expected_output": "Output should: (a) diagnose the feature-team / feature-factory pattern by name; (b) push back on the CEO's 'hire more PMs + tighten discipline' response — the pattern is upstream of PM count; (c) locate the four big risks — which are being attacked in discovery vs. discovered late in delivery; (d) name at least 2-3 Cagan-specific anti-patterns (feature team, backlog administrator, roadmap-as-commitment, product management theater, or missing empowerment); (e) prescribe empowered-team model — problems + desired outcomes, not features; (f) cite at least one specific Cagan source (SVPG essay, book chapter, or Lenny episode); (g) reach for *Empowered* and/or *Transformed* material, not only *Inspired*; (h) NOT default to generic 'do more discovery' without naming the structural cause.",
+      "assertions": [
+        "Output names the pattern as 'feature team' or 'feature factory' with attribution to Cagan/SVPG",
+        "Output pushes back on the CEO's 'hire more PMs + tighten discipline' framing rather than accepting it",
+        "Output references the four big risks (value, usability, feasibility, viability) or the discovery/delivery split",
+        "Output names at least 2 Cagan-specific anti-patterns explicitly (feature team, backlog administrator, roadmap-as-commitment, product management theater, missing empowerment, missing product vision, missing product strategy)",
+        "Output cites at least one specific Cagan source (SVPG essay URL, book chapter, or Lenny episode)",
+        "Output references material from EMPOWERED (2020) and/or TRANSFORMED (2024) or the post-2018 SVPG essays, not only Inspired (2008/2018)",
+        "Output uses at least one Cagan contrast pair (product team vs. feature team, outcomes vs. output, missionaries vs. mercenaries, discovery vs. delivery, problems vs. features)",
+        "Output does NOT recommend adopting SAFe",
+        "Output does NOT default to 'do more discovery' as the answer without naming the structural cause"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "transformation-planning-with-pilot-team",
+      "prompt": "I'm the newly hired CPO at a 2000-person financial services company. 30 years old, pre-Internet origin. We have 8 product 'teams' — really feature teams reporting into IT under the CIO. Board just approved my mandate to move to a 'product operating model' over the next 18 months. Where do I start? The board wants a plan in 30 days.",
+      "expected_output": "Output should: (a) reach for TRANSFORMED (2024) material, not just Inspired; (b) apply Cagan's pilot-team playbook — the pilot team is 'the MVP for a full transformation'; (c) push back on 'transformation by memo' or big-bang thinking — this happens through pilots + coaching + leadership behavior change; (d) walk through pilot team composition (hand-picked bar-raisers, not average performers), problem selection ('impressive but not impossible'), success metric (business outcome not process compliance); (e) name what leadership behavior has to change alongside the pilot; (f) cite The Politics of Pilot Teams (2025) essay and TRANSFORMED book; (g) reference the 20 First Principles as the constitution, not a checklist to copy; (h) name common transformation traps.",
+      "assertions": [
+        "Output pulls primarily from TRANSFORMED (2024) material and/or SVPG's 2024-2026 transformation essays, not from Inspired alone",
+        "Output introduces the pilot-team playbook with Cagan's canonical framing ('MVP for the full transformation')",
+        "Output specifies pilot team composition as hand-picked bar-raisers, NOT average performers",
+        "Output names the 'impressive but not impossible' sweet spot for pilot problem selection",
+        "Output cites The Politics of Pilot Teams (2025) or TRANSFORMED book explicitly",
+        "Output references the 20 First Principles or the Product Operating Model as the model being adopted",
+        "Output names at least one transformation anti-pattern (transformation by memo, copying principles as checklist, pilot from average performers, pilot problem too safe or too risky)",
+        "Output identifies that leadership behavior change is required alongside the pilot, not just process/structure change",
+        "Output does NOT recommend adopting SAFe as the target operating model"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "roadmap-critique-with-cagan-alternative",
+      "prompt": "Here's our current roadmap, which we share with sales, top customers, and internally. Please critique it against Cagan's approach.\n\n---\nROADMAP FY2027 (COMMITTED)\n\nQ1: SSO with SAML, Audit Log v2, Bulk API endpoints, iOS mobile app\nQ2: AI-powered smart tagging, Advanced search, Salesforce integration, Custom fields\nQ3: HRIS integrations (Workday, ADP), Multi-region deployment, White-label option, API v4\nQ4: Advanced permissions v2, AI copilot v1, Custom dashboards, Marketplace launch\n---\n\nMy CPO says we should 'add outcome tags to each item' to make it outcome-based. Is that enough?",
+      "expected_output": "Output should: (a) identify this as a roadmap-as-commitment / Gantt-chart pattern (Perri and Cagan compatible on the diagnosis); (b) reject the 'add outcome tags' fix as insufficient — Cagan's position from The Alternative to Roadmaps is REPLACE the artifact, not fix it; (c) push back on 'even outcome-based roadmap is still a roadmap'; (d) prescribe the three-artifact alternative: (1) product vision (multi-year), (2) business objectives per team (problems + desired outcomes), (3) high-integrity commitments used sparingly and only after discovery validation; (e) call out that shipping the same roadmap externally + internally + to sales is conflating audiences; (f) cite The Alternative to Roadmaps + Roadmap Alternative FAQ; (g) can compose with Perri's two-roadmap model if the org isn't ready for Cagan's harder position.",
+      "assertions": [
+        "Output identifies the pattern as roadmap-as-commitment / Gantt-chart / feature-driven roadmap with attribution",
+        "Output rejects the 'add outcome tags' fix as insufficient — treats even outcome-based roadmaps as still roadmaps",
+        "Output prescribes Cagan's three-artifact alternative: product vision + business objectives per team + high-integrity commitments (used sparingly)",
+        "Output specifies that high-integrity commitments should be used sparingly and only AFTER discovery has validated the solution",
+        "Output cites The Alternative to Roadmaps or Roadmap Alternative FAQ specifically",
+        "Output does NOT accept the CPO's 'add outcome tags' as sufficient",
+        "Output does NOT default to Perri's two-roadmap model as the primary answer (may reference as softer alternative but Cagan's position is harder)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "ai-productivity-paradox-diagnosis",
+      "prompt": "Our exec team is thrilled — since rolling out Claude, Cursor, and internal AI tooling to engineering, our velocity is up 40%. We're shipping 2x the features we shipped last year. But NPS is flat and net dollar retention actually dropped a point. Execs want us to scale AI investment further. What am I missing?",
+      "expected_output": "Output should: (a) name the pattern using Cagan's 2026 essay The AI Productivity Paradox — 89%/6% stat; (b) apply Cagan's diagnosis: AI accelerates whatever operating model you already have; feature team + AI = faster feature factory; (c) cite the Hilary Gridley quote Cagan uses ('it's never been faster to build, which means it's never been easier to run 10 times faster in the wrong direction'); (d) apply Build to Learn vs Build to Earn — AI collapses delivery cost, so discovery becomes the new bottleneck; (e) redirect from 'scale AI investment' to 'change operating model first'; (f) cite the specific 2026 essays; (g) recognize this is post-Inspired / post-Empowered material, not book content.",
+      "assertions": [
+        "Output cites Cagan's The AI Productivity Paradox essay (2026) specifically",
+        "Output uses or references the 89%/6% executive-adoption-vs-ROI statistic",
+        "Output identifies that AI accelerates the existing operating model — feature team + AI = faster feature factory",
+        "Output applies the Build to Learn vs Build to Earn framing — AI collapses delivery cost, discovery becomes the bottleneck",
+        "Output pushes back on 'scale AI investment' without changing the operating model first",
+        "Output cites at least one specific 2026 SVPG essay URL (AI Productivity Paradox or Build to Learn vs Build to Earn)",
+        "Output does NOT recommend AI adoption acceleration as the primary answer"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "voice-check-product-management-theater",
+      "prompt": "Our head of engineering says we don't need product managers at all — the engineers can figure out what to build if we give them clear tickets. He points to the 300+ features we shipped last year with 6 PMs vs. our competitor who shipped 400+ with none. He wants to move all 6 PMs into 'product operations' roles and let engineering own the backlog. Sanity check me — is he right?",
+      "expected_output": "Output should push back firmly in Cagan's voice — direct, opinionated, warm about the humans but cold about the pattern. Should: (a) reject the engineering-owns-backlog framing as classic product management theater; (b) apply Cagan's 2024 diagnosis — PMs relabeled as 'product operations' or backlog administrators is theater, not product management; (c) name that 'features shipped' is the wrong metric — the competitor shipping 400+ with no PM may be shipping 400+ things that don't matter; (d) locate the missing accountability — who is accountable for value and viability under this proposal? nobody; (e) push back on comparing feature counts as evidence of anything; (f) cite the Lenny 2024 episode + Product vs Feature Teams essay; (g) match Cagan's tone: cold about the pattern, warm about the humans, opinionated.",
+      "assertions": [
+        "Output pushes back on the head of engineering's proposal rather than validating it",
+        "Output uses Cagan's exact vocabulary — 'product management theater', 'backlog administrator', 'feature team', or similar",
+        "Output identifies that no one would be accountable for value + viability under the proposal",
+        "Output rejects 'features shipped' as a meaningful comparison metric",
+        "Output cites the Lenny 2024 'Product management theater' episode or the Product vs Feature Teams essay specifically",
+        "Output uses at least one contrast pair (product team vs. feature team, outcomes vs. output, value/viability vs. throughput)",
+        "Response tone is direct + opinionated (Cagan-like) — cold about the pattern, warm about the humans, not soft, not hostile",
+        "Output does NOT recommend removing product managers"
+      ],
+      "files": []
+    }
+  ]
+}

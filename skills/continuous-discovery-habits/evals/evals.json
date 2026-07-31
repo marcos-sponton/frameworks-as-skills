@@ -1,0 +1,90 @@
+{
+  "skill_name": "continuous-discovery-habits",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "interview-technique-audit",
+      "prompt": "Here's the interview guide our PM wrote for a customer call next week. Please review it:\n\n---\n1. What do you think of our new dashboard?\n2. Would you use a feature that alerted you when your inventory hits low?\n3. In general, how often do you check inventory in a typical week?\n4. Tell me about your experience with our product overall.\n5. Do you think the notifications feature is useful? Yes/no, and why?\n---\n\nWhat should we change?",
+      "expected_output": "Output should: (a) score the guide as broken across Torres's rules — nearly every question is an anti-pattern (opinion, hypothetical, generalization, self-reported metric, closed); (b) name each anti-pattern explicitly by Torres's naming (opinion / hypothetical / generalization / self-reported behavior / closed question); (c) rewrite each question in Torres's story-based form, opening with 'tell me about the last time you [X]'; (d) reference Torres's 4 rubric dimensions (opening with story-based question, setting the scene, building the timeline, redirecting generalizations); (e) cite the Story-Based Customer Interviews essay (Apr 2024) and/or the Interview Coach essay (2025); (f) NOT collapse the fix into 'ask better questions' — should hold the strict rules.",
+      "assertions": [
+        "Output names at least 3 of Torres's 5 interview anti-patterns explicitly (opinion, hypothetical/future, generalization, self-reported behavior, closed/yes-no)",
+        "Output rewrites at least 3 of the 5 questions in Torres's story-based form using 'tell me about the last time you [X]' or equivalent past-behavior specific-instance opener",
+        "Output does NOT accept any of the 5 questions as-is",
+        "Output cites Torres's Story-Based Customer Interviews essay OR the Interview Coach evals essay OR Continuous Discovery Habits (book)",
+        "Output does NOT paraphrase Torres's rules into 'just have a conversation' or 'ask open questions' generic advice",
+        "Output uses Torres's exact vocabulary — 'story-based interview', 'past behavior', 'specific instance', or 'timeline' — at least once",
+        "Output distinguishes self-reported behavior (Q3 — 'how often…') from actual analytics; recommends using analytics for the number and the interview for the story"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "opportunity-vs-solution-disguise",
+      "prompt": "Here's our current Opportunity Solution Tree opportunities list. Product outcome at the top is 'increase weekly returning users completing at least one export'. Please critique the opportunity list:\n\n- Users can save their filter preferences\n- Add SSO with Okta\n- One-click export to Excel\n- Users don't know when their scheduled reports fail\n- Improve dashboard load time under 2 seconds\n- Bulk actions on selected rows\n- Users need to work across multiple projects at once",
+      "expected_output": "Output should: (a) apply Torres's 'is there more than one way to address this?' test to every item; (b) identify that items 1, 2, 3, 5, 6 are solutions disguised as opportunities (there's only one way to address each — they name the feature, not the underlying need); (c) identify items 4 and 7 as real opportunities (customer needs / pain points, multiple solutions possible); (d) for each solution-in-disguise, propose the underlying opportunity it likely serves and multiple alternative solutions; (e) note that opportunities should come from story-based interviews, not team brainstorming — flag if we don't have interview evidence for the surviving opportunities; (f) cite the Opportunity Solution Trees canonical essay.",
+      "assertions": [
+        "Output applies Torres's 'is there more than one way to address this?' test explicitly (uses the phrase or a clear paraphrase)",
+        "Output flags at least 4 of the 7 items as solutions disguised as opportunities",
+        "Output identifies items 4 ('users don't know when their scheduled reports fail') and 7 ('users need to work across multiple projects at once') as real opportunities (customer needs, multiple solutions possible)",
+        "Output rewrites at least 2 of the flagged solutions as the underlying opportunity + multiple candidate solutions",
+        "Output cites the Opportunity Solution Trees canonical Product Talk essay OR the Continuous Discovery Habits book",
+        "Output surfaces the question of whether we have interview evidence supporting the surviving opportunities (or flags if it looks like team speculation)",
+        "Output uses the term 'solution disguised as an opportunity' or Torres's equivalent naming"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "we-already-do-continuous-discovery-audit",
+      "prompt": "My CPO says we already do continuous discovery — she doesn't understand why our engineering team keeps asking for more research. Here's what we do: our UX researcher runs 5–8 user interviews at the start of every quarter to inform the roadmap, then delivers a research report to the product team. During the quarter, our PMs occasionally hop on customer calls when sales requests it. We update our roadmap after each research cycle. Is she right? Are we doing continuous discovery?",
+      "expected_output": "Output should apply Torres's diagnostic: (a) recognize this as classic project-based (quarterly research sprints) research, NOT continuous discovery; (b) apply the 4 diagnostic questions (is it happening this week? is the full trio in it? is it story-based? does it update the OST?); (c) name what's missing — weekly cadence, trio (PM+designer+engineer together, not researcher-solo), likely story-based interviewing technique, living OST; (d) address the CPO's misconception warmly but firmly — 'you have research; that's different from continuous discovery'; (e) explain why the engineer keeps asking (they never hear the customer live; they're consuming secondhand summaries); (f) propose the minimum first change — bring engineer + designer + PM into ONE interview this week; (g) cite Torres's canonical definition + probably her post-2024 pushback on trio-as-replacement-for-researchers (both, not either).",
+      "assertions": [
+        "Output diagnoses the current practice as project-based / quarterly research, NOT continuous discovery",
+        "Output applies at least 3 of Torres's 4 diagnostic questions (weekly cadence, full trio, story-based, updates OST)",
+        "Output names the missing trio element specifically — engineer + designer are not in the interview live",
+        "Output does NOT recommend eliminating the UX researcher role; instead recommends composition (trio does weekly practice, researcher does deeper studies) or references Torres's 2024 pushback on trio-as-replacement",
+        "Output proposes a minimum viable first change (not a full reorg) — usually one interview this week with the full trio",
+        "Output cites Torres's canonical definition of continuous discovery (weekly touchpoints, by the team building the product, in pursuit of a product outcome) OR a specific Product Talk essay",
+        "Output uses Torres's exact vocabulary — 'continuous discovery', 'product trio', 'story-based' — at least twice combined",
+        "Output does NOT accept the CPO's framing uncritically"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "outcome-reframe-and-8-mistakes",
+      "prompt": "Our exec team just gave our product team this OKR for the quarter: 'Objective: Grow net new ARR by 30% quarter-over-quarter. Key Results: (1) Launch 3 new premium features by end of Q3, (2) Achieve NPS score of 50+, (3) Reduce customer support tickets by 20%.' Help me evaluate this with Teresa Torres's product outcome framing.",
+      "expected_output": "Output should apply Torres's 8-mistakes checklist and product-outcome definition: (a) flag the Objective as a business outcome, not a product outcome — 'grow ARR' is outside the trio's span of control (Mistake #3); (b) flag KR1 as an output (features launched — a yes/no completion, not a behavior change) (Mistake #1); (c) flag KR2 as sentiment-without-behavior (NPS alone, no behavioral direction) (Mistake #7); (d) note that KR3 could go either way — reducing tickets is directional but doesn't distinguish 'fewer problems' from 'users gave up trying'; (e) rewrite as a product outcome at the trio's span of control — a customer behavior change that would drive the underlying business outcome; (f) trace how the rewritten product outcome would drive ARR growth so the exec team can see the chain; (g) cite Torres's Defining Product Outcomes 8-mistakes essay.",
+      "assertions": [
+        "Output identifies the Objective ('grow ARR 30%') as a business outcome outside the trio's span of control (Mistake #3 in Torres's 8-mistakes)",
+        "Output identifies KR1 (launch 3 features) as an output disguised as an outcome (Mistake #1)",
+        "Output identifies KR2 (NPS 50+) as a sentiment metric without behavioral direction (Mistake #7)",
+        "Output rewrites the objective at the trio's altitude — a product outcome describing customer behavior change, not a business outcome",
+        "Output traces how the rewritten product outcome would drive the underlying business outcome (ARR growth) — makes the chain visible",
+        "Output cites Torres's 'Defining Product Outcomes: The 8 Most Common Mistakes' essay OR Continuous Discovery Habits book",
+        "Output uses Torres's exact distinction — product outcome vs business outcome vs output — explicitly",
+        "Output does NOT accept the OKR as valid without revision"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "assumption-mapping-across-5-categories",
+      "prompt": "Our team is about to commit two engineers for 6 weeks to build an AI feature that auto-summarizes a user's activity log into a weekly digest email. Before we build, help me map assumptions using Teresa Torres's method.",
+      "expected_output": "Output should: (a) name at least one assumption in EACH of the 5 categories (desirability, viability, feasibility, usability, ethical) — should NOT skip ethical; (b) rank the assumptions by risk; (c) design a small assumption test for the top-ranked risky assumption — something doable in hours or days, not weeks; (d) explicitly distinguish assumption test from full experiment (Torres's rule); (e) cite the Assumption Testing essay + Five Types of Assumptions essay; (f) push back if the team is over-indexing on feasibility (engineers' bias) or usability (designers' bias) at the expense of desirability, viability, or ethical.",
+      "assertions": [
+        "Output names at least one assumption in EACH of the 5 categories (desirability, viability, feasibility, usability, ethical)",
+        "Output explicitly names an ETHICAL assumption — does not skip this category",
+        "Output ranks assumptions by risk",
+        "Output designs a specific small assumption test that could be executed in hours or days (not weeks)",
+        "Output distinguishes assumption test from full experiment, citing Torres's rule that we rarely have time for full experiments in discovery",
+        "Output cites Torres's Assumption Testing essay OR the Five Types of Assumptions essay OR Continuous Discovery Habits book",
+        "Output uses the 5-category vocabulary — desirability, viability, feasibility, usability, ethical — explicitly",
+        "Output does NOT jump straight from 'here are assumptions' to 'let's build the feature and A/B test it'"
+      ],
+      "files": []
+    }
+  ]
+}

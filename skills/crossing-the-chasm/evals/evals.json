@@ -1,0 +1,61 @@
+{
+  "skill_name": "crossing-the-chasm",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "diagnose-stuck-at-the-chasm",
+      "prompt": "I'm the CEO of a Series A vertical AI startup. ~30 people, $3M ARR, growing but plateauing. Over the last 18 months we've won 8 great customers — Chief Innovation Officers at big-name firms who love us and give us keynote slots. But our pipeline is stalling — new prospects (usually the actual line-of-business owners, not innovation offices) take 6+ months to evaluate and mostly end in 'let's revisit next year'. Our sales cycles are getting *longer*, not shorter. Help me think about what's going on using Geoffrey Moore.",
+      "expected_output": "Output should: (a) diagnose this as classic chasm symptoms — visionary early customers (Chief Innovation Officer = classic visionary buyer), pragmatists (line-of-business owners) refusing to buy on visionary references, sales cycles lengthening instead of shortening; (b) name that they're at the chasm, not still in Early Market; (c) explain WHY pragmatists won't take visionary references (specific mechanism, not generic); (d) walk through the D-Day discipline required to cross — pick a beachhead segment, ship whole product for that segment, don't chase more visionary logos; (e) probably name Documentum as the archetype; (f) ask what evidence they have about what specific broken process is currently costing pragmatist buyers real money; (g) cite Moore (3rd ed 2014 book, or Lenny Podcast Jan 2024) at least once; (h) NOT confuse with Christensen's disruption theory.",
+      "assertions": [
+        "Output diagnoses the situation as being at the chasm (not still in Early Market, not in Bowling Alley)",
+        "Output identifies Chief Innovation Officers as visionary buyers and line-of-business owners as pragmatist buyers, or equivalent psychographic labeling",
+        "Output explains that pragmatists will not accept visionary references — the specific mechanism, not generic advice",
+        "Output introduces D-Day / beachhead discipline as the corrective playbook",
+        "Output pushes back on continuing to chase visionary logos",
+        "Output names a compelling-reason-to-buy inquiry — asks what quantified broken-process pain the pragmatist buyer currently suffers",
+        "Output cites Geoffrey Moore, Crossing the Chasm (with edition, ideally 3rd ed 2014), or a specific source (podcast/blog/essay) at least once",
+        "Output does NOT confuse this with Christensen's Innovator's Dilemma or disruption theory",
+        "Output does NOT recommend a broad-front invasion (multiple verticals) as the fix",
+        "Output ends with a question that forces the user to name what stage they're actually in, what evidence tells them that, or what the compelling reason to buy is"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-mixing-playbooks-during-tornado",
+      "prompt": "Here's our GTM plan for FY 2027. We're a SaaS platform in a category that's growing 60% year-over-year and every enterprise seems to be evaluating one of us or our top 3 competitors. Please critique this against Moore's framework.\n\n---\nFY2027 GTM PLAN\n\n1. Deepen customer success — invest in high-touch onboarding, dedicated CSMs, quarterly business reviews\n2. Verticalize into 3 new industries: healthcare, financial services, manufacturing — each with dedicated sales pods and industry-specific solution architects\n3. Introduce customized deployment options and industry-specific SKUs\n4. Improve NPS from 42 to 60\n5. Focus on retention and net revenue retention (target NRR: 130%)\n6. Add solution consultants to help enterprises tailor the product to their workflows\n7. Deepen partnerships with regional systems integrators\n---",
+      "expected_output": "Output should identify this as a Bowling Alley / Main Street playbook being run during what sounds like a Tornado (60% category growth, top-of-mind evaluation across all enterprises). Specifically it should: (a) name that if the category is in a Tornado, this plan is playing the WRONG stage — the Tornado playbook reverses Bowling Alley discipline (standardize, ship product not solutions, grab share above margin, kill customization); (b) name the specific plays that are stage-wrong (verticalization with customization, customer intimacy focus, NRR optimization); (c) warn about the consequence — ceding horizontal share to a rival that standardized faster (Chimp trajectory instead of Gorilla); (d) probably reference Inside the Tornado's stage-reversal doctrine; (e) also acknowledge — if they're NOT actually in a Tornado, this plan may be right, but then challenge whether the evidence supports Tornado; (f) offer the diagnostic questions to test tornado readiness.",
+      "assertions": [
+        "Output diagnoses that this plan is running Bowling Alley / Main Street plays, potentially in a Tornado",
+        "Output identifies the specific plays that reverse under Tornado discipline — customization, verticalization, customer intimacy, NRR focus",
+        "Output introduces the stage-reversal doctrine from Inside the Tornado ('the winning strategy actually reverses the prior strategy')",
+        "Output names the risk — ceding horizontal share, Chimp vs. Gorilla outcome, or equivalent share-loss framing",
+        "Output challenges whether they are actually in a Tornado, or asks for the evidence (competitors in every deal, horizontal deals closing on features/price, standardization pressure from buyers)",
+        "Output cites Moore — Inside the Tornado (1995), Crossing the Chasm, or a specific source",
+        "Output does NOT accept the plan uncritically and just optimize the mechanics",
+        "Output does NOT recommend adding OKRs, more marketing, or more customer success as the fix"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ai-adoption-nuanced-use-case-diagnosis",
+      "prompt": "I'm a founder pitching investors on our agentic AI product for enterprise customer service call centers. Investors keep pushing back saying 'agentic AI has already crossed the chasm — you're too late'. How would Geoffrey Moore think about this?",
+      "expected_output": "Output should: (a) name that Moore, as of Feb 2026 Diginomica piece, has EXPLICITLY said agentic AI has NOT yet crossed the chasm — customer service call centers is one of the beachheads he named as moving toward crossing but not yet across; (b) apply Moore's use-case-by-use-case distinction — category chasm ≠ use-case chasm; AI-as-a-category has crossed for narrow use cases (HFT, digital ad placement, financial regulatory compliance per Forbes Jul 2024) but that does NOT mean agentic AI as a whole has crossed; (c) name the specific diagnostic Moore uses — trapped value large enough to force complete function re-engineering ('when one function completely re-engineers itself'); (d) push back on the investor framing as based on a category-level narrative that Moore's own framework rejects; (e) give the founder specific evidence to counter — the Feb 2026 Diginomica interview and the trapped-value discriminator; (f) probably cite Forbes/Randy Bean Jul 2024 and Diginomica Feb 2026 by name.",
+      "assertions": [
+        "Output names that Moore has explicitly stated agentic AI has NOT crossed the chasm as of Feb 2026",
+        "Output applies the use-case-by-use-case distinction — some AI use cases have crossed, not the whole category",
+        "Output introduces 'trapped value' as Moore's discriminator variable",
+        "Output cites Moore's Feb 2026 Diginomica piece or Forbes/Randy Bean Jul 2024 interview specifically",
+        "Output pushes back on the investor's broad 'agentic AI has crossed' framing",
+        "Output distinguishes between use-case-level chasm crossings and category-level chasm crossings",
+        "Output does NOT parrot the 'AI is table stakes / too late' narrative",
+        "Output gives the founder actionable framing — either 'you're not too late because the specific use case hasn't crossed' or 'here's the evidence that would let you diagnose whether YOUR specific use case has crossed'",
+        "Output offers or references Moore's own 2024–2026 essays as counter-evidence to the investor's framing"
+      ],
+      "files": []
+    }
+  ]
+}

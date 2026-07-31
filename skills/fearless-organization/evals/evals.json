@@ -1,0 +1,93 @@
+{
+  "skill_name": "fearless-organization",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The misread guard cases (2 and 5) are non-negotiable — the skill's main job is to resist the 'psychological safety as being nice' misread and to always pair PS with accountability in the 2x2. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "diagnose-quiet-team-with-two-by-two",
+      "prompt": "I've been managing an engineering team of eight for about a year. The technical work is high quality, we hit our deadlines, engagement scores are decent. But in the last three months I've noticed that our retros have gone completely quiet. Everyone says 'went well, no blockers' and we move on. In design reviews, the same two senior people talk and everyone else just nods. I don't know what changed. What's going on?",
+      "expected_output": "Output should: (a) frame silence as data — voice isn't happening, which is a psychological safety diagnostic at the team level, not a personality diagnostic about individual team members; (b) present the 2x2 with accountability (Learning / Comfort / Anxiety / Apathy Zones) explicitly, NOT psychological safety in isolation; (c) locate the team on the 2x2 based on the user's description — likely a shift toward Anxiety Zone (high standards, low PS) given the pattern; (d) diagnose which leader behavior has likely eroded — Framing, Situational Humility, Proactive Inquiry, or Responding Productively (something happened 3 months ago); (e) prescribe one specific move — usually asking a specific proactive-inquiry question to a specific person, not the room; (f) cite Amy Edmondson or a specific source (Fearless Organization, TEDxHGSE, or Behavioral Scientist essay).",
+      "assertions": [
+        "Output presents the 2x2 with accountability — NOT psychological safety alone",
+        "Output names all four zones (Learning / Comfort / Anxiety / Apathy) or at least three of them",
+        "Output frames silence as evidence of low PS, not evidence of personality/introversion",
+        "Output identifies at least one specific leader behavior gap (Framing / Situational Humility / Proactive Inquiry / Responding Productively)",
+        "Output prescribes a specific proactive-inquiry move (ask a specific person, specific question), not generic 'invite more voice'",
+        "Output cites Amy Edmondson or a specific source (Fearless Organization, TEDxHGSE, Behavioral Scientist, HBR)",
+        "Output does NOT frame the problem as 'the team just needs more psychological safety' without also naming accountability",
+        "Output asks about the 3-month change point — what happened, what shifted"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "misread-guard-ps-as-being-nice",
+      "prompt": "My team has been struggling with a really tough project and I think I've been too hard on them lately. I want to introduce psychological safety so people feel safer and more comfortable at work. I'm thinking we back off on the delivery deadlines, do more social things together, and I'll stop pushing so hard in reviews. Does that sound like a good psychological safety intervention?",
+      "expected_output": "Output should DETECT the 'PS as being nice' misread and REDIRECT rather than validate the plan. Specifically: (a) name that this is exactly the misread Edmondson has spent seven years pushing back against — 'psychological safety is not about being nice'; (b) name that lowering standards, backing off deadlines, and reducing challenge is not building PS — it's moving from wherever the team is now into the Comfort Zone; (c) present the 2x2 with accountability and name the Comfort Zone (high PS + low standards) as exactly what this plan produces; (d) name the target as the Learning Zone (high PS + high standards) — both required; (e) reframe the actual problem: if the team is struggling, the fix is probably specific leader moves (Framing, Situational Humility, Proactive Inquiry) that build PS while KEEPING standards high — not lowering standards; (f) cite Edmondson's 'Psychological Safety ≠ Anything Goes' essay or the TEDxHGSE line; (g) use Edmondson's specific vocabulary (psychological safety, accountability, Learning Zone / Comfort Zone). THIS EVAL IS THE CORE MISREAD GUARD — if the skill validates the user's plan, it has failed its most important job.",
+      "assertions": [
+        "Output does NOT validate the 'back off deadlines + social events + stop pushing' plan as a PS intervention",
+        "Output explicitly names the 'PS as being nice' misread and rejects it",
+        "Output names the Comfort Zone as the failure mode this plan produces",
+        "Output presents the 2x2 with accountability — all four zones or at least the Learning Zone and Comfort Zone distinction",
+        "Output names the Learning Zone (high PS + high standards) as the target",
+        "Output cites Edmondson's 'Psychological Safety ≠ Anything Goes' essay OR the 'not about being nice' quote OR equivalent",
+        "Output uses Edmondson's specific vocabulary (psychological safety, accountability, Learning/Comfort Zone) at least twice",
+        "Output reframes the actual problem — how to build PS while keeping standards high",
+        "Tone is warm and direct — names the misread without shaming the user"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "failure-taxonomy-diagnosis",
+      "prompt": "We had a really bad week. Two things happened. First, one of our engineers deployed a config change to production without running the pre-deploy checks and it caused a 40-minute outage. Second, our new AI-generated summarization feature got launched to 5% of users and the outputs were bad enough that we had to roll it back after two days. My co-founder wants to do a 'blameless retro' on both but I'm not sure that's the right frame. What do you think?",
+      "expected_output": "Output should: (a) diagnose the two failures using Edmondson's taxonomy from Right Kind of Wrong (2023) — the deploy incident is a Basic failure (preventable, known territory, single cause — skipped checks); the AI feature is likely an Intelligent failure (novel territory, hypothesis-driven, small pilot, learning-motivated); (b) explain that treating them the same is the mistake — 'not all failures are created equal'; (c) prescribe the response for each — Basic failure needs a checklist/process fix (make the pre-deploy check unskippable), NOT a workshop; Intelligent failure gets celebrated for the learning (what did we learn about the summarization approach, what's the next hypothesis to test), NOT punished; (d) address the co-founder's 'blameless retro' framing — blameless doesn't mean unanalyzed; a blameless post-mortem on the Basic failure still needs to produce a specific process change; (e) cite Right Kind of Wrong (2023) or the Basic/Complex/Intelligent taxonomy explicitly.",
+      "assertions": [
+        "Output diagnoses the deploy incident as a Basic failure (or equivalent — preventable, known, single cause)",
+        "Output diagnoses the AI feature rollback as an Intelligent failure (or acknowledges it maps to that category)",
+        "Output cites the Basic / Complex / Intelligent taxonomy explicitly",
+        "Output prescribes different responses for the two failure types (Basic → process fix / checklist; Intelligent → celebrate learning)",
+        "Output addresses the 'blameless retro' framing — blameless does not mean unanalyzed",
+        "Output cites Right Kind of Wrong (2023) or Amy Edmondson",
+        "Output does NOT treat both failures the same way",
+        "Output prescribes a specific process change for the Basic failure (not a workshop or 'let's discuss')"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "columbia-boeing-pattern-recognition",
+      "prompt": "I just joined a new company as a senior engineering leader. In my first two weeks I've noticed something that's bothering me. The teams have a reputation for delivering — every quarter they hit their commitments, morale looks decent on paper, and the CEO is proud of the 'execution culture.' But I've had three separate one-on-ones now where engineers pulled me aside and told me — off the record — about safety concerns, technical debt they've been asked to ignore, and one case of a manager retaliating against someone who raised a design flaw. The engineers all said something like 'that's just how things work here.' How should I think about this?",
+      "expected_output": "Output should: (a) diagnose this as an Anxiety Zone pattern — high standards / execution + low psychological safety; (b) connect it explicitly to Edmondson's canonical Anxiety Zone cases — Boeing 737 MAX, Columbia Space Shuttle, Wells Fargo, or Volkswagen. The pattern is: high performance from the outside, suppressed concerns internally, retaliation against messengers, 'that's how things work here' as the tell; (c) name the future risk in specific terms — every one of those cases had suppressed concerns before the catastrophe; the pattern the user is describing is the pattern that precedes major failures; (d) address the retaliation specifically — retaliation is not a PS issue to be improved with vibes, it's a sanction issue that requires clear consequences; (e) prescribe specific leverage the user has — Framing, Situational Humility, Proactive Inquiry, structural changes to how concerns get raised, sanction predictability. If the user isn't senior enough to change the culture, name that too and route to escalation or personal decisions about staying; (f) cite Edmondson and at least one of the canonical Anxiety Zone cases.",
+      "assertions": [
+        "Output diagnoses the pattern as Anxiety Zone (or equivalent — high standards + low PS)",
+        "Output cites at least one of Edmondson's canonical Anxiety Zone cases (Boeing 737 MAX, Columbia, Wells Fargo, Volkswagen)",
+        "Output names the future risk — Anxiety Zone patterns precede catastrophic failures",
+        "Output addresses the retaliation as a sanction issue, not just a culture-improvement issue",
+        "Output prescribes specific leader moves (Framing / Situational Humility / Proactive Inquiry / Structures / sanction predictability)",
+        "Output cites Amy Edmondson or a specific source (Fearless Organization, HBR IdeaCast NASA episode)",
+        "Output takes the concern seriously — does NOT minimize as 'every company has some issues'",
+        "Output addresses the power dynamics — what the user can and can't change at their level"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "misread-guard-brilliant-jerk-and-ps",
+      "prompt": "We have a senior engineer, Marcus, who's a top performer — probably the best on the team technically. But he's a jerk to people in code review, dismissive in design meetings, and I've had two other engineers tell me they dread interactions with him. I keep hearing that firing or PIPing him would 'destroy psychological safety' on the team because we'd be seen as punishing high performers. What do you think?",
+      "expected_output": "Output should REJECT the framing that sanctioning a bully destroys psychological safety. Specifically: (a) name that this is a misread — Edmondson is explicit that PS is NOT a shield for misconduct, and sanctioning bullies REINFORCES PS rather than destroying it; (b) name the pattern — Marcus is destroying PS for the whole team, and the team's collective output (which depends on PS) is dropping far more than his individual output justifies; (c) cite Kim Scott's aligned rule ('Do not promote bullies. It's that simple.') as a well-known parallel — the two frameworks align completely on this; (d) name the signal cost of keeping Marcus — every other engineer learns that behavior doesn't matter, only results do; the best people notice and leave; (e) prescribe the sequence — clear feedback with a specific behavior change requirement, then escalating consequences (Kim Scott's conversational → compensation → career escalation, aligned with Edmondson's stance on sanction predictability); (f) end with the hard question — 'Are you willing to lose Marcus if the pattern continues? If not, you're keeping him regardless of the framework.'; (g) explicitly reject the 'firing Marcus destroys PS' framing.",
+      "assertions": [
+        "Output explicitly rejects the framing that sanctioning Marcus would destroy PS",
+        "Output names that PS is not a shield for misconduct",
+        "Output names that sanctioning bullies reinforces PS rather than destroying it",
+        "Output cites Kim Scott's 'do not promote bullies' rule OR equivalent from either author",
+        "Output names the collective-output cost — Marcus is destroying PS for the team",
+        "Output prescribes a specific escalation sequence (feedback → escalating consequences)",
+        "Output ends with a concrete question or commitment forcing the user to decide",
+        "Output cites Amy Edmondson or Kim Scott specifically"
+      ],
+      "files": []
+    }
+  ]
+}

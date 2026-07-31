@@ -1,0 +1,91 @@
+{
+  "skill_name": "cold-start-problem",
+  "version": "v0",
+  "note": "These are v0 evals for Andrew Chen's Cold Start Problem skill. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sharpen-atomic-network-marketplace-launch",
+      "prompt": "We're launching a peer-to-peer skill-sharing marketplace where people teach each other things like guitar, coding, cooking. Our plan is to launch in Buenos Aires — big city, lots of demand, we know the market. Help us think through the launch.",
+      "expected_output": "Output should: (a) diagnose that 'Buenos Aires' is far too big to be the atomic network; (b) apply Chen's atomic-network sharpener test (cut it in half, cut it again); (c) cite the Uber Caltrain example as calibration; (d) suggest something drastically smaller as the atomic network (a specific neighborhood, a specific skill category, a specific university, a specific weekend, etc.); (e) identify the hard side (teachers) and warn against 'we'll figure out supply later'; (f) reference Chen's book, atomic network concept, or Wimdu-style failure of neglecting the hard side.",
+      "assertions": [
+        "Output explicitly identifies 'Buenos Aires' as too big for the atomic network",
+        "Output applies the atomic-network sharpener test (cut in half)",
+        "Output cites the Uber Caltrain example (5pm at Caltrain / 5th and King / similar hyperlocal calibration)",
+        "Output proposes a drastically smaller atomic network as the launch beachhead",
+        "Output identifies teachers/creators as the hard side",
+        "Output warns against 'figure out supply later' or references Wimdu",
+        "Output cites Andrew Chen, The Cold Start Problem, or a specific concept from the book",
+        "Output does NOT rubber-stamp the 'launch in Buenos Aires' plan"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "identify-hard-side-creator-platform",
+      "prompt": "We're building a short-form video platform focused on educational content — think TikTok but for teaching. We have 30,000 signups from teacher / educator influencers on Twitter and 100,000 signups from students. Growth feels stuck. What should we do?",
+      "expected_output": "Output should: (a) diagnose this as an atomic-network density problem — 130,000 signups spread across many contexts probably means empty rooms; (b) identify creators (teachers/educators) as the hard side; (c) note the power-law 80/20 pattern likely to be at play; (d) diagnose that students without creators is wasted acquisition; (e) reference Chen's 'solve a hard problem' framing for the hard side; (f) recommend narrowing atomic network AND solving the specific hard problem for teachers (probably: monetization, audience-building tools, low friction to create); (g) NOT recommend more student marketing as the primary fix.",
+      "assertions": [
+        "Output identifies creators/teachers as the hard side",
+        "Output notes that signups without density = empty rooms",
+        "Output references the power-law / 80/20 pattern on the hard side",
+        "Output diagnoses that student acquisition without creators is wasted",
+        "Output cites 'Solve a Hard Problem' or the hard-side-first principle",
+        "Output proposes solving a specific hard problem for creators (monetization / distribution / creation friction)",
+        "Output cites Andrew Chen, The Cold Start Problem, or the atomic network concept",
+        "Output does NOT primarily recommend more student marketing"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "moat-pressure-test-network-effects-claim",
+      "prompt": "We're raising a Series B. Our pitch says: 'We have strong network effects — more hosts attract more guests, more guests attract more hosts, we have 500k users and this is our moat.' Pressure-test this against Andrew Chen's Cold Start Problem framework.",
+      "expected_output": "Output should: (a) push back on 'we have network effects' as a static defensibility claim; (b) reference Chen's argument that networks are less defensible than commonly claimed; (c) cite the Wimdu vs Airbnb case explicitly; (d) note that 500k users is not evidence of density unless density inside atomic-network units is described; (e) ask about hard-side (host) retention specifically, not aggregate metrics; (f) name cherry-picking as the primary competitive attack pattern; (g) note platform-shift risks (AI, agents, new distribution surfaces); (h) recommend the defensibility argument be reframed around live defense mechanisms, not the static claim.",
+      "assertions": [
+        "Output pushes back on 'we have network effects' as an unsubstantiated moat claim",
+        "Output cites Chen's argument that networks are less defensible than commonly claimed",
+        "Output references the Wimdu vs Airbnb case (or Wimdu-style cherry-picking)",
+        "Output notes 500k users is not the same as density inside atomic networks",
+        "Output asks about hard-side (host) retention as a separate metric",
+        "Output names cherry-picking as the main competitive attack",
+        "Output cites Andrew Chen, The Cold Start Problem, or the Moat chapter",
+        "Output does NOT rubber-stamp 'we have network effects' as sufficient defensibility"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-network-effects-viral-loop-conflation",
+      "prompt": "We're getting viral — our referral program is producing 1.5 invites per user. That means we have network effects, right? What should we do next to double down on our network effects?",
+      "expected_output": "Output should push back on the viral-loop / network-effect conflation in a Chen-consistent way. Should distinguish: viral loop = acquisition mechanic; network effect = value scaling with participation. Should ask whether the product itself gets more valuable to each user as more users join, or whether it's just a good acquisition mechanic. Should reference Chen's explicit push-back on this conflation. Voice should be patient and empirical (Chen-like), not combative. Should cite Chen.",
+      "expected_output_notes": "This is the voice-guard test — the skill should NOT hand over 'ways to double down on network effects' without distinguishing viral loops from network effects.",
+      "assertions": [
+        "Output distinguishes viral loop (acquisition mechanic) from network effect (value scaling with participation)",
+        "Output asks whether the product itself gets more valuable per user as more users join",
+        "Output does NOT rubber-stamp 'we have network effects because we're going viral'",
+        "Output references Chen's push-back on the conflation",
+        "Output cites Andrew Chen or The Cold Start Problem",
+        "Response tone is patient/empirical (Chen-like), not combative",
+        "Output redirects to the specific question — is there a real network effect mechanism here?"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "come-for-the-tool-audit-cosplay",
+      "prompt": "I'm building a networking app for people looking to change careers. The idea is: come for our AI resume feedback tool, stay for the network of career-changers who share leads and advice. What do you think of this come-for-the-tool strategy?",
+      "expected_output": "Output should: (a) apply Chen's come-for-the-tool test — does the tool have real N=1 value?; (b) evaluate whether AI resume feedback is genuine solo utility (probably yes); (c) evaluate the mechanism by which tool users would become network users (needs work — nothing in the tool naturally creates network participation); (d) reference the come-for-the-tool cosplay anti-pattern (network product in tool clothing); (e) reference specific cases (Instagram photo filter → feed, Dropbox sync → shared folders, Yelp listings → reviews) as legitimate come-for-the-tool patterns; (f) push on whether the network layer will actually activate or whether tool users will churn.",
+      "assertions": [
+        "Output applies the come-for-the-tool N=1 value test",
+        "Output evaluates whether AI resume feedback delivers real solo utility",
+        "Output evaluates the mechanism by which tool users become network users",
+        "Output references the come-for-the-tool cosplay anti-pattern",
+        "Output cites specific cases (Instagram, Dropbox, Yelp, or similar) as legitimate come-for-the-tool patterns",
+        "Output cites Andrew Chen or The Cold Start Problem",
+        "Output does NOT rubber-stamp 'come for the tool' without testing whether the tool truly delivers N=1 value"
+      ],
+      "files": []
+    }
+  ]
+}

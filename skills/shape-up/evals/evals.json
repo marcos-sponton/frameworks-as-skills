@@ -1,0 +1,105 @@
+{
+  "skill_name": "shape-up",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "shape-a-pitch-from-scratch",
+      "prompt": "I'm a PM at a B2B SaaS (~40 people, post-PMF, ~$8M ARR). Our biggest customer complaint is that our reporting dashboard is confusing. Leadership just said 'let's redesign the reporting dashboard.' Help me shape this bet using Ryan Singer's Shape Up method.",
+      "expected_output": "Output should: (a) push back on jumping to shaping — 'improve the dashboard' or 'redesign it' is an unframed problem; force framing first (whose problem, why now, business value); (b) reference Singer's 2022 Framing essay explicitly; (c) walk through the five ingredients of a Package once framing is done (Problem, Appetite, Solution, Rabbit Holes, No-Gos); (d) insist on setting Appetite BEFORE designing the Solution — appetite is a design constraint, not a prediction; (e) mention fat marker sketches / breadboarding as the fidelity level for the Solution; (f) cite Singer at least once with a specific source (book chapter URL, essay URL, or podcast); (g) NOT jump straight to designing screens or handing over a task breakdown; (h) reference the 2025 gym-management case study as a similar pattern (vague ask → SME conversation → sharper framed problem).",
+      "assertions": [
+        "Output pushes back on 'redesign the dashboard' as an unframed problem before shaping",
+        "Output cites Singer's Framing (2022) essay or the framing → shaping distinction",
+        "Output walks through all five ingredients (Problem, Appetite, Solution, Rabbit Holes, No-Gos)",
+        "Output insists on setting Appetite BEFORE the Solution",
+        "Output mentions fat marker sketches OR breadboarding as the fidelity level",
+        "Output cites at least one specific Singer source (book chapter URL, essay URL, or podcast episode)",
+        "Output does NOT jump to designing screens or a task breakdown",
+        "Output uses 'Package' or 'Pitch' correctly (not 'PRD', 'user story', or 'requirements doc')"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-a-doc-that-is-really-a-scrum-backlog-item",
+      "prompt": "Please critique this pitch I wrote against the Shape Up method.\n\n---\n\nPITCH: Reporting Dashboard v2\n\nAs a customer, I want a better reporting dashboard so that I can understand my data.\n\nAcceptance criteria:\n- Faster load times (target: <2s)\n- More charts (target: 8+ chart types)\n- Export to Excel\n- Mobile-responsive\n- Dark mode\n\nEstimated: 34 story points (~3 sprints)\n\nPriority: P0\n\nDependencies: blocked on Analytics API v3 (currently in backlog)\n\n---\n\nReview this against Ryan Singer's Shape Up.",
+      "expected_output": "Output should identify that this is NOT a Shape Up pitch — it's a user story + acceptance criteria in Scrum format with story-point estimation. Specifically it should: (a) name that this uses user-story-as-pitch which is not the Shape Up shape; (b) name the missing five ingredients (specifically: no specific-story Problem, no Appetite (it uses story points instead), no Solution at fat-marker fidelity (just a feature list), no Rabbit Holes, no No-Gos); (c) call out story points as estimation, not appetite — the two are not interchangeable; (d) call out 'blocked on backlog' as a Shape Up anti-pattern (no backlog); (e) cite Singer specifically — Ch. 6 Write the Pitch or Ch. 7 Bets Not Backlogs; (f) suggest what a real Shape Up pitch/package would look like for this same customer problem.",
+      "assertions": [
+        "Output identifies this as a user-story-and-acceptance-criteria doc rather than a Shape Up pitch",
+        "Output names at least 3 of the 5 missing ingredients (Problem-as-specific-story, Appetite, Solution-at-fat-marker-fidelity, Rabbit Holes, No-Gos)",
+        "Output challenges the use of story-point estimation as inconsistent with Shape Up's appetite discipline",
+        "Output challenges the reference to 'blocked on backlog' as inconsistent with Shape Up's no-backlog stance",
+        "Output cites Bill's book at least once — specifically Ch. 6 (Write the Pitch), Ch. 7 (Bets Not Backlogs), or a related URL",
+        "Output does NOT just accept the pitch and offer polish suggestions",
+        "Output distinguishes appetite (fixed time, variable scope) from estimation (variable time, fixed scope)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "circuit-breaker-decision",
+      "prompt": "We're on day 40 of a 6-week Shape Up cycle. The team's bet — a redesigned onboarding flow — isn't done. Two of the four scopes are downhill and shipping in the next few days. The other two scopes are still uphill and the team says they need 'another 2-3 weeks' to finish them well. Leadership is asking whether to extend the cycle or trip the circuit breaker. What should we do?",
+      "expected_output": "Output should default to the Circuit Breaker (kill, don't extend) rather than the extension. Specifically it should: (a) cite Singer Ch. 14 explicitly — 'Cancel projects that don't ship in one cycle by default instead of extending them by default' and 'If the work is uphill, it's better to do something else in the next cycle and put the troubled project back in the shaping phase'; (b) name that uphill work at the deadline signals a conceptual flaw, not slowness — extension papers over the flaw; (c) suggest shipping the two downhill scopes as scope-cutting-under-appetite (Shape Up's discipline of cutting scope, not extending time); (d) suggest putting the two uphill scopes back into shaping for a future cycle, not carrying them over; (e) name that extension is possible but should be an explicit leadership override, not a default; (f) push back if the user tries to argue 'but we're so close.'",
+      "assertions": [
+        "Output defaults to Circuit Breaker (kill, not extend), not extension",
+        "Output cites Singer Ch. 14 or the Circuit Breaker glossary definition with attribution",
+        "Output names that uphill work at deadline signals conceptual flaw, not execution slowness",
+        "Output suggests shipping the 2 downhill scopes as legitimate scope-cutting to fit appetite",
+        "Output suggests putting 2 uphill scopes back into shaping (not carrying over)",
+        "Output frames extension as exception (leadership override), not default",
+        "Output does NOT endorse extending the cycle as the default response"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "adopt-shape-up-in-non-basecamp-company",
+      "prompt": "My team is a typical B2B SaaS: 8 engineers (backend and frontend, separate), 2 designers, 3 PMs, QA, separate marketing/sales. We run 2-week Scrum sprints with a JIRA backlog of ~200 tickets. Leadership just read Shape Up and wants to adopt it. Help me think through what's actually realistic. Should we go all-in or borrow specific mechanisms?",
+      "expected_output": "Output should apply Singer's post-book Shaping in Real Life thinking, not just recite the 2019 book. Specifically it should: (a) name that Basecamp was 'an unusual company' — everyone technical, tiny team, product-led CEO — and adaptation is required; (b) name at least two of the three failure modes from Singer's 2025 Common Pitfalls piece (undershaped work, blurred framing/shaping, mixed reactive work); (c) engineer the technical shaper explicitly — pair non-technical PMs with senior engineers for shaping sessions; (d) address the backlog honestly — 'no backlog' requires CEO commitment, not just a team decision; (e) reference the 2025 End-to-End gym-management case study as a similar-team example; (f) offer honest options — full adoption with leadership sponsorship, or borrowing specific mechanisms (appetite, cool-down, circuit breaker) without the full cadence; (g) NOT sell adoption as easy or promise a frictionless transformation.",
+      "assertions": [
+        "Output names that Basecamp was 'an unusual company' and adaptation is required",
+        "Output cites Singer's 2025 Common Pitfalls piece OR names at least 2 of the 3 named failure modes",
+        "Output engineers technical shaping explicitly (pair non-technical PMs with senior engineers)",
+        "Output addresses the backlog politically (CEO commitment required, not just team decision)",
+        "Output references the 2025 gym-management case study OR the Shaping in Real Life material",
+        "Output offers a real choice between full adoption and borrowing specific mechanisms",
+        "Output does NOT sell adoption as easy or promise frictionless transformation",
+        "Output cites at least one specific Singer source (ryansinger.co essay or book chapter URL)"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "framing-vs-shaping-blur",
+      "prompt": "Great — I'm going to shape a bet on our new mobile checkout flow. The problem is that mobile conversion is 30% lower than desktop. Let me start sketching the solution.",
+      "expected_output": "Output should pause the user BEFORE shaping and force framing first. Specifically it should: (a) name that 'mobile conversion is 30% lower than desktop' is a metric observation, not a framed problem — is this a problem worth solving 6 weeks on, whose problem is it (small merchants? enterprise? both?), why now, what business value if solved; (b) cite Singer's 2022 Framing essay and the 2025 Common Pitfalls piece on the blurred-framing-and-shaping failure mode; (c) refuse to help sketch a solution until framing produces a framed problem as an artifact; (d) walk the user through the framing questions concretely; (e) NOT proceed to shaping fat-marker sketches just because the user asked for that.",
+      "assertions": [
+        "Output pauses the user BEFORE shaping and forces framing first",
+        "Output names that a metric observation ('30% lower conversion') is not a framed problem",
+        "Output cites Singer's Framing (2022) essay OR the Common Pitfalls (2025) piece on blurred framing/shaping",
+        "Output walks through concrete framing questions (whose problem, why now, business value)",
+        "Output does NOT proceed to shaping fat-marker sketches on demand",
+        "Output distinguishes 'discussing the problem briefly' from 'framing producing an artifact'"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "shape-up-vs-scrum-choice",
+      "prompt": "My team runs Scrum. Should we switch to Shape Up? What are the actual tradeoffs?",
+      "expected_output": "Output should NOT reflexively endorse Shape Up. It should offer a real comparison and identify what makes the switch fit or not fit. Specifically it should: (a) name the core disagreements — backlog vs. no backlog, sprints vs. cycles, estimation vs. appetite, story points vs. fixed time budget; (b) name that Shape Up is defined against Scrum ceremony — blending them collapses the mechanism; (c) name the prerequisites for a successful Shape Up adoption (CEO commitment, post-PMF, teams of enough size, feature bets not maintenance work); (d) offer honest signals of when Scrum is the right tool to keep (need for short feedback loops, backlog is politically load-bearing, small predictable work); (e) offer honest signals of when Shape Up is worth switching to (feature bets with real design surface, willing to commit to no backlog, willing to default-kill); (f) NOT sell Shape Up as universally better; (g) reference the applications.md-style comparison if possible.",
+      "assertions": [
+        "Output does NOT reflexively endorse Shape Up over Scrum",
+        "Output names the core disagreements (backlog, sprints vs cycles, estimation vs appetite)",
+        "Output names that blending Shape Up and Scrum collapses the mechanism",
+        "Output names prerequisites for Shape Up adoption (CEO commitment, post-PMF, team size, feature bets only)",
+        "Output offers honest signals for when Scrum is the right tool to keep",
+        "Output offers honest signals for when Shape Up is worth adopting",
+        "Output cites Singer or the book at least once",
+        "Output tone is measured and dispositional (matches Singer's voice, not polemical)"
+      ],
+      "files": []
+    }
+  ]
+}

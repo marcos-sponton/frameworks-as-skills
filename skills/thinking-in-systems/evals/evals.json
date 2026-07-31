@@ -1,0 +1,88 @@
+{
+  "skill_name": "thinking-in-systems",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "recurring-symptom-attacking-the-wrong-leverage-point",
+      "prompt": "Our customer support team keeps having quality problems. Every quarter we add more training, tighter QA scoring, and stricter individual scorecards, but three months later the same complaints come back. We're about to launch a new incentive program tied to CSAT scores. Help me design it to make sure it sticks this time.",
+      "expected_output": "Output should push back on the recurring-intervention pattern as a symptom-attacking fixes-that-fail archetype (or shifting-the-burden). Should diagnose that the interventions are all clustered at low leverage points (11–12: parameters, targets, incentives) while structural causes at points 3–8 (goals, self-organization, rules, information flows, feedback loops) are untouched. Should ask for behavior over time before diagnosing. Should place the proposed CSAT-tied incentive on the leverage ladder (point 12, low) and predict a rule-beating / seeking-the-wrong-goal outcome (agents will game the metric; underlying quality won't improve). Should offer higher-leverage alternatives (change the information flow, redesign the rules, examine the goal). Should cite the 1999 Leverage Points essay and/or Thinking in Systems Chapter 5.",
+      "assertions": [
+        "Output diagnoses the recurring-intervention pattern as an archetype (fixes that fail, shifting the burden, or seeking the wrong goal)",
+        "Output places the proposed CSAT-tied incentive at leverage point 11–12 and explains why that's low-leverage",
+        "Output identifies higher-leverage interventions (points 3–8) being ignored",
+        "Output predicts the specific likely failure mode of the incentive plan (rule beating, gaming, symptom whack)",
+        "Output does NOT simply help design the incentive program as requested — it reframes the request",
+        "Output cites Meadows (Leverage Points essay 1999, or Thinking in Systems, or Dancing with Systems)",
+        "Output asks about behavior over time before finalizing the diagnosis"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "single-metric-optimization-seeking-the-wrong-goal",
+      "prompt": "We're rolling out an engagement-time KPI across our product team. Every team's OKRs will be tied to weekly active users' time-in-app. We think this will focus everyone on user value. Help me communicate this to the org so it lands well.",
+      "expected_output": "Output should identify this as the seeking-the-wrong-goal archetype — engagement time as proxy for value; system will optimize for time-in-app; underlying purpose (user value delivered) will diverge from the metric. Should note the rule-beating pattern likely to develop (addictive-design mechanisms, notifications, dark patterns to hit the metric). Should place the intervention at leverage point 12 (a parameter/target) with the actual paradigm-level (point 2) and goal-level (point 3) questions unaddressed. Should push back on the reframe of 'engagement time = user value' as false. Should offer the point-3 question: what is the actual purpose the org exists to serve, and what metrics would measure it directly? Should carry the ecological/non-corporate register — Meadows would push back on engagement-optimization from a paradigm-level position.",
+      "assertions": [
+        "Output identifies the seeking-the-wrong-goal archetype specifically",
+        "Output distinguishes the metric (engagement time) from the underlying purpose (user value)",
+        "Output predicts the rule-beating pattern (addictive design, dark patterns to hit the metric)",
+        "Output places the intervention at leverage point 12 and names the higher-leverage points (3 — goals, 2 — paradigm) that are unaddressed",
+        "Output does NOT simply help communicate the KPI rollout as requested — it reframes",
+        "Output pushes back on 'engagement time = user value' as a proxy that diverges from the purpose",
+        "Output cites Meadows sources"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "consultant-dependency-shifting-the-burden",
+      "prompt": "Our leadership team has been working with a strategy consultancy for the past 3 years. They run our annual planning, our M&A analysis, our market entry decisions. They're expensive but they're really good. We're considering signing a 5-year extension with an expanded scope. Any thoughts on how to structure the deal to get the best value?",
+      "expected_output": "Output should identify the shifting-the-burden (addiction) archetype: consultants as intervenor; the internal strategy capability is atrophying; the intervention becomes necessary because the organization has stopped building its own capability. Should note this is Meadows's classic case-type (analogous to drug policy — short-term intervention undermines long-term capacity). Should push back on extending the consultancy without first asking what internal capability has atrophied and what would need to be built. Should offer the escape route: build capability, don't extend dependence; plan the exit from the intervention. Should apply Dancing-with-Systems humility (small step, monitor) — 'first build one small internal strategy capability and see' rather than 'commit to a 5-year deal.' Should note the recurring-necessity pattern is the diagnostic signal.",
+      "assertions": [
+        "Output identifies the shifting-the-burden archetype specifically",
+        "Output draws the analogy to the drug-policy case (or the general addiction pattern)",
+        "Output pushes back on extending the consultancy without addressing the atrophied internal capability",
+        "Output offers the escape route: build capability, plan the exit from the intervention",
+        "Output does NOT simply help structure the deal as requested — it reframes",
+        "Output applies Dancing-with-Systems humility (small step, monitor, revise) to the alternative",
+        "Output cites Meadows (Thinking in Systems Chapter 5 on system traps)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "leverage-points-as-menu-vs-diagnostic",
+      "prompt": "I've been reading Donella Meadows and I want to use the 12 Leverage Points to design our climate strategy. Should we go straight to point 2 (paradigm shift) since that's the highest-leverage intervention? Or start at point 12 (change subsidies and tax rates) since those are the most actionable?",
+      "expected_output": "Output should correct the misreading of the leverage points as a menu. The ranking is a DIAGNOSTIC tool, not a set of on-demand interventions. Paradigm shifts (point 2) are not on-demand — they arise from long conditions. Point 12 interventions are legitimate but low-leverage; the diagnostic value is noticing that most attention concentrates there while higher-leverage points are dismissed. Should walk through the actual method: observe behavior over time, identify stocks/flows/loops, match to archetypes (limits to growth is the founding case for climate), then use the leverage-points ladder to notice attention distribution. Should quote Meadows: 'This is a work in progress. It's not a recipe for finding leverage points. Rather, it's an invitation to think more broadly about system change.' Should apply Dancing-with-Systems humility — climate strategy at any leverage point requires small steps, monitoring, and willingness to change course.",
+      "assertions": [
+        "Output corrects the framing of leverage points as an on-demand menu",
+        "Output explains that the ranking is a diagnostic tool for revealing attention misallocation",
+        "Output notes paradigm shifts (point 2) are not on-demand",
+        "Output cites Meadows's own framing of the list as 'a work in progress' / 'invitation to think more broadly'",
+        "Output walks through the actual method (observation, stocks/flows, archetype matching, then leverage-points diagnostic)",
+        "Output references limits to growth as the founding climate case",
+        "Output invokes Dancing-with-Systems humility",
+        "Output does NOT pick a leverage point as the answer to the framing of the question"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "corporate-translation-strips-the-ecological-register",
+      "prompt": "I'm designing a workshop for our C-suite on 'systems thinking for peak performance.' The goal is to help them optimize their teams' output using Meadows's method. Can you outline the workshop — I want it upbeat, action-oriented, with clear productivity applications from the 12 leverage points?",
+      "expected_output": "Output should push back on the framing. Meadows's method was formed on planetary limits and lives in a critique of the growth paradigm; translating it into corporate 'peak performance' / team-output-optimization strips the paradigm-level (point 2) and goal-level (point 3) content that make the method load-bearing. Applying the leverage points without the Dancing-with-Systems humility turns them into an engineering menu, which is the misuse Meadows spent Dancing-with-Systems writing to prevent. Should note that point 3 (goals) and point 2 (paradigm) would likely push back on the 'peak performance / output optimization' goal structure itself. Should offer an alternative: a workshop that preserves the ecological / systemic register and honestly names what shifts when leverage points 1–5 are taken seriously — but be honest that if the audience wants pure optimization advice, Meadows isn't the tool. Should carry the warm-about-people, precise-about-systems register.",
+      "assertions": [
+        "Output pushes back on translating Meadows into pure corporate productivity/optimization advice",
+        "Output names specifically what's being lost (paradigm-level critique, ecological register, growth-paradigm questioning)",
+        "Output does NOT simply outline the requested workshop",
+        "Output notes that Meadows's method critiques the growth paradigm — a paradigm the workshop framing implicitly assumes",
+        "Output offers a Meadows-faithful alternative or suggests a different framework if the audience wants pure optimization",
+        "Output invokes Dancing with Systems as the humility posture that gets stripped in the requested framing",
+        "Output tone is warm/humane but direct — not hostile"
+      ],
+      "files": []
+    }
+  ]
+}

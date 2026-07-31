@@ -81,3 +81,73 @@
   title: Pattern Breakers
   tagline: Mike Maples Jr's inflections + insights + movements for breakthrough startups — non-consensus bets, backcasting, living in the future
   theme: Strategy
+
+- slug: high-output-management
+  title: High Output Management
+  tagline: Andy Grove's managerial leverage, task-relevant output, 1:1s, staff meetings, decision framework — kept alive by Horowitz, Doerr, Zhuo, Hughes Johnson
+  theme: Management & communication
+
+- slug: inspired
+  title: Inspired
+  tagline: Marty Cagan's product team topology + discovery/delivery split — spans Inspired, Empowered, and Transformed (Product Operating Model)
+  theme: Product & discovery
+
+- slug: crossing-the-chasm
+  title: Crossing the Chasm
+  tagline: Geoffrey Moore's technology adoption lifecycle, bowling alley, whole product, beachhead — 3rd ed as canonical, plus Inside the Tornado + Zone to Win
+  theme: Positioning & narrative
+
+- slug: never-split-the-difference
+  title: Never Split the Difference
+  tagline: Chris Voss's tactical empathy — mirroring, labeling, calibrated questions, "that's right", Ackerman model, Black Swans (with weaponization guard)
+  theme: Sales
+
+- slug: scaling-people
+  title: Scaling People
+  tagline: Claire Hughes Johnson's founding docs, operating cadences, hiring loops, personal operating manual — template-first, synthesizes Grove/Scott/Wodtke/Bezos
+  theme: Management & communication
+
+- slug: theory-of-constraints
+  title: Theory of Constraints
+  tagline: Eliyahu Goldratt's Five Focusing Steps, Throughput/Inventory/Operating Expense, DBR, Critical Chain, Thinking Processes — carried by Goldratt Institute + Kim/Behr/Spafford
+  theme: Operations
+
+- slug: lean-startup
+  title: The Lean Startup
+  tagline: Eric Ries's Build-Measure-Learn, MVP (not v0.1), pivot/persevere, innovation accounting, engines of growth — with aggressive misapplication guards
+  theme: Product & discovery
+
+- slug: continuous-discovery-habits
+  title: Continuous Discovery Habits
+  tagline: Teresa Torres's weekly customer touchpoints, Opportunity Solution Tree, story-based interviewing, assumption tests across 5 categories including ethical
+  theme: Product & discovery
+
+- slug: shape-up
+  title: Shape Up
+  tagline: Ryan Singer's shaping/betting/building — 6-week cycles, appetite (not estimation), hill charts, no backlog, circuit breaker — free book at basecamp.com/shapeup
+  theme: Product & discovery
+
+- slug: play-bigger
+  title: Play Bigger
+  tagline: Ramadan/Peterson/Lochhead/Maney's category design — Point of View, Lightning Strike, Category King, Data Flywheel — evolves through Category Pirates
+  theme: Positioning & narrative
+
+- slug: five-dysfunctions
+  title: The Five Dysfunctions of a Team
+  tagline: Patrick Lencioni's sequential pyramid (trust → conflict → commitment → accountability → results) — with guards against trust theater and fable-only reads
+  theme: Management & communication
+
+- slug: thinking-in-systems
+  title: Thinking in Systems
+  tagline: Donella Meadows's stocks/flows/loops, 8 system archetypes, 12 leverage points (ranked, not menu), Dancing with Systems — carried by the Academy for Systems Change
+  theme: Sensemaking & decisions
+
+- slug: fearless-organization
+  title: The Fearless Organization
+  tagline: Amy Edmondson's psychological safety paired with high standards (Learning Zone 2x2) — plus the Right Kind of Wrong failure taxonomy (basic/complex/intelligent)
+  theme: Management & communication
+
+- slug: cold-start-problem
+  title: The Cold Start Problem
+  tagline: Andrew Chen's network-effects lifecycle — atomic network, hard side, five stages (Cold Start → Tipping Point → Escape Velocity → Ceiling → Moat), anti-network effects
+  theme: Growth

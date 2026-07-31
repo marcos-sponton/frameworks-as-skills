@@ -1,0 +1,91 @@
+{
+  "skill_name": "lean-startup",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The evals emphasize the differential of this skill: nuance over vocabulary. Everyone thinks they know Lean Startup; the skill's job is to reset the degraded vocabulary and apply the actual method. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. An assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "mvp-vocabulary-reset",
+      "prompt": "We're building a B2B SaaS scheduling tool. Small founding team of 4. We're going to ship an MVP in 8 weeks — basically a stripped-down v0.1 with the core scheduling flow, minimal onboarding, no integrations. We think shipping fast and getting real users will teach us the most. Sound like a good Lean Startup MVP plan?",
+      "expected_output": "Output should: (a) reset the vocabulary — restate Ries's actual definition of MVP ('the minimum amount of effort to learn', not 'small first version to ship'); (b) push back on the 8-week stripped-down-v0.1 framing as the classic MVP-as-excuse-for-shipping-garbage misapplication; (c) ask what specific hypothesis they're testing and what metric will confirm or falsify it; (d) recommend a smaller test — landing page + paid ad demand test, concierge MVP (manually schedule for 5 customers), Wizard of Oz (fake the calendar integration), Zapier-piecemeal MVP — depending on what hypothesis is actually being tested; (e) warn against 'ship it and see' as the anti-pattern Ries has spent 15 years pushing back on; (f) cite Ries's actual MVP definition (The Lean Startup ch 6) + the 2024 Lenny retrospective + the 4-common-misconceptions article.",
+      "assertions": [
+        "Output restates Ries's actual definition of MVP as 'the minimum amount of effort to learn' (or 'validated learning with the least effort')",
+        "Output pushes back on the 8-week stripped-down v0.1 as MVP framing rather than accepting it",
+        "Output asks what specific hypothesis is being tested (or names that unclear as the finding)",
+        "Output names at least one alternative MVP type (landing page, concierge, Wizard of Oz, video, piecemeal) with a shorter time-to-learning",
+        "Output names 'MVP as excuse for shipping garbage' or equivalent as an explicit misapplication risk",
+        "Output cites at least one specific Ries source (book chapter, 2009 tim.blog post, 2024 Lenny episode, or Lean Startup Co article)",
+        "Output does NOT default to 'yes, ship it fast and iterate' as the answer",
+        "Output does NOT recommend 'fail fast' as a virtue"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "vanity-vs-actionable-metrics-audit",
+      "prompt": "Here are our current OKRs and metrics we report to the board. Please audit them the way Ries would.\n\nQ2 2026 OKRs (early-stage SaaS, $2M ARR, 12k signups total):\n- O: Grow the top of funnel\n  - KR: Reach 20,000 total signups by end of Q2 (currently 12,000)\n  - KR: 500,000 total pageviews on marketing site (currently 320,000)\n  - KR: Grow LinkedIn followers to 15,000 (currently 8,500)\n- O: Improve product\n  - KR: Ship 8 features from the roadmap\n  - KR: Reduce bug count by 30%\n  - KR: NPS above 40",
+      "expected_output": "Output should classify each metric as vanity or actionable using Ries's framework. Almost every KR listed is vanity: cumulative signups (aggregate), pageviews (aggregate), LinkedIn followers (aggregate + not causally tied to business), features shipped (output not outcome — direct parallel to Perri's build trap), bug count (output), NPS aggregate (aggregate). Output should: (a) apply the substitution test; (b) recommend actionable alternatives — cohort retention, per-cohort conversion, cohorted funnel, cohorted paid-vs-organic acquisition; (c) surface that the underlying issue is unclear engine of growth (sticky/viral/paid) — recommend picking one and defining actionable metrics around it; (d) warn about vanity-metrics-dressed-as-OKRs as an explicit Ries anti-pattern; (e) cite Ries's 2009 tim.blog post + The Lean Startup ch 7.",
+      "assertions": [
+        "Output classifies at least 4 of the listed KRs as vanity metrics with specific reasoning",
+        "Output applies the substitution test (per-cohort, causal, per-customer)",
+        "Output recommends cohorted / actionable alternatives (cohort retention, per-cohort conversion, cohorted funnel, or similar)",
+        "Output surfaces the engine of growth (sticky / viral / paid) as the underlying question that determines which actionable metrics matter",
+        "Output cites Ries's 2009 tim.blog vanity-vs-actionable post OR The Lean Startup ch 7 specifically",
+        "Output identifies 'features shipped' as output-not-outcome (with or without explicit build-trap cross-reference)",
+        "Output does NOT accept the current OKR list as a valid Lean Startup measurement approach"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "amazon-scale-mvp-honest-disagreement",
+      "prompt": "I'm the head of product at a large payments company (public, $10B+ market cap). We're launching a new merchant onboarding flow that will handle billions in transaction volume in the first year. Our engineering team wants to run this the Lean Startup way — ship an MVP to a small merchant cohort, measure, learn, iterate. Our CEO is pushing for a more considered launch with extensive upfront design. Which approach is right?",
+      "expected_output": "Output should surface the honest disagreement between Lean Startup and Working Backwards. Should: (a) apply the 'how expensive is a wrong bet here?' diagnostic — at billions-in-transaction-volume scale with public-company reputation stakes, the cost of a wrong launch is high; (b) recommend Working Backwards / PR-FAQ approach for the LAUNCH commitment; (c) but propose Lean Startup for the DISCOVERY phase — merchant interviews, prototype testing, cohort validation of specific features BEFORE the launch commitment; (d) name that this is a real disagreement between two valid frames, not a case of one being wrong; (e) cite both Ries and Bryar & Carr honestly; (f) NOT collapse the disagreement in either direction; (g) recommend the sequence — Lean Startup for search, Working Backwards for commitment.",
+      "assertions": [
+        "Output applies the 'how expensive is a wrong bet' diagnostic",
+        "Output names Amazon-scale / commitment altitude as the reason MVP alone is insufficient here",
+        "Output recommends Working Backwards or PR/FAQ (Bryar & Carr) for the launch commitment",
+        "Output does NOT abandon Lean Startup entirely — recommends it for the discovery phase before commitment",
+        "Output names the disagreement between Ries and Working Backwards as REAL and defensible on both sides, not as one being wrong",
+        "Output recommends a sequence (Lean Startup then Working Backwards) rather than either alone",
+        "Output cites both frames — Ries AND Bryar/Carr / Working Backwards",
+        "Output does NOT push the CEO to abandon 'considered launch' framing as anti-lean"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-fail-fast-pushback",
+      "prompt": "Our new head of innovation wants to install a 'fail fast, fail often' culture. He's putting it in our company values and giving Innovation Day awards to teams whose experiments failed. Feels very lean-startup to me. Am I missing anything?",
+      "expected_output": "Output should push back on 'fail fast' as a value using Ries's own line. Voice should be patient, definitional, and specifically anti-'fail fast'. Should: (a) use Ries's exact quote ('I hate the idea of fail fast. It's like I'm trying to run a sprint, and you're like, OK. Breathe fast.'); (b) reframe the value as 'learn fast; failure is one form learning sometimes takes'; (c) warn that celebrating failure without extracting learning is waste, not signal; (d) name the specific test — did we EXTRACT LEARNING from the failure that changes what we do next? If not, the failure was waste; (e) recommend rewriting the value + the awards to focus on validated learning, not failure per se; (f) cite the Lean Startup Co 4-common-misconceptions article. Tone should be direct-but-patient, not preachy.",
+      "assertions": [
+        "Output pushes back on 'fail fast' as a value rather than accepting it as pro-lean-startup",
+        "Output uses Ries's specific 'breathe fast' quote or a close paraphrase",
+        "Output reframes the value as 'learn fast' rather than 'fail fast'",
+        "Output warns that celebrating failure without extracting learning is waste",
+        "Output recommends rewriting the value / awards to focus on validated learning",
+        "Output cites the Lean Startup Co 4-common-misconceptions article specifically OR Ries by name on the misconception",
+        "Response tone is patient and definitional, not preachy or scolding",
+        "Output does NOT accept 'fail fast' as a legitimate summary of Lean Startup"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "enterprise-innovation-startup-way",
+      "prompt": "I'm a VP at a Fortune 500 industrial company. Our CEO just returned from a conference and wants to install Lean Startup across the company — internal startups, MVPs, the whole thing. He's giving me 6 months and a small team (8 people, all internal transfers) to prove it works. No dedicated budget yet — I'd need to justify each experiment through the existing capex process. My performance review will be based on how many MVPs we ship. Where do I start?",
+      "expected_output": "Output should apply The Startup Way (2017) diagnostic. Should: (a) name multiple scaffolding gaps — no dedicated protected budget, using existing capex process (BAU governance killing entrepreneurial method), performance review based on outputs (MVPs shipped) not outcomes/learning; (b) name specific enterprise-specific obstacles (defensive middle management, procurement/finance/legal treating team as anomalies, quarterly earnings pressure); (c) recommend Growth Board governance as the fix — tranche-based funding, separate from capex; (d) push back on 'measured by MVPs shipped' as an output metric that will produce the exact wrong incentives (build-trap-style pathology inside the innovation team); (e) reference the GE FastWorks case honestly — including that it partially unwound after Immelt's departure, and the governance lesson that teaches; (f) cite The Startup Way + FastWorks retrospective; (g) recommend the VP name the scaffolding gaps to the CEO BEFORE proceeding, not after failure.",
+      "assertions": [
+        "Output identifies at least 3 scaffolding gaps (protected budget, dedicated team, protected timeline, governance separate from BAU capex, appropriate accountability metric)",
+        "Output pushes back on 'measured by MVPs shipped' as a wrong output-based metric",
+        "Output recommends Growth Board governance (or equivalent tranche-based funding structure)",
+        "Output cites the GE FastWorks case with honesty about the post-Immelt unwind",
+        "Output names at least 2 enterprise-specific obstacles from The Startup Way (BAU incentive misalignment, defensive middle management, procurement/finance/legal, quarterly earnings pressure, or similar)",
+        "Output cites The Startup Way (2017) specifically",
+        "Output recommends surfacing the scaffolding gaps to the CEO before proceeding, not just accepting the constraints",
+        "Output does NOT default to 'just start shipping MVPs and prove it works' — that's the exact misapplication being warned against"
+      ],
+      "files": []
+    }
+  ]
+}

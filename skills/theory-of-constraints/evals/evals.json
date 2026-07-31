@@ -1,0 +1,98 @@
+{
+  "skill_name": "theory-of-constraints",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with a skill eval harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "diagnose-bottleneck-in-manufacturing-plant",
+      "prompt": "I run a mid-size manufacturing plant. We miss delivery dates and management keeps yelling about efficiency. Our reports say we're at 87% utilization overall, so on paper we should be shipping more than we are. Something's wrong but I can't tell what. Help me diagnose it.",
+      "expected_output": "Output should: (a) refuse to diagnose before naming the Goal — ask what the Goal of the plant is and force it to be stated in Throughput terms (make money via sales), not efficiency; (b) reframe the 87% utilization number as suspect — either the plant is at a balanced line (impossible under statistical fluctuations + dependent events) or non-constraints are running at 87% producing WIP the constraint can't consume; (c) walk through the Five Focusing Steps starting with Identify — look for where WIP piles up, where people wait, which resource is expedited; (d) explicitly cite activation vs. utilization; (e) warn against elevating (buying capacity) before Exploit and Subordinate; (f) cite Goldratt / The Goal at least once with specific chapter or concept.",
+      "assertions": [
+        "Output asks about or names the Goal of the system before diagnosing (Jonah opening move)",
+        "Output names the Five Focusing Steps or at least Identify + Exploit + Subordinate explicitly",
+        "Output pushes back on the 87% utilization framing rather than accepting it",
+        "Output cites activation vs utilization (Goldratt's distinction) explicitly or in paraphrase with attribution",
+        "Output warns against buying capacity (Elevate) before Exploiting and Subordinating",
+        "Output does NOT reduce TOC to 'find the bottleneck' as the entire method",
+        "Output attributes to Goldratt / The Goal / TOC at least once"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "push-back-on-100-percent-utilization",
+      "prompt": "My COO just announced a new initiative: every resource — every person, every machine — must run at 95%+ utilization. He calls it 'operational discipline.' What should I say back?",
+      "expected_output": "Output should push back cleanly and give the user a script. Specifically: (a) name the doctrinal TOC position that running non-constraints at 100% is a bug, not a feature; (b) explain the mechanism — non-constraints at full utilization produce WIP in front of the constraint (increasing Inventory), or defective work reaching the constraint (destroying Throughput); (c) cite Goldratt's activation-vs-utilization distinction; (d) predict the concrete consequences: WIP piles up, quality drops at the constraint, delivery slips; (e) offer a redirect — instrument the constraint's utilization, not the non-constraints'; non-constraints SHOULD have idle time; (f) give the user a Jonah-style question to ask the COO ('which resource is the constraint of the overall pipeline?').",
+      "assertions": [
+        "Output states clearly that running non-constraints at 100% is a bug in TOC terms",
+        "Output names activation vs utilization with attribution to Goldratt",
+        "Output explains the mechanism (WIP buildup, defects, hidden inventory) not just the conclusion",
+        "Output offers a concrete question or reframe the user can bring back to the COO",
+        "Output does NOT capitulate or offer to help design the 95% utilization dashboard",
+        "Output attributes to Goldratt / The Goal at least once"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "critical-chain-multitasking-diagnosis",
+      "prompt": "We manage ~15 concurrent projects with 40 engineers. Every project is late. Engineers are working nights and weekends. Management wants to hire more engineers. Is that the right move?",
+      "expected_output": "Output should recognize this as a classic CCPM setup and respond with the CCPM playbook. Specifically: (a) push back on hiring as the first move — apply Exploit before Elevate; (b) diagnose multitasking as the likely dominant cause — 15 projects across 40 engineers means most engineers are split across 3+ projects, which finishes all of them later than sequencing would; (c) name Student Syndrome and Parkinson's Law as CCPM failure modes to test for; (d) propose the CCPM intervention: cut task estimates ~50%, aggregate safety into Project Buffers, sequence per-resource, identify the Critical Chain (resource-constrained longest path); (e) cite Goldratt's Critical Chain (1997) and/or Efrat Goldratt-Ashlag's Goldratt's Rules of Flow (2023) since this is a multi-project environment; (f) warn: hiring more engineers without killing multitasking will not move the numbers.",
+      "assertions": [
+        "Output identifies multitasking as the likely primary constraint before recommending hiring",
+        "Output names Critical Chain / CCPM as the applicable framework",
+        "Output mentions cutting estimates and pooling safety into Project Buffers, or the mechanism in equivalent terms",
+        "Output cites either Goldratt's Critical Chain (1997) or Efrat's Goldratt's Rules of Flow (2023) or both",
+        "Output warns that hiring more engineers without killing multitasking will not fix the problem",
+        "Output does NOT recommend adding engineers as the first move"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "phoenix-project-toc-devops-mapping",
+      "prompt": "My team read The Phoenix Project and now they're talking about 'the Three Ways' and 'Brent bottlenecks.' I'm familiar with DORA metrics but never read Goldratt. How does TOC map to what my team is doing?",
+      "expected_output": "Output should map the DevOps / Phoenix Project vocabulary to Goldratt's TOC cleanly. Specifically: (a) name that The Phoenix Project is deliberately The Goal for IT — Bill Palmer as Alex Rogo, Erik Reid as Jonah, Brent as the NCX-10 constraint; (b) map the Three Ways to POOGI and the Five Focusing Steps: First Way (Flow) = Five Focusing Steps applied to delivery pipeline; Second Way (Feedback) = buffer management as diagnostic signal; Third Way (Continuous Experimentation) = POOGI as team culture; (c) map DORA measures to TOC measurements: DF + Lead Time = Throughput; CFR + Recovery Time = stability of the flow; (d) cross-link to the dora-accelerate skill or Forsgren's work; (e) name Goldratt (1984) and Kim/Behr/Spafford (2013) with attribution; (f) recommend a specific TOC reading path — start with The Goal (2004 edition) for the story, then Beyond the Goal or the Satellite Program for the theory.",
+      "assertions": [
+        "Output explicitly maps Bill Palmer to Alex Rogo, Erik Reid to Jonah, or Brent to the NCX-10 (any of these mappings)",
+        "Output maps at least one of the Three Ways to TOC POOGI or the Five Focusing Steps",
+        "Output states that DORA measures are Throughput measures for software delivery, or maps at least one DORA metric to Throughput",
+        "Output cross-links to the dora-accelerate skill or names Forsgren / Accelerate / DORA explicitly",
+        "Output attributes both Goldratt (1984) and Kim/Behr/Spafford (2013)",
+        "Output recommends a specific starting point for reading Goldratt (The Goal, Beyond the Goal, Satellite Program, or equivalent)"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "evaporating-cloud-on-stuck-conflict",
+      "prompt": "Engineering and Product have been fighting for 8 months about lead time for new feature commitments. Engineering says 'we need at least 6 weeks to commit reliably.' Product says 'the market moves in 2 weeks; we lose deals waiting.' We've tried compromise (4 weeks) and everyone's unhappy. Help me actually resolve this.",
+      "expected_output": "Output should recognize this as an Evaporating Cloud situation and walk through the diagnosis. Specifically: (a) name that compromise loses in a Cloud — the goal is dissolution, not middle ground; (b) draw the Cloud out with all five boxes named: A (common objective — probably 'grow the business' or 'ship the right things'), B (Engineering's need — probably 'commit reliably' or 'protect quality'), C (Product's need — probably 'respond to market' or 'win deals'), D (Engineering's action — 6 weeks), D' (Product's action — 2 weeks); (c) surface assumptions on the arrows: why does 'commit reliably' require 6 weeks specifically? why does 'respond to market' require 2 weeks specifically? why do 6 weeks and 2 weeks actually conflict?; (d) propose an injection that satisfies both B and C without the D/D' conflict (e.g., decoupled commit-vs-forecast, staged commitments, sprint-of-record vs sprint-of-plan); (e) recommend testing the injection with a Future Reality Tree before rolling it out; (f) cite Goldratt's Thinking Processes / It's Not Luck.",
+      "assertions": [
+        "Output names the Evaporating Cloud as the tool being applied",
+        "Output identifies all five Cloud boxes (A, B, C, D, D') or their equivalents for this specific conflict",
+        "Output surfaces at least one assumption on one of the arrows to be invalidated",
+        "Output proposes an injection that dissolves the conflict rather than a compromise",
+        "Output warns against compromise as the solution",
+        "Output cites Goldratt's Thinking Processes or It's Not Luck (1994) or The Choice (2008)"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "distinguish-toc-from-lean-question",
+      "prompt": "My factory just wrapped a Lean transformation. We eliminated waste everywhere, standardized work, 5S'd every corner. We got some improvements but the top-line output only moved 4%. Now consultants are pitching Theory of Constraints as 'Lean 2.0.' Is that the same thing under a new name? Or is it different?",
+      "expected_output": "Output should NOT call TOC 'Lean 2.0' but should map the real differences and the composition pattern. Specifically: (a) name the shared ground (both attack local optima; both focus on flow; both agree activity is not productivity); (b) name the key divergence — Lean attacks waste everywhere continuously; TOC attacks the constraint specifically; (c) explain why 4% may be the expected result of Lean-everywhere without prioritizing the constraint: waste reduction at non-constraints doesn't move throughput because throughput is limited by the constraint; (d) propose the composition — use TOC to identify the constraint, then use Lean tools (5S, VSM, kaizen) at the constraint for high-leverage waste reduction; (e) cite Marris Consulting or the general 'TOC to prioritize which Lean improvement to sequence first' pattern; (f) do NOT flatten the two frameworks into one; (g) attribute to Goldratt and to Lean/TPS lineage separately.",
+      "assertions": [
+        "Output does not call TOC 'Lean 2.0' or treat them as identical",
+        "Output names the specific divergence (Lean attacks waste everywhere; TOC attacks the constraint)",
+        "Output explains the 4% result in TOC terms (Lean-everywhere without constraint focus = low leverage)",
+        "Output proposes composition (TOC to prioritize; Lean tools at the constraint)",
+        "Output attributes Lean and TOC separately (Goldratt vs Toyota/Ohno lineage)",
+        "Output does NOT flatten the two frameworks into a single approach"
+      ],
+      "files": []
+    }
+  ]
+}

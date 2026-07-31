@@ -42,6 +42,7 @@ THEME_ORDER = [
     "Management & communication",
     "Growth",
     "Engineering",
+    "Operations",
     "Other",
 ]
 

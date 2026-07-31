@@ -1,0 +1,99 @@
+{
+  "skill_name": "high-output-management",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "fix-broken-one-on-ones",
+      "prompt": "My weekly 1:1s with my 5 direct reports feel like a waste of time. I ask 'how's it going' and they say 'fine, just working on X.' I end up filling the silence with company updates. They're all senior engineers, ~2 years each on my team. Help me fix this.",
+      "expected_output": "Output should apply Grove's specific one-on-one mechanics from *HOM* Ch. 4: (a) diagnose the failure — the manager is setting the agenda instead of the report ('the subordinate's meeting'); (b) prescribe cadence calibrated to TRM (question whether weekly is right for 2-year veterans or if it should be less frequent); (c) prescribe duration (one hour minimum, not implied); (d) prescribe agenda ownership (subordinate); (e) invoke Grove's Principle of Didactic Management ('ask one more question'); (f) push for problems/worries/potential problems rather than status updates; (g) cite *HOM* explicitly; (h) NOT devolve into generic 'have better conversations' advice; (i) match Grove's register — direct, specific, mechanic-focused.",
+      "assertions": [
+        "Output identifies that the manager is currently setting the agenda instead of the subordinate — the core Grove violation",
+        "Output prescribes that the subordinate sets the agenda, citing Grove's 'the subordinate's meeting' framing",
+        "Output addresses cadence calibration to task-relevant maturity (weekly may be over-frequent for 2-year veterans)",
+        "Output specifies one hour minimum duration (Grove's actual mechanic)",
+        "Output invokes 'ask one more question' — Grove's Principle of Didactic Management",
+        "Output pushes for problems / worries / potential problems rather than status updates",
+        "Output cites *High Output Management* or Andy Grove or a specific chapter",
+        "Output does NOT default to generic 'have better conversations' or 'be more curious' advice",
+        "Output uses Grove's signature vocabulary (TRM, output, leverage) somewhere in the answer"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "critique-micromanagement-accusation-against-grove-trm",
+      "prompt": "My VP of Engineering complained I'm micromanaging my team. Specifically I'm reviewing code PRs from a new hire (started 3 weeks ago) daily, and I'm doing weekly walkthroughs with our tech lead (been on the team 4 years) on a new architecture project she's leading. Am I actually micromanaging? Help me think about this using Grove.",
+      "expected_output": "Output should apply Grove's Task-Relevant Maturity framework carefully to distinguish two different situations: (a) new hire daily PR review = LOW TRM (3 weeks in a new context) → calibrated involvement, not micromanagement; (b) tech lead on NEW architecture project = LOW TRM in this specific task even though HIGH TRM as a tech lead → walkthroughs are appropriate but the framing should be different (supporting a high-TRM person on a new-to-them task, not directing a low-TRM person on their day-to-day). Output should invoke Grove's explicit warning: 'Don't confuse people's Task-Relevant Maturity with their general competence.' Output should NOT reduce to a generic 'trust your team' answer. Output should probably challenge the VP's framing — micromanagement is the wrong diagnosis; calibrated involvement to TRM is Grove's actual concept.",
+      "assertions": [
+        "Output applies task-relevant maturity as a TASK-SPECIFIC concept, not a person-general one",
+        "Output distinguishes the two cases: new hire (low TRM in general) vs. tech lead on new architecture (low TRM in this specific task even though high TRM overall)",
+        "Output quotes or paraphrases Grove: 'Don't confuse people's Task-Relevant Maturity with their general competence'",
+        "Output challenges (rather than accepts) the framing that both interactions are 'micromanagement'",
+        "Output cites Grove or *High Output Management*",
+        "Output does NOT default to 'trust your team more' or 'step back' as generic advice",
+        "Output ends with a specific recalibration or action, not just analysis"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "decision-meeting-drift-six-question-audit",
+      "prompt": "We had a leadership meeting last week to decide whether to launch a new pricing tier. Six people in the room, 90 minutes, lots of debate, ended without a clear decision. Today I found out our head of product started building the launch anyway, and finance is quietly assuming we won't launch. How should I have run that meeting?",
+      "expected_output": "Output should immediately apply Grove's six-question decision audit as the diagnostic: (1) what decision, (2) when, (3) WHO WILL DECIDE (the modal miss), (4) who consults, (5) who ratifies, (6) who's informed. Output should identify that the manager most likely failed on #3 and #6 specifically — which produced the current situation (product assuming yes, finance assuming no). Output should quote or paraphrase Grove's rule: 'If you cannot answer all six before the meeting starts, you don't have a decision-making meeting — you have a chat.' Output should also mention Grove's guard against groupthink (most junior person speaks first). Output should give concrete instructions for what to do now (retroactively answer the six questions, communicate the decision + owner, inform the right people).",
+      "expected_assertions": [
+        "Output invokes Grove's six-question decision audit explicitly, ideally listing all six",
+        "Output identifies 'who will decide' as the most likely miss",
+        "Output identifies 'who will be informed' as the other likely miss (given the product / finance drift)",
+        "Output paraphrases Grove's 'if you cannot answer all six... it's a chat' rule",
+        "Output cites *High Output Management* Ch. 4 or Andy Grove",
+        "Output prescribes concrete corrective action (not just diagnosis) — retroactively decide + communicate",
+        "Output does NOT default to 'you need to be more decisive' or 'establish clearer roles' as generic advice"
+      ],
+      "assertions": [
+        "Output invokes Grove's six-question decision audit explicitly, ideally listing all six",
+        "Output identifies 'who will decide' as the most likely miss",
+        "Output identifies 'who will be informed' as the other likely miss",
+        "Output paraphrases Grove's rule that without answering the six, it's a chat not a decision meeting",
+        "Output cites *High Output Management* or Andy Grove",
+        "Output prescribes concrete corrective action, not just diagnosis"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "okr-as-strategy-substitute-catch-the-drift",
+      "prompt": "We're a 40-person startup. Our leadership team is doing our Q3 planning next week. Our CEO said, 'Our strategy for next quarter is our OKRs: (1) hit $2M ARR, (2) ship the enterprise tier, (3) launch in EMEA, (4) reduce churn to under 3%.' Help me set this up well using Grove.",
+      "expected_output": "Output should push back — respectfully but clearly — that this is not a Grove-consistent framing. Specifically: (a) OKRs are an operating cadence, not a strategy; Grove's *HOM* Ch. 7 is explicit that OKRs cascade FROM strategic decisions, not INSTEAD of them; (b) Roger Martin's 'Stop Letting OKRs Masquerade as Strategy' essay is the exact critique Grove would endorse — link or reference it; (c) the four 'OKRs' listed are actually goals + targets — where is the actual how-to-win theory? (d) suggest composing with a strategy framework ([[playing-to-win]] cascade, [[good-strategy-bad-strategy]] kernel) BEFORE cascading OKRs; (e) then instrument the resulting strategy with Grove's OKR mechanics (cascade, quarterly cadence, KRs-become-objectives-one-level-down); (f) also cross-reference [[radical-focus]] for startup-scale OKR practice.",
+      "assertions": [
+        "Output pushes back on the framing 'strategy = OKRs' rather than accepting it",
+        "Output explicitly states OKRs are an operating cadence, not a strategy",
+        "Output cites Grove's *HOM* Ch. 7 or the general principle that OKRs cascade FROM strategy",
+        "Output references Roger Martin's critique of OKRs-as-strategy or [[playing-to-win]]",
+        "Output points at a strategy framework to run BEFORE the OKRs (Playing to Win, Good Strategy Bad Strategy, or similar)",
+        "Output references [[radical-focus]] or the startup-scale OKR practice extension",
+        "Output cites Andy Grove and/or Roger Martin explicitly",
+        "Output does NOT accept the four bullets as valid OKRs without diagnosing them"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "strategic-inflection-point-diagnostic-real-question",
+      "prompt": "We're a mid-sized B2B SaaS company (~$40M ARR) in HR tech. Over the last 6 months we've seen: (a) three of our top-10 customers building internal AI-driven replacements for our core module, (b) our win rate against traditional competitors is up, but we're losing more deals to 'build internally with LLMs' as the alternative, (c) our head of sales says 3 of our largest deals in pipeline are 'stalled while they evaluate AI options.' Are we at a strategic inflection point? What should I do?",
+      "expected_output": "Output should apply Grove's *Only the Paranoid Survive* diagnostic seriously: (a) name the 10X test — is the AI shift 10x stronger than what the business is built to handle on any of Porter's Five Forces + complementors? Specifically customers (they can now build in-house) and substitutes (LLM tooling); (b) name the Helpful Cassandras — the head of sales and the customer signals ARE the weak-signal detectors, don't dismiss them; (c) run the outside-CEO thought experiment explicitly — 'if we got kicked out and the board brought in a new CEO, what would they do?' — and force the user to answer it; (d) acknowledge the emotional phase of an SIP response; (e) NOT default to a hedged answer like 'it could be, watch and see' — Grove would push for a decision; (f) probably conclude that yes, this pattern of signals looks like an SIP, and the response requires the three-phase Grove sequence (emotional acknowledgment → bottom-up input → top-down direction). Cite *OTPS* explicitly.",
+      "assertions": [
+        "Output applies the 10X test to at least two of Porter's Five Forces + complementors",
+        "Output identifies the head of sales and customer signals as Helpful Cassandras and validates them (not dismisses)",
+        "Output runs the outside-CEO thought experiment — verbatim or paraphrased",
+        "Output does NOT default to hedged 'watch and see' advice — pushes for a decision",
+        "Output cites *Only the Paranoid Survive* or *OTPS* or Andy Grove",
+        "Output references the three-phase SIP response (emotional acknowledgment → bottom-up input → top-down direction)",
+        "Output takes a position on whether this looks like an SIP (rather than only asking questions back)",
+        "Output uses Grove's specific vocabulary (10X, Helpful Cassandras, SIP)"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "skill_name": "play-bigger",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "design-a-new-category-startup",
+      "prompt": "I'm the founder of a Series A startup building an AI-native tool that automates parts of a security analyst's job — triage, prioritization, evidence gathering. We've been describing ourselves as 'the AI copilot for SecOps teams' and we keep getting compared to CrowdStrike and Splunk. Deals get stuck. Prospects say 'cool, but we're already invested in Splunk.' Help me use the Play Bigger method to design our category.",
+      "expected_output": "Output should: (a) diagnose this as the Existing Market Trap AND specifically the Bolt-on AI Trap (Lochhead 2025 material); (b) push back on 'AI copilot for SecOps' as languaging that installs the incumbent as the category and them as the accessory; (c) walk through the Play Bigger 7-step method starting with problem framing; (d) push toward a 2–3 word category name that reframes the incumbents as legacy; (e) sketch a POV (problem → ramifications → future → outcomes); (f) suggest a Lightning Strike in 3–6 months; (g) cite the 76% Category King statistic; (h) probably contrast with Liquid Death's inverse move (canned water reframing bottled water); (i) NOT default to positioning-inside-existing-category advice (do not do Dunford here).",
+      "assertions": [
+        "Output diagnoses this as the Existing Market Trap or Bolt-on AI Trap with attribution to Lochhead/Category Pirates 2025 material",
+        "Output pushes back specifically on 'AI copilot' languaging as installing the incumbent as the category",
+        "Output walks the Play Bigger method (problem framing → category naming → POV → ecosystem → Lightning Strike) not a generic positioning exercise",
+        "Output proposes at least one candidate category name in 2–3 words that does NOT contain 'copilot', 'assistant for', or the incumbent's category language",
+        "Output cites the ~76% Category King market cap statistic at least once",
+        "Output references at least one case (Salesforce/Siebel, Liquid Death, Airbnb, Uber, or similar) as teaching device",
+        "Output does NOT default to Dunford's competitive-alternatives positioning method",
+        "Output uses proper-noun Play Bigger vocabulary (Category King, POV, Lightning Strike, or Missionary) at least twice"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "redirect-positioning-problem-to-dunford",
+      "prompt": "I run a Series B SaaS in HR tech. Our market is well-understood — everyone knows what 'employee onboarding software' is. We compete against BambooHR, Rippling, Sapling. We're not trying to invent a new category. We just want to figure out how to differentiate and win more of the SMB segment. Help me use Play Bigger to sharpen our category.",
+      "expected_output": "Output should NOT run the Play Bigger method at this problem. It should: (a) recognize this is a positioning-inside-an-existing-category problem, not a category-creation problem; (b) explicitly redirect to Dunford's Obviously Awesome / positioning method; (c) explain the distinction (positioning is inside a category; Play Bigger creates the category); (d) probably note Dunford's own pushback that ~90% of successful tech companies won inside existing categories; (e) offer to run the Play Bigger diagnostic question if the user is unsure — 'do you already have a real category the market accepts, and you're trying to win inside it? Or are you trying to make the market accept a new category?'; (f) NOT walk through the 7-step category design process; (g) NOT invent a fake 'HR-tech-as-a-category' new category to justify running Play Bigger anyway.",
+      "assertions": [
+        "Output declines to run the Play Bigger 7-step method on this problem",
+        "Output explicitly redirects to Dunford / Obviously Awesome / positioning as the right tool",
+        "Output articulates the distinction between category design (creating the category) and positioning (winning inside a category)",
+        "Output does NOT propose a fake new category to justify using Play Bigger",
+        "Output offers a diagnostic question or check to confirm the user is in the positioning-not-category-design lane",
+        "Output does NOT invoke the Existing Market Trap framing (this user isn't in it — they have PMF inside an accepted category)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "critique-weak-POV-and-Lightning-Strike-plan",
+      "prompt": "Here's our category strategy doc. Please critique it against Play Bigger.\n\n---\nCATEGORY: AI-Powered Sales Enablement\n\nPOV: In today's competitive world, sales teams need better tools. Our AI-powered platform helps sales reps be more productive by giving them the insights they need to close deals faster. We are the leading platform for AI-powered sales enablement.\n\nLIGHTNING STRIKE PLAN:\n- Q3: Big launch event at our office, invite customers and press\n- Q3: New homepage\n- Q4: Attend Dreamforce\n- Q4: Analyst briefings with Gartner and Forrester\n---",
+      "expected_output": "Output should: (a) diagnose the POV as category-generic ('would fit unchanged on 5 competitors' homepages'), not disputable, not framing the problem, and full of 'better' language (Better Trap); (b) diagnose the 'category' name as a language-match to an existing category (AI-Powered [Existing Category] = Bolt-on AI Trap), not a new category; (c) diagnose the 'Lightning Strike' as a launch event / press release with catering — not a real Lightning Strike (no hijack, no CEO commitment framing, no ecosystem prep, no big+bold+different content); (d) cite Play Bigger's rule 'if the CEO wavers or hedges or doesn't commit resources, the strike will fail'; (e) provide specific fixes with attribution to book vs. post-book material; (f) name at least 2 of the 13 Deadly Sins that apply.",
+      "assertions": [
+        "Output diagnoses the POV as failing multiple Play Bigger tests (not disputable, product-first, 'better' language, category-generic)",
+        "Output diagnoses 'AI-Powered Sales Enablement' as a Bolt-on AI Trap / language-match to an existing category",
+        "Output diagnoses the Lightning Strike plan as a launch event, not a real Lightning Strike, and names specifically what's missing (hijack, big+bold+different content, CEO commitment, ecosystem prep)",
+        "Output quotes or paraphrases 'if the CEO wavers or hedges or doesn't commit resources, the strike will fail' with attribution to Play Bigger (2016)",
+        "Output distinguishes between what's book-material (2016) vs. post-book material (Existing Market Trap 2025, Category Pirates)",
+        "Output offers concrete rewrites of at least the POV and the Lightning Strike plan, not just critique"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-user-uses-blue-ocean-framing",
+      "prompt": "We think we've found a Blue Ocean — a market space nobody is really competing in yet. How do we use Play Bigger to win it?",
+      "expected_output": "Output should push back on 'Blue Ocean' framing in a Category-Pirates-consistent way — invoking No Ocean Strategy (Category Pirates), noting the premise-rejection move ('Pirates reject the premise!'), and reframing from 'find an uncontested ocean' to 'build the space itself.' Should cite the Category Pirates essay. Voice should be direct/blunt (Lochhead-like), not soft. Should then walk into the Category Design method as the alternative to Blue Ocean thinking.",
+      "assertions": [
+        "Output pushes back on the Blue Ocean framing rather than accepting it uncritically",
+        "Output introduces No Ocean Strategy as Category Pirates' alternative",
+        "Output cites Category Pirates as the source (post-book material, not the 2016 book)",
+        "Output uses at least one direct/blunt Category-Pirates rhetorical move (e.g., 'reject the premise' or equivalent Lochhead phrasing)",
+        "Output then walks into the Category Design method (POV, Lightning Strike, ecosystem, Data Flywheel) not generic strategy advice",
+        "Response tone is direct rather than hedged"
+      ],
+      "files": []
+    }
+  ]
+}

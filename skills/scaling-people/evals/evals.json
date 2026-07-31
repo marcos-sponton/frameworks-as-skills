@@ -1,0 +1,128 @@
+{
+  "skill_name": "scaling-people",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The template-router cases (1, 2, 3, 5) are non-negotiable — the skill's central value is producing the specific artifact Claire would hand you, not abstract principle. The 'don't force premature infrastructure' case (case 6) is also non-negotiable — Claire explicitly warns against forcing a mission statement in month one, and the skill must honor that. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "personal-operating-manual-first-draft",
+      "prompt": "I just took a new role as VP Product at a Series C company (about 300 people). My team is 4 direct reports and I'll be working across engineering, design, marketing, and sales. Someone on my team suggested I write a 'how to work with me' document. I've never done this. Can you help me draft one?",
+      "expected_output": "Output should: (a) frame the doc as a working document, not a personality quiz; (b) walk the three sections Claire uses (work preferences, behavioral style, optional personal context); (c) give Claire's own example line about micromanagement ('I am not a micromanager necessarily... but the first time we're doing something, I will get really into the details') as the model for the register; (d) ask the user for the specific inputs (communication defaults, stress behavior, deep-work times, decision defaults) and produce a draft in their voice, not generic copy; (e) end with the pinning and annual-refresh rules; (f) cite Claire, the Fortune article, or Lenny's Podcast at least once; (g) NOT produce a generic 'about me' page with corporate-training register.",
+      "assertions": [
+        "Output frames the doc as living / working, not a personality quiz",
+        "Output walks Claire's three sections (work preferences, behavioral style, personal context)",
+        "Output includes Claire's example line about micromanagement OR an equivalent Claire quote that shows the register",
+        "Output asks the user for their specific inputs rather than fabricating them",
+        "Output produces a draft (or explicit template to fill) — not just abstract advice",
+        "Output ends with the pinning + annual-refresh rules",
+        "Output cites Claire Hughes Johnson, Scaling People, Fortune, or Lenny's Podcast at least once",
+        "Output does NOT use corporate-training register ('empower your team', 'align on values', etc.)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "reference-check-drill-coaching",
+      "prompt": "I'm about to do a reference call for a candidate I really want to hire — she's going to be my new Head of Growth. I have 30 minutes with her former VP of Marketing. I've never really been trained on how to do these well. What should I actually ask?",
+      "expected_output": "Output should: (a) NAME Claire's non-negotiable rule ('If you are delegating the references, you're making a mistake') and confirm the user is doing this themselves; (b) prime the referee move — describe the current role context and year-one success indicators before asking evaluative questions; (c) give the RANKING question verbatim ('Are they top 50%, top 20%, top 10%?') and the follow-up ('Does that mean they're top 5%?'); (d) give the COACHING question verbatim ('What can I do as their manager to help them succeed?'); (e) for exec references, add the followership question ('When they moved, who followed them?' OR 'Would you follow them to a new company?'); (f) warn about confirmation bias — the user is 'really' wants to hire her, so back-load the back-channels; (g) end with the user-check question: 'What would change your mind about this hire?' If nothing, they're doing validation calls, not reference checks; (h) cite Claire or the First Round Review podcast.",
+      "assertions": [
+        "Output cites the 'if you are delegating the references, you're making a mistake' rule OR confirms the user is doing them personally",
+        "Output includes the ranking question verbatim ('top 50%, top 20%, top 10%')",
+        "Output includes the coaching question verbatim ('What can I do as their manager to help them succeed?')",
+        "Output includes a priming-the-referee move (describe role context / year-one success)",
+        "Output includes the followership question OR equivalent exec-signal question",
+        "Output flags confirmation bias / the 'I really want to hire her' framing",
+        "Output ends with a check that forces disconfirming evidence (e.g., 'what would change your mind?')",
+        "Output cites Claire Hughes Johnson, Scaling People, or First Round Review at least once",
+        "Output does NOT produce a generic 'behavioral question' list"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "low-performer-four-phase-escalation",
+      "prompt": "I have a mid-level PM on my team who's been underperforming for about 6 weeks. Missed a launch deadline, then submitted a spec that had to be rewritten from scratch. I keep hoping he'll turn it around because he was great in his first year. I haven't said anything yet because I don't want to demoralize him. What should I do?",
+      "expected_output": "Output should: (a) diagnose the current state — the user is in Phase 0/1 territory but hasn't opened Phase 1 yet; the 6 weeks of silence is Ruinous Empathy (borrow from Radical Candor); (b) walk Claire's four-phase escalation explicitly (Phase 0 pattern recognition, Phase 1 align on challenge, Phase 2 agree on next steps, Phase 3 formal action plan); (c) give the Phase 1 opening line verbatim ('I am worried this is not working out for you') OR the softer hypothesis-based opener for a first conversation ('Here's what I'm noticing — does this match your experience?'); (d) explicitly precede hard feedback with hypothesis-based coaching — let him self-assess first; (e) apply the 'separate the person from the it' move (critique the specific work, not the character); (f) warn about the Bob test (Kim Scott, endorsed by Claire) — if he would say 'why didn't you tell me?' when things escalate, the manager failed; (g) end with a specific-action ask (when is this conversation happening?); (h) NOT frame this as 'just have the tough conversation' without the hypothesis-first opener.",
+      "assertions": [
+        "Output names Claire's four-phase escalation explicitly OR walks all four phases with duration guidance",
+        "Output identifies the current state as Phase 0/1 territory",
+        "Output flags the 6-week silence as Ruinous Empathy / manager avoidance",
+        "Output includes Claire's opener 'I am worried this is not working out for you' OR the hypothesis-based coaching opener",
+        "Output applies the 'separate the person from the it' move",
+        "Output references the Bob test or an equivalent 'unwarned failure = manager failure' framing",
+        "Output ends with a specific commit-to-action (when is the conversation?)",
+        "Output cites Claire Hughes Johnson, Scaling People, or cross-links to Radical Candor",
+        "Output does NOT jump straight to 'just be direct' without hypothesis-first opener"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "route-to-other-skill-when-strategy-question",
+      "prompt": "We're a 40-person startup and I think we need to figure out whether we're going after mid-market or enterprise as our primary segment. Can you help me use Claire Hughes Johnson's framework to decide?",
+      "expected_output": "Output should: (a) RECOGNIZE this is a strategy question (where to play), not a Scaling People question; (b) NAME that Claire's method is a management/operating-system framework, not a strategy framework — it assumes strategy is decided; (c) redirect to Playing to Win, Good Strategy Bad Strategy, 7 Powers, or Obviously Awesome (positioning) as the actual fit; (d) offer to help apply Scaling People AFTER the strategy is decided — team charter refresh, hiring loop for the new segment, comms cadence for the pivot; (e) NOT force-fit the 4 operating principles onto a strategy question just because the user asked; (f) reference Claire's own posture of crediting other frameworks generously.",
+      "assertions": [
+        "Output identifies this as a strategy question (where to play), not a Scaling People question",
+        "Output names that Scaling People is a management/operating-system framework, not a strategy framework",
+        "Output redirects to Playing to Win, Good Strategy Bad Strategy, 7 Powers, or Obviously Awesome",
+        "Output offers to help apply Scaling People AFTER the strategy question is answered",
+        "Output does NOT force-fit Claire's 4 operating principles onto a strategy question",
+        "Output uses hedged language for its confidence in the redirect (open to being wrong if user disagrees)",
+        "Output does NOT produce a summary of Scaling People or the 4 operating principles as if they resolved the question"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "team-charter-with-anti-scope",
+      "prompt": "I'm the head of a newly-created Customer Success team (5 people). We were spun out of Sales and there's confusion about what we own vs. what Sales still owns vs. what Product owns. My manager suggested writing a 'team charter.' What goes in it?",
+      "expected_output": "Output should: (a) frame the charter as a living doc (1–3 pages, refreshed annually, owned by the user); (b) walk Claire's team charter sections (mission, customers, strategy, goals, what we DO, what we do NOT do, team norms, owner, last updated); (c) EMPHASIZE the anti-scope section ('what we will NOT do') — this is where the Sales/Product confusion resolves; (d) run FOCUS(S) on any goals proposed (Focus, Objectively assessable, Challenging but possible, User-oriented, States not activities, Sensitivity and specificity); (e) end with owner + refresh cadence; (f) offer to walk the user through drafting the actual charter (ask for their inputs on mission, customers, scope); (g) cite Claire Hughes Johnson or Scaling People Chapter 2; (h) NOT produce a generic 'team mission template' with corporate-training filler.",
+      "assertions": [
+        "Output walks Claire's team charter sections (at minimum: mission, customers, scope, anti-scope, goals, norms, owner)",
+        "Output explicitly emphasizes the anti-scope ('what we will NOT do') section",
+        "Output introduces or applies FOCUS(S) on the goals",
+        "Output frames the charter as a living document with annual refresh cadence",
+        "Output offers to draft the actual charter with the user's inputs (rather than just giving a template)",
+        "Output cites Claire Hughes Johnson, Scaling People, or Chapter 2 at least once",
+        "Output keeps the charter compact (does NOT produce a 5-page corporate strategy doc)"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "dont-force-premature-founding-documents",
+      "prompt": "I'm the founder of a 4-person seed-stage startup. We just closed our seed round and I want to do this right from the start. Can you help me write our mission, vision, and values in the next couple of days so we can hire against them?",
+      "expected_output": "Output should: (a) RESIST producing a fabricated mission statement — Claire explicitly warns against forcing this early ('listen for the crystallization of what you're trying to be'); (b) explain WHY: a mission written in month one before the work has revealed the shape produces aspirational marketing, not an honest mission; (c) ACKNOWLEDGE what CAN be written now with integrity — the personal operating manuals for the 4 founders + a first team charter for the whole team + a lightweight set of behaviors (not values) they're testing; (d) offer the values TEST — 'would you fire someone for violating this?' — and note that at 4 people you might not have enough working history to answer; (e) suggest a 6–12 month refresh cadence so the mission emerges from work rather than a whiteboard; (f) cite Claire Hughes Johnson explicitly on 'listen for the crystallization'; (g) NOT capitulate and produce a generic mission/vision/values set just because the user asked.",
+      "assertions": [
+        "Output resists producing a fabricated mission statement at 4 people",
+        "Output cites Claire's 'listen for the crystallization' warning explicitly",
+        "Output explains why a rushed mission is aspirational marketing rather than honest",
+        "Output offers alternative artifacts that can be written now with integrity (personal operating manuals, team charter, behaviors)",
+        "Output introduces the values test ('would you fire someone for violating this?')",
+        "Output suggests a 6–12 month refresh cadence so the mission can emerge from work",
+        "Output cites Claire Hughes Johnson or Scaling People at least once",
+        "Output does NOT capitulate and produce a generic mission/vision/values set",
+        "Tone remains warm and useful — offers what CAN be done, not just what shouldn't"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "executive-hire-followership-diagnostic",
+      "prompt": "I hired a VP Engineering 4 months ago. She came from a great pedigree — big-name company, strong references. But she hasn't hired anyone yet and two of my strongest engineers have quietly started interviewing elsewhere. I keep making excuses for her ramp. What am I missing?",
+      "expected_output": "Output should: (a) NAME the specific pattern — Claire's red flag for exec hires is 'no strong hires in the first 3–6 months = followership isn't attaching'; (b) name the second red flag — strongest engineers interviewing elsewhere is the followership-drain signal; (c) surface Claire's own 'trying to be liked' failure mode — the user is 'making excuses' which is the same pattern; (d) recommend applying Claire's four-phase escalation (Phase 0 → 1 → 2 → 3) to the VP herself; (e) ask the diagnostic question Claire recommends for exec hires: 'Did she try to bring anyone with her? Who at her old company would follow her to a new role?'; (f) push for a specific conversation with the VP using hypothesis-based coaching + the neutral-distance opener ('From my seat, I have a couple of things I'm worried about'); (g) cite Claire Hughes Johnson or First Round Review; (h) NOT downplay the signals or advise 'give her more ramp time' without action.",
+      "assertions": [
+        "Output identifies the 'no strong hires in 3–6 months' pattern as Claire's specific exec-hire red flag",
+        "Output identifies the strong-engineers-leaving as the followership-drain signal",
+        "Output surfaces the 'trying to be liked' failure mode explicitly",
+        "Output recommends applying the four-phase escalation to the VP",
+        "Output includes at least one Claire-signature question for exec hires (followership, current team structure, etc.)",
+        "Output includes the neutral-distance line for the conversation ('From my seat...')",
+        "Output cites Claire Hughes Johnson, Scaling People, or First Round Review at least once",
+        "Output does NOT advise 'give her more time' without a specific conversation / action",
+        "Output does NOT jump to 'just fire her' either — walks the escalation"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -6,15 +6,7 @@
 
 ## Files
 
-- `hamilton-helmer.md`
-- `melissa-perri.md`
-- `bob-moesta.md`
-- `april-dunford.md`
-- `andy-raskin.md`
-- `dave-snowden.md`
-- `annie-duke.md`
-
-Each dossier corresponds to a skill in `skills/` (once built). Some dossiers may be here without a built skill yet (queue).
+Dossiers accumulate as skills are built. Run `ls _research/` for the current list — every `<slug>.md` here corresponds to a built skill under `skills/`, with the exception of `bob-moesta.md`, which is queued (JTBD demand-side, held while the Kalbach partnership plays out).
 
 ## The standard research brief
 

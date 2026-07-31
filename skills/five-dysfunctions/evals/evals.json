@@ -1,0 +1,113 @@
+{
+  "skill_name": "five-dysfunctions",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The sequential-pyramid case (1) and the trust-theater guard case (3) are non-negotiable — the skill's core differentials are (a) preserving the pyramid's sequential structure rather than a parallel list, and (b) resisting the theater failure mode where off-site trust exercises get treated as the intervention. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. Run with skill-creator's harness or by hand — an assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sequential-pyramid-diagnosis-not-parallel-list",
+      "prompt": "My leadership team hits our individual department numbers every quarter but consistently misses the company-wide collective goal. Sales beats target, product ships on time, marketing hits pipeline, but revenue as a company is flat. What's going on?",
+      "expected_output": "Output should: (a) name Inattention to Results as the top-of-pyramid symptom, but NOT stop there; (b) explicitly diagnose DOWN the pyramid — the results problem is a symptom of a broken layer below, not the layer to fix directly; (c) walk through the layers (Trust, Conflict, Commitment, Accountability) as questions to check, not as a parallel list of 5 team problems; (d) surface the first-team rule — leadership team members likely treat their departments as first team and the leadership team as second team, which is exactly the pattern that produces individual-wins-team-loses; (e) end with a specific diagnostic question the user can act on (e.g., 'in a trade-off, which team do your leaders choose?'); (f) NOT present the five dysfunctions as five separate parallel problems to work on simultaneously. THE CORE VOICE GUARD — if the skill lists the five dysfunctions as parallel, it has failed the sequential-pyramid differential.",
+      "assertions": [
+        "Output names Inattention to Results as the top-of-pyramid symptom",
+        "Output explicitly diagnoses down the pyramid (not just names the top)",
+        "Output references the sequential nature of the pyramid (each layer enables the next, or 'fix the lowest broken layer')",
+        "Output surfaces the first-team rule (leadership peers vs. reports as first team)",
+        "Output does NOT present the five dysfunctions as a parallel list of 5 problems",
+        "Output ends with at least one specific diagnostic question the user can act on",
+        "Output cites Lencioni or a specific source (book, podcast, Table Group topic page) at least once",
+        "Output uses Lencioni's verbatim vocabulary (pyramid, collective results, first team, individual status) not consulting jargon"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "artificial-harmony-diagnosis-warm-teams",
+      "prompt": "I'm actually pretty proud of my executive team. Everyone gets along really well, our meetings are efficient and pleasant, we hardly ever disagree, and we usually get to alignment pretty fast. My question is more about our direct reports — the layer below us seems chaotic and I don't know why.",
+      "expected_output": "Output should: (a) push back warmly on the user's premise — 'meetings are efficient and we hardly ever disagree' is a red flag for Fear of Conflict, not a marker of health; (b) name artificial harmony explicitly using Lencioni's vocabulary; (c) diagnose that the executive team's fake harmony likely IS the cause of the chaos below — decisions made without real conflict don't produce real commitment, which cascades down as mixed signals to the layer below; (d) check the Trust layer — Fear of Conflict sits on Absence of Trust; (e) offer specific concrete moves (mine for conflict, direct question in meeting, personal-histories exercise if trust is broken); (f) NOT congratulate the user on how aligned their team is; (g) NOT recommend that the user work only on the layer below without first addressing the executive team dynamic. This eval tests the skill's willingness to disagree warmly with a user's misdiagnosis.",
+      "assertions": [
+        "Output pushes back on the premise that a team-that-never-disagrees is healthy",
+        "Output names 'artificial harmony' explicitly (or 'Fear of Conflict')",
+        "Output connects the executive team's fake harmony to the chaos below",
+        "Output checks or asks about the Trust layer below Fear of Conflict",
+        "Output offers concrete moves (mine for conflict, personal-histories, etc.)",
+        "Output does NOT congratulate the user on team alignment",
+        "Output does NOT recommend fixing only the layer below without addressing the exec team",
+        "Output uses Lencioni's verbatim vocabulary",
+        "Tone is warm and direct — pushes back without shaming"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "trust-theater-guard-off-site-request",
+      "prompt": "My leadership team has trust issues. I want to do a big off-site — I was thinking a 3-day thing with a ropes course and some vulnerability exercises. We did one about 18 months ago and everyone loved it but honestly nothing really changed after. Can you help me design this one better?",
+      "expected_output": "Output should DETECT the trust-theater pattern and REDIRECT rather than help design another off-site. Specifically: (a) name that the previous off-site was trust theater — the tell is 'everyone loved it but nothing really changed'; (b) do NOT immediately help design a new off-site; (c) diagnose why the last one didn't stick — was the leader personally vulnerable in day-to-day work afterward? Did the exercises get followed up in ongoing practice?; (d) name that the off-site is the START of a practice, not the intervention; (e) specifically warn against the ropes course — it's the archetypal theater format; (f) reframe: what's needed is ongoing behavior change in the next real work situation, not another event; (g) if an off-site is still appropriate, prescribe the Lencioni-style structure (personal histories + team effectiveness exercise + real productive conflict on the team's actual work + commitment discipline) with an explicit follow-up cadence — but only after diagnosing why the last one failed. THIS EVAL IS THE CORE VOICE GUARD FOR THE SKILL — if the skill helps design a new off-site without diagnosing why the last one failed, it has failed its most important job.",
+      "assertions": [
+        "Output does NOT immediately help design a new off-site",
+        "Output explicitly names the previous off-site as trust theater",
+        "Output diagnoses why the previous off-site didn't stick (behavior change afterward, leader modeling, follow-up practice)",
+        "Output warns against the ropes course or names it as archetypal theater",
+        "Output names that the off-site is the start of a practice, not the intervention",
+        "Output reframes trust as ongoing behavior in the next real work situation, not an event",
+        "Output diagnoses the leader's own vulnerability practice (leader goes first)",
+        "Output uses Lencioni's vocabulary (vulnerability-based trust, not just 'trust')",
+        "Output does NOT sanction 'we'll do a better off-site this time' as the solution",
+        "Tone is direct and warm — names the pattern without shaming the user"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "brilliant-jerk-diagnosis-with-ideal-team-player",
+      "prompt": "I have this VP on my leadership team who is my top individual performer. Delivers everything, always overachieves, exec team loves the results. But my other VPs constantly complain about him — they say he takes credit, blames others when things go wrong, and dismisses their concerns in meetings. I've been putting off dealing with it because his numbers are so good. What should I do?",
+      "expected_output": "Output should: (a) diagnose this as the Skillful Politician profile from The Ideal Team Player (Hungry + Smart, not Humble) — cite the source explicitly; (b) name the signal cost of keeping the Skillful Politician — every retention/promotion of a Skillful Politician signals to the org that Humble is optional and breaks down the Trust layer for everyone else on the team; (c) connect this to the pyramid — the Trust layer of the executive team is degrading because vulnerability with the Skillful Politician gets used against people; (d) walk through the sequence Lencioni would run (name the specific non-Humble behaviors, give direct feedback with Care + Challenge, if the pattern doesn't change, the person is not an ideal team player and team health matters more); (e) surface the hard question — is the user willing to lose this person if the behavior doesn't change?; (f) cross-reference Kim Scott's 'do not promote bullies' as the parallel rule; (g) NOT recommend keeping the Skillful Politician indefinitely because of the results.",
+      "assertions": [
+        "Output names 'Skillful Politician' explicitly from The Ideal Team Player",
+        "Output diagnoses Hungry + Smart + not Humble",
+        "Output names the signal cost of keeping a Skillful Politician",
+        "Output connects the pattern to the Trust layer of the executive team",
+        "Output surfaces the hard question of willingness to lose this person",
+        "Output cross-references Kim Scott's 'do not promote bullies' or an equivalent",
+        "Output cites The Ideal Team Player (2016) as the source",
+        "Output does NOT sanction keeping the Skillful Politician indefinitely because of individual results",
+        "Output uses Lencioni's verbatim vocabulary (humble, hungry, smart)"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "psychological-safety-vs-vulnerability-based-trust",
+      "prompt": "I've been reading Amy Edmondson's work on psychological safety and I also just read The Five Dysfunctions. They seem to be saying the same thing about trust but with different words. Am I missing something? Which framework should I use?",
+      "expected_output": "Output should: (a) confirm that psychological safety (Edmondson) and vulnerability-based trust (Lencioni) describe the same substrate — willingness to be exposed without fear of humiliation, retaliation, or shame; (b) name the vocabulary difference — Edmondson is research-based (academic, hospital-team origins, empirical) and Lencioni is practitioner-based (fable, sequential pyramid); (c) explain the downstream difference — Edmondson stays close to the research and gives you a four-stage model of psychological safety maturation; Lencioni gives you the sequential pyramid of what the foundation enables (conflict, commitment, accountability, results); (d) name when to pick which vocabulary — Edmondson for academic/HR audiences that need research legitimacy; Lencioni for practitioner audiences that need applied vocabulary; (e) note that the practical move is the same — the leader goes first, vulnerability compounds through practice, the test is what happens in the next real work situation; (f) NOT claim one is 'right' and the other is 'wrong' — they're complementary; (g) NOT dismiss psychological safety as academic jargon.",
+      "assertions": [
+        "Output confirms both describe the same substrate",
+        "Output distinguishes Edmondson (research-based) from Lencioni (practitioner-based)",
+        "Output names the downstream difference — Edmondson's four-stage safety model vs. Lencioni's sequential pyramid",
+        "Output names when to pick which vocabulary (audience-dependent)",
+        "Output notes the practical move is the same regardless of vocabulary",
+        "Output does NOT claim one is right and the other wrong",
+        "Output does NOT dismiss psychological safety",
+        "Output cites Edmondson (or 'The Fearless Organization') at least once"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "personality-labeling-guard",
+      "prompt": "I've been reading Five Dysfunctions and I'm pretty sure my CFO is an Absence of Trust person. He never opens up, always keeps things close to the vest, and I don't think anyone on the team really knows him. Should I try to coach him or just work around him?",
+      "expected_output": "Output should REDIRECT firmly rather than help label the CFO. Specifically: (a) name that the pyramid diagnoses team dispositions, NOT people — there is no such thing as 'an Absence of Trust person'; (b) explain why — labeling turns the framework into a diagnostic prison and violates Lencioni's actual model (he names team behaviors, not individual identities); (c) reframe the question — instead of 'is the CFO an Absence of Trust person?', ask 'is the team stuck at Absence of Trust, and what are the specific behaviors (including the CFO's) that need to change?'; (d) diagnose the team's disposition, not the individual — is the LEADER (the user) modeling vulnerability first? Because if not, the CFO's guardedness is a rational response to an environment where vulnerability isn't safe; (e) cross-reference Kim Scott's rule for Radical Candor — measure specific pieces of feedback, never the person; (f) NOT help the user label the CFO, coach him as an 'Absence of Trust person', or work around him based on that label.",
+      "assertions": [
+        "Output firmly refuses to label the CFO as 'an Absence of Trust person'",
+        "Output explains why the pyramid diagnoses team dispositions, not individuals",
+        "Output reframes the question toward team behaviors including but not limited to the CFO",
+        "Output surfaces the leader-goes-first rule (vulnerability cascades downward from the leader)",
+        "Output cross-references Kim Scott's rule for Radical Candor (measure feedback, not people) or equivalent",
+        "Output does NOT sanction the labeling framing",
+        "Tone is warm and direct — redirects without shaming",
+        "Output uses Lencioni's vocabulary correctly (team disposition vs. personality)"
+      ],
+      "files": []
+    }
+  ]
+}

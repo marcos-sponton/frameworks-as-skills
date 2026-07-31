@@ -7,7 +7,7 @@ A growing collection of agent skills that package management and product framewo
 **Why:** when I invoke a well-known framework by name (e.g., "let's do Playing to Win on this"), the response the assistant gives me by default is thin — it knows the book but not the twelve years of refinements the author has published since. These skills close that gap: primary text + post-publication material + practitioner heuristics + the author's voice, structured so the assistant can be a competent thinking partner in the framework, not just a summarizer.
 
 <!-- SKILLS_INDEX_START -->
-**What's here** — 16 skills, each packages one framework:
+**What's here** — 30 skills, each packages one framework:
 
 **Strategy**
 - ✅ **[7 Powers](skills/7-powers/)** — Hamilton Helmer's taxonomy of durable competitive advantage (Benefit + Barrier, 3 S's, Statics vs. Dynamics)
@@ -17,29 +17,45 @@ A growing collection of agent skills that package management and product framewo
 - ✅ **[V2MOM](skills/v2mom/)** — Marc Benioff's Vision-Values-Methods-Obstacles-Measures — obstacles as the load-bearing element, order matters, individual/team...
 
 **Product & discovery**
+- ✅ **[Continuous Discovery Habits](skills/continuous-discovery-habits/)** — Teresa Torres's weekly customer touchpoints, Opportunity Solution Tree, story-based interviewing, assumption tests across 5 cat...
 - ✅ **[Escaping the Build Trap](skills/escaping-the-build-trap/)** — Melissa Perri's product-org diagnostic (Four Dimensions + Three Pillars of Product Ops)
+- ✅ **[Inspired](skills/inspired/)** — Marty Cagan's product team topology + discovery/delivery split — spans Inspired, Empowered, and Transformed (Product Operating...
+- ✅ **[Shape Up](skills/shape-up/)** — Ryan Singer's shaping/betting/building — 6-week cycles, appetite (not estimation), hill charts, no backlog, circuit breaker — f...
+- ✅ **[The Lean Startup](skills/lean-startup/)** — Eric Ries's Build-Measure-Learn, MVP (not v0.1), pivot/persevere, innovation accounting, engines of growth — with aggressive mi...
 - ✅ **[Working Backwards](skills/working-backwards/)** — Bill Carr + Colin Bryar's Amazon method (PR/FAQ, 6-pager, silent reading, Single-Threaded Leader, input metrics)
 
 **Positioning & narrative**
+- ✅ **[Crossing the Chasm](skills/crossing-the-chasm/)** — Geoffrey Moore's technology adoption lifecycle, bowling alley, whole product, beachhead — 3rd ed as canonical, plus Inside the...
 - ✅ **[Obviously Awesome](skills/obviously-awesome/)** — April Dunford's positioning method (5 components + 8-step Sales Pitch)
+- ✅ **[Play Bigger](skills/play-bigger/)** — Ramadan/Peterson/Lochhead/Maney's category design — Point of View, Lightning Strike, Category King, Data Flywheel — evolves thr...
 - ✅ **[Strategic Narrative](skills/strategic-narrative/)** — Andy Raskin's 5-part narrative structure (Change in the World → Promised Land → Magic Gifts)
 
 **Sensemaking & decisions**
 - ✅ **[Cynefin](skills/cynefin/)** — Dave Snowden's sensemaking framework (5 domains, constraints, aporetic turn, Estuarine)
 - ✅ **[Thinking in Bets](skills/thinking-in-bets/)** — Annie Duke's decision toolkit (resulting, kill criteria, calibration, monkeys & pedestals)
+- ✅ **[Thinking in Systems](skills/thinking-in-systems/)** — Donella Meadows's stocks/flows/loops, 8 system archetypes, 12 leverage points (ranked, not menu), Dancing with Systems — carrie...
 
 **Sales**
 - ✅ **[Challenger Sale + JOLT](skills/challenger-sale/)** — Matt Dixon's Challenger + JOLT Effect — Challenger earns the meeting, JOLT closes against no-decision; not aggression, not pres...
+- ✅ **[Never Split the Difference](skills/never-split-the-difference/)** — Chris Voss's tactical empathy — mirroring, labeling, calibrated questions, "that's right", Ackerman model, Black Swans (with we...
 
 **Management & communication**
+- ✅ **[High Output Management](skills/high-output-management/)** — Andy Grove's managerial leverage, task-relevant output, 1:1s, staff meetings, decision framework — kept alive by Horowitz, Doer...
 - ✅ **[Radical Candor](skills/radical-candor/)** — Kim Scott's Care Personally + Challenge Directly matrix — with an explicit guard against weaponization as "brutal honesty"
 - ✅ **[Radical Focus](skills/radical-focus/)** — Christina Wodtke's OKRs done right — weekly cadence, team-level, Team Health Monitor, one Objective at a time
+- ✅ **[Scaling People](skills/scaling-people/)** — Claire Hughes Johnson's founding docs, operating cadences, hiring loops, personal operating manual — template-first, synthesize...
+- ✅ **[The Fearless Organization](skills/fearless-organization/)** — Amy Edmondson's psychological safety paired with high standards (Learning Zone 2x2) — plus the Right Kind of Wrong failure taxo...
+- ✅ **[The Five Dysfunctions of a Team](skills/five-dysfunctions/)** — Patrick Lencioni's sequential pyramid (trust → conflict → commitment → accountability → results) — with guards against trust th...
 
 **Growth**
 - ✅ **[Four Fits](skills/four-fits/)** — Brian Balfour's Product-Market-Channel-Model fit chain + growth loops (compounding, closed) as alternative to funnels
+- ✅ **[The Cold Start Problem](skills/cold-start-problem/)** — Andrew Chen's network-effects lifecycle — atomic network, hard side, five stages (Cold Start → Tipping Point → Escape Velocity...
 
 **Engineering**
 - ✅ **[DORA / Accelerate](skills/dora-accelerate/)** — Nicole Forsgren's DORA metrics + capabilities + SPACE + DevEx — evidence-based, org-level (never individual performance)
+
+**Operations**
+- ✅ **[Theory of Constraints](skills/theory-of-constraints/)** — Eliyahu Goldratt's Five Focusing Steps, Throughput/Inventory/Operating Expense, DBR, Critical Chain, Thinking Processes — carri...
 
 More coming — see the roadmap below.
 <!-- SKILLS_INDEX_END -->
@@ -115,13 +131,14 @@ See `CONTRIBUTING.md` (coming soon) for how to structure additions.
 
 ## Roadmap
 
-**Next candidates** (round 3+, order tentative):
+**Next candidates** (order tentative):
 - Jobs to be Done — Bob Moesta (demand-side / Switch Interview / Forces of Progress)
-- Continuous Discovery Habits — Teresa Torres
-- Shape Up — Ryan Singer / Basecamp
 - Wardley Mapping — Simon Wardley
 - Product Management frameworks — Shreyas Doshi
-- North Star Framework / Product Operating Model — John Cutler
+- North Star Framework — John Cutler
+- Getting to Yes — Fisher / Ury (as a foil to Never Split the Difference)
+- Only the Paranoid Survive — Andrew Grove (companion to High Output Management)
+- Empowered / Transformed — Marty Cagan (already threaded into the Inspired skill; separate skill if the extensions warrant it)
 
 **Process behind each skill.** Every skill is built from a research dossier (see [`_research/`](_research/) directory). The dossier extracts live sources, method, voice & tone, heuristics, and adjacent frameworks. The build phase hydrates the dossier into the standard skill structure. If you want to contribute a candidate framework, start with a dossier PR against `_research/`.
 
