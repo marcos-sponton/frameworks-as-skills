@@ -1,10 +1,14 @@
 # Frameworks as Skills
 
-> Install: `npx skills add marcos-sponton/frameworks-as-skills` — works in Claude Code, Codex CLI, and any tool that supports the [SKILL.md open standard](https://agentskills.io).
+> Install: `npx skills add marcos-sponton/frameworks-as-skills` — works in any tool that supports the [SKILL.md open standard](https://agentskills.io) (Claude Code, Codex CLI, Claude Desktop, and more coming).
 
-A growing collection of agent skills that package management and product frameworks — the ones I actually use when thinking about strategy, discovery, and building — so they're available inside the pipeline where you already work, not stuck behind a Custom GPT you have to visit.
+A growing collection of agent skills — **30 today** — that package the management, product, strategy, and discovery frameworks I actually use into structured methods your AI assistant can reason with, not just summarize. The point isn't to have the frameworks *listed* somewhere; it's to have real conversations with an assistant that knows the method deeply enough to push back, ask the next right question, and hold the author's original discipline.
 
-**Why:** when I invoke a well-known framework by name (e.g., "let's do Playing to Win on this"), the response the assistant gives me by default is thin — it knows the book but not the twelve years of refinements the author has published since. These skills close that gap: primary text + post-publication material + practitioner heuristics + the author's voice, structured so the assistant can be a competent thinking partner in the framework, not just a summarizer.
+**Use them to think, not to skim.** Pull up Playing to Win when you're stuck on strategy. Load Never Split the Difference before a hard conversation. Run Continuous Discovery Habits alongside your PM work. Compose Cynefin + Thinking in Systems when the problem doesn't fit one lens. Each skill is designed so you can have a working session with your assistant — not read a summary — in the framework's actual voice, with the author's post-book refinements and anti-patterns loaded.
+
+**Why this exists.** When you invoke a well-known framework by name (e.g., "let's do Playing to Win on this"), the response the assistant gives by default is thin — it knows the book but not the twelve years of refinements the author has published since. These skills close that gap: primary text + post-publication material (essays, podcasts, updated books) + practitioner heuristics + the author's actual voice, structured so the assistant can be a competent thinking partner in the framework, not just a summarizer.
+
+**Where this is going.** Started as a personal shelf. Now: 30 skills across 9 themes (strategy, product, positioning, decisions, sales, management, growth, engineering, operations), each built from a research dossier that's kept in `_research/` so the process is legible. Community contributions welcome — new skills, sharper heuristics, missing post-book essays, better failing test cases. The repo grows as the frameworks and their authors grow.
 
 <!-- SKILLS_INDEX_START -->
 **What's here** — 30 skills, each packages one framework:
