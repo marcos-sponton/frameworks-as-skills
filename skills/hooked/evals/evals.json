@@ -1,0 +1,77 @@
+{
+  "skill_name": "hooked",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "hook-design-for-fitness-app",
+      "prompt": "I'm building a fitness app for busy professionals. It tracks workouts and suggests daily routines based on available time and equipment. I want to design the engagement loop so people actually come back daily instead of downloading and forgetting. Walk me through the Hook Model for this.",
+      "expected_output": "A structured walkthrough of all four Hook phases (Trigger, Action, Variable Reward, Investment) applied specifically to the fitness app. Should identify the internal trigger via the 5 Whys (likely guilt about missing workouts or desire for control over health). Should recommend the simplest possible action (open app, see today's workout). Should identify variable reward type (primarily Rewards of the Self — mastery, completion, progress). Should design the investment phase (workout history, personalization data, streaks). Should check the Habit Zone (daily use = sufficient frequency). Should explicitly run the Manipulation Matrix and confirm Facilitator quadrant.",
+      "assertions": [
+        "Output names all four Hook phases (Trigger, Action, Variable Reward, Investment) with specific recommendations for each",
+        "Output identifies an internal trigger that is an emotional state, not a feature description",
+        "Output names at least one of the three variable reward types (Tribe, Hunt, Self) and explains why it fits",
+        "Output includes the Manipulation Matrix check with an explicit ethics evaluation",
+        "Output attributes the framework to Nir Eyal and references Hooked"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "diagnose-engagement-drop",
+      "prompt": "Our project management SaaS has seen a 30% drop in weekly active users over the past quarter. Users sign up, use it for a week or two, then stop. We've tried sending more email reminders but it hasn't helped. Can you diagnose what's going wrong using the Hook Model?",
+      "expected_output": "A diagnostic walkthrough of each Hook phase, identifying likely failure points. Should note that 'sending more email reminders' is a symptom of weak/missing internal triggers — the team is depending on external triggers instead of building emotional associations. Should examine whether the action is too complex (PM tools often have high friction). Should question whether the reward is variable or predictable. Should check whether users are investing anything that loads the next trigger. Should warn against notification spam as a fix. Should check whether a PM tool used weekly can enter the Habit Zone.",
+      "assertions": [
+        "Output diagnoses each of the four Hook phases as a potential failure point",
+        "Output explicitly addresses the email reminder approach as a symptom of external trigger dependency, not a solution",
+        "Output uses Eyal's distinction between external and internal triggers",
+        "Output questions whether the product's usage frequency qualifies for the Habit Zone",
+        "Output recommends examining the habit path of retained users vs. churned users"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ethics-audit-social-app",
+      "prompt": "We built a social app for teens where engagement is driven by streaks, disappearing content, and social comparison metrics (who viewed your profile). Our DAU is through the roof but parents are complaining and some users report feeling anxious. Run an ethical audit on our engagement design.",
+      "expected_output": "A thorough ethical analysis using the Manipulation Matrix. Should surface that high engagement with user-reported anxiety is a red flag — engagement metrics without value metrics can mask harm. Should walk the Manipulation Matrix: does this improve users' lives? Would the builders use it as teens? Should name specific mechanics as potentially crossing from hook to exploitation: social comparison metrics triggering anxiety (not a Facilitator), disappearing content creating FOMO (manufactured urgency), streaks creating obligation rather than value. Should distinguish between hooks (ethical, value-creating) and dark patterns (exploitative). Should recommend concrete redesigns. Should reference Eyal's position on the habit vs. addiction distinction.",
+      "assertions": [
+        "Output runs the Manipulation Matrix with both questions explicitly answered",
+        "Output distinguishes between hooks and dark patterns or exploitation",
+        "Output flags social comparison metrics and manufactured anxiety as potential ethical violations",
+        "Output references Eyal's distinction between habits and addictions",
+        "Output recommends specific redesigns, not just 'be more ethical'"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "indistractable-for-remote-team",
+      "prompt": "I manage a remote team of 8 engineers. They complain about constant Slack notifications and context-switching destroying their deep work. I want to apply Indistractable principles to help the team focus better without cutting communication entirely.",
+      "expected_output": "A structured application of Eyal's Indistractable model to the team context. Should walk all four strategies: (1) Master internal triggers — what's driving the compulsive Slack-checking? Likely uncertainty and FOMO. (2) Make time for traction — suggest timeboxing with protected deep work blocks. (3) Hack back external triggers — audit which Slack notifications serve the team vs. which are noise; suggest specific notification settings. (4) Prevent distraction with pacts — suggest team-level effort pacts (agreed quiet hours) or identity pacts ('we are a team that protects deep work'). Should acknowledge that Slack itself is a hooked product (reference the Slack example from the examples file). Should balance focus protection with legitimate communication needs.",
+      "assertions": [
+        "Output names all four Indistractable strategies and applies each to the team scenario",
+        "Output mentions timeboxing as Eyal's recommended time management approach",
+        "Output distinguishes between triggers that serve the team and triggers that are noise",
+        "Output suggests at least one of the three pact types (effort, price, identity)",
+        "Output attributes the framework to Nir Eyal and references Indistractable"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "hook-vs-gamification-confusion",
+      "prompt": "We just added points, badges, and a leaderboard to our B2B analytics platform. We're calling it our 'Hook Model implementation.' Users engage with the gamification for a week then ignore it. What are we doing wrong?",
+      "expected_output": "Should directly address the misapplication: gamification is NOT the Hook Model. Points, badges, and leaderboards can be one component of variable reward but they are not a hook. Should explain what's missing: the team skipped trigger (what emotional state drives the user?), didn't simplify the action (B2B analytics is inherently complex), and has no investment phase loading the next trigger. Should note the gamification is likely producing finite variability (predictable point accumulation) rather than genuine variable reward. Should explain why bolting gamification onto an existing product without the full hook framework fails. Should redirect toward identifying the actual internal trigger for B2B analytics users (likely uncertainty about business metrics or desire for data-driven confidence) and designing from there.",
+      "assertions": [
+        "Output explicitly states that gamification is not the Hook Model",
+        "Output identifies which Hook phases are missing (not just that gamification was added)",
+        "Output distinguishes between finite variability (predictable points) and genuine variable reward",
+        "Output identifies a plausible internal trigger for B2B analytics users",
+        "Output references Eyal's explicit critique of treating gamification as a synonym for behavioral design"
+      ],
+      "files": []
+    }
+  ]
+}

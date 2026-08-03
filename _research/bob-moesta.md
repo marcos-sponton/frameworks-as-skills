@@ -24,16 +24,22 @@ Very active. Content pattern: (a) reflections framed as "I've been asked X for 3
 
 ### 1e. Podcast appearances (densest)
 - **Lenny's Podcast #1**: "The ultimate guide to JTBD | Bob Moesta (co-creator)" — 2023-ish. Densest single artifact for method + examples.
-- **Lenny's Podcast #2**: "How to find work you love | Bob Moesta" — Job Moves book cycle (2024).
+- **Lenny's Podcast #2**: "How to find work you love | Bob Moesta" — Job Moves book cycle (Feb 2025). Energy audit, jobcation, features vs. experiences.
 - **Intercom "Inside Intercom"** — two-part interview, mattress example heavy.
 - **Business of Software (BoS)** talks — 3+ recorded: "Demand-Side Sales 101", "Understanding Your Customer Jobs-to-be-Done", "JTBD & Hiring", "JTBD in the Enterprise".
 - **SaaS Club #423** — "10 Customer Interviews That Reveal Why People Really Buy".
 - **Getting Smart podcast** — Michael Horn on Job Moves (companion coverage).
+- **Digestible Deming podcast** (June 2026) — Bobby Moesta as guest; focus on JTBD theory roots in Deming/Taguchi quality thinking. Follow-up Q&A episode offered.
+- **Selling from the Heart podcast** (Aug 2025) — "Understanding Job Moves and Talent Management"; demand-side lens applied to hiring/retention.
+- **INDUSTRY 2025 conference** — keynote: "Rethinking Hiring, Retention & Career Progress Like a Product" — JTBD applied to HR/talent as a product problem.
+- **Renegade Marketing podcast** — "Demand-Side Sales: The Forces Behind Every Yes" — CMO-facing discussion of the Forces applied to B2B marketing.
+- **Precision Lender podcast** — "Demand-Side Commercial Banking Sales" — vertical application to financial services.
+- **Grow a Small Business podcast (#051)** — demand-side sales for SMBs, struggling moments, three motivations for progress.
 
 ### 1f. Books (chronological)
 1. *Choosing College* (2019, w/ Michael Horn) — JTBD applied to higher-ed
 2. *Demand-Side Sales 101* (2020, w/ Greg Engle) — Lioncrest — the sales adaptation
-3. *Learning to Build* (2022) — "5 Bedrock Skills of Innovators" — most personal book, dyslexia origin story
+3. *Learning to Build* (2022) — "5 Bedrock Skills of Innovators" — most personal book, dyslexia origin story. The five skills: (1) Empathetic Perspective, (2) Uncovering Demand, (3) Causal Structures, (4) Prototyping to Learn, (5) Making Tradeoffs. Draws from mentors: Christensen, Taguchi, Deming, Willie Hobbs Moore. Bob has coached entrepreneurs for 20+ years and developed 3,500+ products.
 4. *Job Moves: 9 Steps for Making Progress in Your Career* (2024-11-19, w/ Ethan Bernstein + Michael Horn) — HarperCollins — USA Today bestseller
 
 ### 1g. Newsletter / Substack
@@ -320,9 +326,25 @@ Different lineage (Product Discovery school — Cagan, Marty). Overlap: intervie
 - GoPractice framework comparison — https://gopractice.io/product/jobs-to-be-done-the-theory-and-the-frameworks/
 - Getting Smart podcast (Michael Horn on Job Moves) — https://www.gettingsmart.com/podcast/michael-horn-on-hiring-your-job/
 - Stern Strategy speaker bio — https://sternstrategy.com/speakers/bob-moesta/
+- Digestible Deming podcast (2026) — https://digestibledeming.substack.com/p/conversations-with-bobby-moesta
+- Selling from the Heart podcast (2025) — https://www.sellingfromtheheartpodcast.com/understanding-job-moves-and-talent-management-featuring-bob-moesta/
+- INDUSTRY 2025 keynote (YouTube) — https://www.youtube.com/watch?v=QeFDn3Mri4g
+- Renegade Marketing podcast — https://renegademarketing.com/podcasts/demand-side-sales/
+- Precision Lender podcast — https://explore.precisionlender.com/podcasts/demand-side-commercial-banking-sales-with-bob-moesta
+- Grow a Small Business podcast — https://www.growasmallbusiness.com/051-demand-side-sales-and-innovation-can-unlock-huge-growth-opportunities-by-understanding-your-customers
+- Brightidea interview — https://www.brightidea.com/blog/building-innovation-bob-moesta/
+- Learning to Build (Amazon) — https://www.amazon.com/Learning-Build-Bedrock-Innovators-Entrepreneurs/dp/1544524005
+- Learning to Build (SlideShare, BoSON21) — https://www.slideshare.net/slideshow/learning-to-build-the-5-skills-of-an-innovator-bob-moesta/252969850
+- AE Marketing Group podcast — https://aemarketinggroup.com/podcasts/bob-moesta/
+- Job Moves (Google Books) — https://books.google.com/books/about/Job_Moves.html?id=U5HzEAAAQBAJ
+- BoS JTBD & Hiring talk — https://businessofsoftware.org/talks/jtbd-hiring/
+- Shift90 Partners book review (Demand-Side Sales 101) — https://www.shift90.partners/shift90-blog/demand-side-sales-101-by-bob-moesta-book-review
 
 ## Notes / gaps
 
 - Bob Moesta LinkedIn 2025-2026 cadence not directly readable via WebFetch (auth-walled). Best captured live by the user or via a follow-up scrape if needed.
 - The full 9 Steps of Job Moves are not enumerated cleanly in any public source; the synthesis in §2h is a reconstruction from adjacent coverage. For fidelity in the skill, source the book directly.
 - Chris Spiek is under-credited in most third-party coverage but is co-inventor of the Forces diagram — worth naming if the skill produces public-facing content.
+- Learning to Build's five bedrock skills (Empathetic Perspective, Uncovering Demand, Causal Structures, Prototyping to Learn, Making Tradeoffs) are documented in the book and SlideShare presentations (BoSON21, BoSEU23) but not deeply unpacked in public podcast coverage beyond the book itself.
+- The Digestible Deming appearance (June 2026) is notable because it explicitly connects Moesta's JTBD roots to Deming/Taguchi quality thinking — a lineage Moesta references but rarely gets space to develop publicly.
+- INDUSTRY 2025 keynote marks Moesta's expanding application of demand-side thinking into HR/talent management as a first-class domain, not just career advice.

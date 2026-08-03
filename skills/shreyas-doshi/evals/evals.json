@@ -1,0 +1,82 @@
+{
+  "skill_name": "shreyas-doshi",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "classify-tasks-with-lno",
+      "prompt": "I have these tasks for this week: (1) Write the product strategy doc for Q4 planning, (2) Update the team meeting notes from yesterday, (3) Review and approve 3 expense reports, (4) Prepare the pitch deck for the board meeting, (5) Organize my Notion workspace, (6) Draft the research plan for the new market segment. Help me prioritize.",
+      "expected_output": "Output should apply the LNO framework. Should classify each task as L, N, or O. Strategy doc and pitch deck should be classified as L (Leverage). Meeting notes and expense reports should be O (Overhead). Notion workspace should be O. Research plan should be L or N depending on context. Should advise spending best energy on L tasks, doing O tasks at 'good enough' quality. Should NOT just rank them 1-6 or use a generic priority matrix.",
+      "assertions": [
+        "Output uses the LNO framework explicitly (Leverage/Neutral/Overhead)",
+        "Output classifies strategy doc and board pitch as Leverage tasks",
+        "Output classifies meeting notes and expense reports as Overhead tasks",
+        "Output advises perfectionism for L tasks and 'done is better than perfect' for O tasks",
+        "Output does NOT produce a generic numbered priority list without LNO classification",
+        "Output cites Shreyas Doshi or the LNO thread as source"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "run-a-premortem",
+      "prompt": "We're launching a new enterprise pricing tier in 6 weeks. Walk me through how to identify what could go wrong before we launch.",
+      "expected_output": "Output should introduce Shreyas Doshi's pre-mortem framework with Tigers/Paper Tigers/Elephants. Should walk through the one-hour meeting structure (kickoff, quiet brainstorming, quiet voting + discussion, action plan). Should emphasize the post-meeting action plan with DRIs as the actual output. Should NOT just produce a generic risk list. Should use the Tiger/Paper Tiger/Elephant vocabulary, not generic 'risks' or 'concerns'. Should cite Shreyas Doshi and the pre-mortem source.",
+      "assertions": [
+        "Output introduces Tigers / Paper Tigers / Elephants classification with definitions",
+        "Output describes the one-hour meeting structure or a close variant",
+        "Output emphasizes the post-meeting action plan with DRIs as the real output",
+        "Output uses Tiger vocabulary, not generic 'risks' or 'concerns'",
+        "Output does NOT produce just a bullet list of things that could go wrong",
+        "Output cites Shreyas Doshi (pre-mortem thread, Medium essay, or Coda template)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "diagnose-exec-communication-failure",
+      "prompt": "Every time I present to my VP of Product, she seems frustrated and asks 'but what does this mean for the business?' I keep bringing detailed specs and progress updates. What am I doing wrong?",
+      "expected_output": "Output should apply the Three Levels of Product Work (Impact/Execution/Optics). Should diagnose that the user is operating at the Execution level while the VP wants Impact level. Should NOT just say 'be more strategic' -- should specifically name the three levels and explain the mismatch. Should cite Shreyas's quote about drowning executives in execution detail. Tone should be diagnostic, not prescriptive.",
+      "assertions": [
+        "Output applies the Three Levels framework (Impact / Execution / Optics)",
+        "Output diagnoses a level mismatch: user at Execution, VP wants Impact",
+        "Output explains what Impact-level communication looks like vs Execution-level",
+        "Output references the product review scenario or Shreyas's quote about 'losing the audience'",
+        "Output does NOT just say 'be more strategic' without the Three Levels framework",
+        "Output cites Shreyas Doshi or a specific source"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "validate-problem-importance",
+      "prompt": "I've talked to 15 customers and they all say managing their team's workload is a huge pain point. I'm convinced we should build a workload management feature. Should I go ahead?",
+      "expected_output": "Output should flag the Focusing Illusion: customers amplify the importance of whatever problem you're currently discussing with them. Should introduce CPSR (Customer Problems Stack Rank) and recommend having customers rank this problem against all their other problems. Should NOT validate the conclusion at face value. Should cite Shreyas Doshi and the Focusing Illusion / CPSR frameworks.",
+      "assertions": [
+        "Output warns about the Focusing Illusion (amplifying what's currently under discussion)",
+        "Output introduces the CPSR framework or problem stack-ranking method",
+        "Output recommends ranking the problem against all other customer problems",
+        "Output does NOT validate the 15-customer conclusion at face value",
+        "Output cites Shreyas Doshi or a specific source (CPSR thread, OpinionX blog)",
+        "Output explains why isolated problem discussions produce inflated importance signals"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "busy-but-unproductive-diagnosis",
+      "prompt": "I work 60 hours a week as a PM but my manager says my impact is low. I don't understand -- I'm always working. What's going on?",
+      "expected_output": "Output should apply the LNO framework to diagnose where energy is going. Should also raise the 'Why am I so busy?' question from the Lenny live episode. Should investigate whether the user is perfectionism-spraying on Overhead tasks. Should introduce Opportunity Cost thinking: 'is this the best thing I could be doing?' vs 'am I doing enough?' Should NOT just tell the user to work smarter or delegate generically.",
+      "assertions": [
+        "Output applies the LNO framework to diagnose task-type distribution",
+        "Output considers the 'Why am I so busy?' question",
+        "Output identifies perfectionism on Overhead/Neutral tasks as a likely cause",
+        "Output introduces Opportunity Cost thinking as a diagnostic",
+        "Output does NOT give generic productivity advice without Shreyas's frameworks",
+        "Output cites Shreyas Doshi or specific sources (LNO thread, Lenny live episode)"
+      ],
+      "files": []
+    }
+  ]
+}

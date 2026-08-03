@@ -1,0 +1,84 @@
+{
+  "skill_name": "sprint",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "decide-whether-to-sprint",
+      "prompt": "We're a B2B SaaS startup (20 people, post-PMF, ~$2M ARR). We've been debating for 3 months whether to redesign our onboarding flow or add a new reporting feature. The CEO and Head of Product disagree on the direction. Should we run a sprint?",
+      "expected_output": "Output should: (a) identify this as a strong Sprint candidate — high stakes, team stuck, Decider available (CEO); (b) recommend Sprint as the tool because the question is testable with a prototype and 5 customers; (c) help the user formulate Sprint Questions that would resolve the debate ('Will new users complete onboarding without help?' or 'Will existing users adopt the reporting feature?'); (d) name the CEO as the Decider and explain what that means; (e) note that they might need two separate sprints (one for onboarding, one for reporting) rather than trying to sprint on both at once; (f) NOT just say 'yes, run a sprint' without checking the prerequisites.",
+      "assertions": [
+        "Output identifies the situation as a strong Sprint candidate (high stakes, stuck, Decider available)",
+        "Output helps formulate specific, testable Sprint Questions",
+        "Output names the CEO as the likely Decider and explains the Decider role",
+        "Output suggests focusing on ONE question per sprint, not both",
+        "Output checks prerequisites (team availability, customer access for Friday)",
+        "Output cites Knapp or the Sprint book at least once"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "plan-monday-exercises",
+      "prompt": "It's Monday morning of our sprint. We're an e-commerce startup testing whether a personalized shopping experience (AI-driven recommendations) will increase conversion. Our Decider is the VP of Product. Walk me through today.",
+      "expected_output": "Output should walk through Monday's exercises in order: (a) set a long-term goal ('become the go-to personalized shopping platform'); (b) write Sprint Questions that are specific and testable ('Will customers trust AI recommendations?' 'Will personalization increase add-to-cart rate?'); (c) draw the Map — customer journey from landing page to checkout; (d) Ask the Experts — suggest inviting customer support lead, data analyst, someone from the AI team; (e) How Might We notes during expert talks; (f) organize and dot-vote on HMW notes; (g) the Decider (VP of Product) picks the target — one customer type, one moment on the Map. Output should insist on the Note-and-Vote pattern for decisions and NOT skip any exercise.",
+      "assertions": [
+        "Output walks through all Monday exercises in order (goal, Sprint Questions, Map, experts, HMW, vote, target)",
+        "Output helps write specific, testable Sprint Questions (not vague)",
+        "Output describes the Map exercise concretely",
+        "Output suggests specific expert types to invite",
+        "Output explains How Might We note-taking",
+        "Output has the Decider (VP of Product) pick the target, not the group consensus",
+        "Output mentions Note-and-Vote or silent voting"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "push-back-on-group-brainstorming",
+      "prompt": "We're on Tuesday of our sprint. My team lead suggested we do a brainstorming session this afternoon instead of the individual sketching exercises. She says brainstorming is more collaborative and will produce better ideas. What should I do?",
+      "expected_output": "Output should push back firmly but kindly on the brainstorming suggestion. Specifically it should: (a) cite Knapp's anti-brainstorming stance and the research behind it (Charlan Nemeth); (b) explain why individual work produces better ideas — avoids anchoring, prevents deference to seniority, forces everyone to think independently; (c) describe the actual Tuesday exercises (Lightning Demos, Notes, Ideas, Crazy 8s, Solution Sketch) and why they're sequenced this way; (d) explain that the sketches will be evaluated together on Wednesday through a structured process (Art Museum, Heat Map, Speed Critique) — collaboration happens through evaluation, not ideation; (e) NOT compromise by saying 'maybe brainstorm first, then sketch.'",
+      "assertions": [
+        "Output pushes back on group brainstorming, does not accept the suggestion",
+        "Output cites Knapp's anti-brainstorming stance or Nemeth's research",
+        "Output explains why individual work produces better ideas (anchoring, deference, independent thinking)",
+        "Output describes the actual Tuesday exercises as the alternative",
+        "Output explains that collaboration happens through Wednesday's evaluation, not Tuesday's ideation",
+        "Output does NOT compromise by blending brainstorming with sketching"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "prototype-strategy-for-non-tech-product",
+      "prompt": "It's Thursday of our sprint. We're a healthcare startup and our prototype needs to show a patient intake process — a form that asks medical history questions, then shows a personalized care plan. Our team is mostly clinical people, not designers. How do we build this prototype in one day?",
+      "expected_output": "Output should: (a) recommend Keynote/Google Slides or Figma as the prototype tool — not code, not a real form; (b) explain Goldilocks quality — the prototype needs to look real enough that patients react honestly, but it's a facade; (c) assign prototype team roles (Maker, Stitcher, Writer, Asset Collector, Interviewer); (d) emphasize the Writer role especially for a healthcare product — medical language matters; (e) suggest using real-looking but fake medical data; (f) recommend a trial run at 3-4 PM; (g) remind them the prototype is disposable — it will be thrown away after Friday; (h) NOT suggest building a real form or connecting to a real database.",
+      "assertions": [
+        "Output recommends Keynote/Slides/Figma over code for the prototype",
+        "Output explains Goldilocks quality (real enough to test, rough enough to discard)",
+        "Output assigns prototype team roles (Maker, Stitcher, Writer, Asset Collector, Interviewer)",
+        "Output emphasizes the Writer role for medical/clinical language",
+        "Output recommends a trial run Thursday afternoon",
+        "Output explicitly says the prototype is a facade, not a real product",
+        "Output does NOT suggest building real functionality"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "sprint-vs-shape-up-comparison",
+      "prompt": "My team is trying to decide between running a Sprint (Jake Knapp) and adopting Shape Up (Ryan Singer). We're a post-PMF B2B SaaS with 30 people. We need to figure out a major new feature direction AND we need a sustainable development methodology. What should we use?",
+      "expected_output": "Output should: (a) identify that Sprint and Shape Up solve different problems — Sprint is a one-time 5-day intervention to answer a big question; Shape Up is an ongoing development methodology for shipping features; (b) recommend Sprint for the 'figure out the feature direction' question — run a sprint to test the concept with customers; (c) recommend Shape Up for the 'sustainable development methodology' need — 6-week cycles, shaping, betting, building; (d) explain how they compose — Sprint first to validate the direction, then Shape Up to ship it; (e) NOT recommend one over the other as a blanket answer; (f) cite both Knapp and Singer.",
+      "assertions": [
+        "Output identifies Sprint and Shape Up as solving different problems (intervention vs. methodology)",
+        "Output recommends Sprint for the feature direction question",
+        "Output recommends Shape Up for the ongoing methodology need",
+        "Output explains how Sprint and Shape Up compose (Sprint first, then Shape Up)",
+        "Output does NOT recommend one as universally better than the other",
+        "Output cites both Knapp and Singer (or their respective books)"
+      ],
+      "files": []
+    }
+  ]
+}

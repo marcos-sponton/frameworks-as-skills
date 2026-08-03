@@ -2,7 +2,7 @@
 
 > Install: `npx skills add marcos-sponton/frameworks-as-skills` — works in any tool that supports the [SKILL.md open standard](https://agentskills.io) (Claude Code, Codex CLI, Claude Desktop, and more coming).
 
-A growing collection of agent skills — **30 today** — that package the management, product, strategy, and discovery frameworks I actually use into structured methods your AI assistant can reason with, not just summarize. The point isn't to have the frameworks *listed* somewhere; it's to have real conversations with an assistant that knows the method deeply enough to push back, ask the next right question, and hold the author's original discipline.
+A growing collection of agent skills — **36 today** — that package the management, product, strategy, and discovery frameworks I actually use into structured methods your AI assistant can reason with, not just summarize. The point isn't to have the frameworks *listed* somewhere; it's to have real conversations with an assistant that knows the method deeply enough to push back, ask the next right question, and hold the author's original discipline.
 
 **Use them to think, not to skim.** Pull up Playing to Win when you're stuck on strategy. Load Never Split the Difference before a hard conversation. Run Continuous Discovery Habits alongside your PM work. Compose Cynefin + Thinking in Systems when the problem doesn't fit one lens. Each skill is designed so you can have a working session with your assistant — not read a summary — in the framework's actual voice, with the author's post-book refinements and anti-patterns loaded.
 
@@ -11,10 +11,11 @@ A growing collection of agent skills — **30 today** — that package the manag
 **Where this is going.** Started as a personal shelf. Now: 30 skills across 9 themes (strategy, product, positioning, decisions, sales, management, growth, engineering, operations), each built from a research dossier that's kept in `_research/` so the process is legible. Community contributions welcome — new skills, sharper heuristics, missing post-book essays, better failing test cases. The repo grows as the frameworks and their authors grow.
 
 <!-- SKILLS_INDEX_START -->
-**What's here** — 30 skills, each packages one framework:
+**What's here** — 36 skills, each packages one framework:
 
 **Strategy**
 - ✅ **[7 Powers](skills/7-powers/)** — Hamilton Helmer's taxonomy of durable competitive advantage (Benefit + Barrier, 3 S's, Statics vs. Dynamics)
+- ✅ **[DHM Model](skills/dhm-model/)** — Gibson Biddle's Delight × Hard-to-copy × Margin-enhancing product strategy filter + GEM, GLEe, proxy metrics, Strategy/Metric/T...
 - ✅ **[Good Strategy Bad Strategy](skills/good-strategy-bad-strategy/)** — Richard Rumelt's kernel (diagnosis / guiding policy / coherent action) + The Crux + "action agenda" reframe
 - ✅ **[Pattern Breakers](skills/pattern-breakers/)** — Mike Maples Jr's inflections + insights + movements for breakthrough startups — non-consensus bets, backcasting, living in the...
 - ✅ **[Playing to Win](skills/playing-to-win/)** — Roger Martin's 5-question strategy cascade
@@ -22,10 +23,14 @@ A growing collection of agent skills — **30 today** — that package the manag
 
 **Product & discovery**
 - ✅ **[Continuous Discovery Habits](skills/continuous-discovery-habits/)** — Teresa Torres's weekly customer touchpoints, Opportunity Solution Tree, story-based interviewing, assumption tests across 5 cat...
+- ✅ **[Demand-Side Sales](skills/demand-side-sales/)** — Bob Moesta's Four Forces of Progress, Switch Interview, buying timeline, and struggling moments — the causal-research variant o...
 - ✅ **[Escaping the Build Trap](skills/escaping-the-build-trap/)** — Melissa Perri's product-org diagnostic (Four Dimensions + Three Pillars of Product Ops)
 - ✅ **[Inspired](skills/inspired/)** — Marty Cagan's product team topology + discovery/delivery split — spans Inspired, Empowered, and Transformed (Product Operating...
 - ✅ **[Shape Up](skills/shape-up/)** — Ryan Singer's shaping/betting/building — 6-week cycles, appetite (not estimation), hill charts, no backlog, circuit breaker — f...
+- ✅ **[Shreyas Doshi](skills/shreyas-doshi/)** — Shreyas Doshi's PM frameworks — LNO (Leverage/Neutral/Overhead), pre-mortems (Tigers/Paper Tigers/Elephants), Three Levels of P...
+- ✅ **[Sprint](skills/sprint/)** — Jake Knapp's five-day process for answering critical business questions through design, prototyping, and testing with real cust...
 - ✅ **[The Lean Startup](skills/lean-startup/)** — Eric Ries's Build-Measure-Learn, MVP (not v0.1), pivot/persevere, innovation accounting, engines of growth — with aggressive mi...
+- ✅ **[The Mom Test](skills/mom-test/)** — Rob Fitzpatrick's three rules for customer conversations — talk about their life (not your idea), ask about the past (not the f...
 - ✅ **[Working Backwards](skills/working-backwards/)** — Bill Carr + Colin Bryar's Amazon method (PR/FAQ, 6-pager, silent reading, Single-Threaded Leader, input metrics)
 
 **Positioning & narrative**
@@ -53,6 +58,7 @@ A growing collection of agent skills — **30 today** — that package the manag
 
 **Growth**
 - ✅ **[Four Fits](skills/four-fits/)** — Brian Balfour's Product-Market-Channel-Model fit chain + growth loops (compounding, closed) as alternative to funnels
+- ✅ **[Hooked](skills/hooked/)** — Nir Eyal's Hook Model (Trigger → Action → Variable Reward → Investment), Manipulation Matrix for ethical evaluation, and Indist...
 - ✅ **[The Cold Start Problem](skills/cold-start-problem/)** — Andrew Chen's network-effects lifecycle — atomic network, hard side, five stages (Cold Start → Tipping Point → Escape Velocity...
 
 **Engineering**
@@ -136,13 +142,10 @@ See `CONTRIBUTING.md` (coming soon) for how to structure additions.
 ## Roadmap
 
 **Next candidates** (order tentative):
-- Jobs to be Done — Bob Moesta (demand-side / Switch Interview / Forces of Progress)
 - Wardley Mapping — Simon Wardley
-- Product Management frameworks — Shreyas Doshi
 - North Star Framework — John Cutler
 - Getting to Yes — Fisher / Ury (as a foil to Never Split the Difference)
 - Only the Paranoid Survive — Andrew Grove (companion to High Output Management)
-- Empowered / Transformed — Marty Cagan (already threaded into the Inspired skill; separate skill if the extensions warrant it)
 
 **Process behind each skill.** Every skill is built from a research dossier (see [`_research/`](_research/) directory). The dossier extracts live sources, method, voice & tone, heuristics, and adjacent frameworks. The build phase hydrates the dossier into the standard skill structure. If you want to contribute a candidate framework, start with a dossier PR against `_research/`.
 

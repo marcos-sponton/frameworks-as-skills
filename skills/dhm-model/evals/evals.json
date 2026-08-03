@@ -1,0 +1,87 @@
+{
+  "skill_name": "dhm-model",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "score-initiative-on-dhm-missing-hard-to-copy",
+      "prompt": "We're building a consumer fitness app with AI-generated workout plans. Users love it — our NPS is 72 and retention at 3 months is 65%. But three competitors launched nearly identical features in the last 6 months. Our CEO says 'we just need to move faster.' Help me evaluate this using the DHM model.",
+      "expected_output": "Output should: (a) score the initiative on all three DHM dimensions explicitly; (b) diagnose that Delight is strong (NPS 72, 65% retention) but Hard-to-copy is the critical gap — AI-generated workouts are commoditized and three competitors replicated the feature quickly; (c) challenge the CEO's 'move faster' framing — speed is not a durable hard-to-copy advantage; (d) identify which of the four H-types could be built (unique technology via proprietary data? network effects? brand?); (e) assess Margin-enhancing separately from Delight; (f) cite Biddle or a specific essay.",
+      "assertions": [
+        "Output names all three DHM dimensions (Delight, Hard-to-copy, Margin-enhancing) and scores each",
+        "Output identifies Hard-to-copy as the critical gap or weakest dimension",
+        "Output pushes back on 'move faster' as a strategy for defensibility",
+        "Output references at least 2 of Biddle's four types of hard-to-copy advantage (brand, network effects, economies of scale, unique technology)",
+        "Output proposes concrete ways to build a hard-to-copy advantage rather than accepting the current state",
+        "Output cites Gibson Biddle, DHM, or a specific essay at least once",
+        "Output does NOT accept 'customers love it' as sufficient evidence that the strategy is sound"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "build-strategy-metric-tactic-lockup",
+      "prompt": "I'm a product lead at a B2B SaaS company that helps sales teams manage their pipeline. We have about 2,000 customers. My CEO asked me to present our product strategy next week but all I have is a list of 15 features we're building this quarter. Help me turn this into a real product strategy using Biddle's frameworks.",
+      "expected_output": "Output should: (a) diagnose that a feature list is not a product strategy — cite Biddle's distinction; (b) walk the user through the bottom-up approach (scan the 15 features, identify themes/strategies); (c) help define 3-5 strategies from the feature list themes; (d) for each strategy, build a Strategy/Metric/Tactic lock-up (strategy hypothesis, proxy metric, tactics); (e) evaluate each strategy on DHM; (f) suggest a presentation format using Biddle's frameworks.",
+      "assertions": [
+        "Output explicitly states that a feature list is not a product strategy",
+        "Output uses the bottom-up approach (scan projects, identify themes) to extract strategies",
+        "Output produces a Strategy/Metric/Tactic lock-up table or structure for at least 2 strategies",
+        "Output defines proxy metrics for at least one strategy",
+        "Output evaluates at least one strategy on DHM (all three dimensions)",
+        "Output cites Biddle, the lock-up concept, or a specific essay",
+        "Output does NOT just repackage the feature list as a strategy"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "diagnose-vanity-proxy-metrics",
+      "prompt": "We launched a new onboarding flow and we're measuring success by 'number of users who complete onboarding.' The number is going up every month and the team is celebrating. But our monthly retention hasn't budged. What's going on? Can you help me think about this using Biddle's proxy metrics framework?",
+      "expected_output": "Output should: (a) diagnose that 'onboarding completion' may be a vanity metric if it doesn't correlate with the high-level engagement metric (retention); (b) explain Biddle's proxy metric hierarchy (high-level engagement metric → proxy metrics); (c) explain that correlation between proxy and high-level metric must be demonstrated, not assumed; (d) suggest that the onboarding flow might be optimizing for completion without improving the behaviors that actually drive retention; (e) propose alternative proxy metrics that might better predict retention; (f) recommend A/B testing to verify causation.",
+      "assertions": [
+        "Output identifies 'onboarding completion' as a potentially vanity or uncorrelated proxy metric",
+        "Output explains the proxy metric hierarchy (high-level metric → proxy metrics)",
+        "Output emphasizes that correlation must be demonstrated, not assumed",
+        "Output distinguishes between correlation and causation in the proxy metric context",
+        "Output proposes at least one alternative proxy metric that might better predict retention",
+        "Output recommends A/B testing or data analysis to verify the proxy-to-retention link",
+        "Output cites Biddle's proxy metrics essay or framework"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "voice-check-strategy-as-plan",
+      "prompt": "Here's our 2027 product strategy: Ship AI copilot by Q1, launch enterprise tier by Q2, integrate with Salesforce by Q3, add analytics dashboard by Q4. What do you think?",
+      "expected_output": "Output should push back on the framing — this is a project timeline, not a product strategy. Biddle defines strategy as hypotheses about how you hope to delight customers in hard-to-copy, margin-enhancing ways. The user has presented a roadmap/timeline of deliverables, not testable hypotheses. Output should reframe: what's the underlying hypothesis behind each project? What proxy metric would prove each hypothesis? Does each initiative pass the DHM filter? Voice should be Biddle-like (professorial, encouraging, constructive) — not dismissive.",
+      "assertions": [
+        "Output pushes back on the framing as 'this is a timeline/roadmap, not a strategy'",
+        "Output introduces Biddle's definition of strategy as hypotheses",
+        "Output asks what hypothesis each project is testing (or reframes at least one project as a hypothesis)",
+        "Output introduces the DHM filter and applies it to at least one of the listed projects",
+        "Output suggests defining proxy metrics for at least one strategy",
+        "Output cites Biddle or a specific essay",
+        "Response tone is constructive and encouraging (Biddle-like) rather than dismissive"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "gem-prioritization-with-trade-offs",
+      "prompt": "We have three product initiatives competing for the same engineering resources:\n\n1. Referral program — expected to drive 20% more signups but no impact on retention or revenue per user\n2. Advanced reporting dashboard — our top-paying customers are asking for it, would justify a price increase, but won't drive new signups\n3. Mobile app redesign — user research shows it would significantly improve daily engagement and retention\n\nHow should we prioritize? We're a Series B company with strong growth but declining retention.",
+      "expected_output": "Output should: (a) apply the GEM model (Growth, Engagement, Monetization) to score each initiative; (b) identify that declining retention makes Engagement the priority for a Series B company; (c) score: referral = high G, low E, low M; reporting = low G, low E, high M; mobile redesign = low G, high E, medium M; (d) recommend mobile redesign as the priority given the declining retention diagnosis; (e) also evaluate each on DHM — especially the 'hard to copy' dimension; (f) note the trade-off: referral program drives growth but doesn't address the retention leak.",
+      "assertions": [
+        "Output uses the GEM model (Growth, Engagement, Monetization) to score each initiative",
+        "Output identifies declining retention as the critical signal that should influence prioritization",
+        "Output recommends the mobile redesign (or engagement-focused initiative) as highest priority given declining retention",
+        "Output explains the trade-off of prioritizing growth (referrals) when retention is declining",
+        "Output evaluates at least one initiative on DHM (all three dimensions)",
+        "Output cites Biddle, GEM, or a specific essay",
+        "Output does NOT recommend the referral program as top priority despite declining retention"
+      ],
+      "files": []
+    }
+  ]
+}

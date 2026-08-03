@@ -151,3 +151,33 @@
   title: The Cold Start Problem
   tagline: Andrew Chen's network-effects lifecycle — atomic network, hard side, five stages (Cold Start → Tipping Point → Escape Velocity → Ceiling → Moat), anti-network effects
   theme: Growth
+
+- slug: dhm-model
+  title: DHM Model
+  tagline: Gibson Biddle's Delight × Hard-to-copy × Margin-enhancing product strategy filter + GEM, GLEe, proxy metrics, Strategy/Metric/Tactic lock-ups — from Netflix VP Product
+  theme: Strategy
+
+- slug: mom-test
+  title: The Mom Test
+  tagline: Rob Fitzpatrick's three rules for customer conversations — talk about their life (not your idea), ask about the past (not the future), listen more than you talk — plus bad-data detection, commitment currencies, and segmentation
+  theme: Product & discovery
+
+- slug: demand-side-sales
+  title: Demand-Side Sales
+  tagline: Bob Moesta's Four Forces of Progress, Switch Interview, buying timeline, and struggling moments — the causal-research variant of JTBD for understanding why people buy, switch, or hire a product
+  theme: Product & discovery
+
+- slug: shreyas-doshi
+  title: Shreyas Doshi
+  tagline: Shreyas Doshi's PM frameworks — LNO (Leverage/Neutral/Overhead), pre-mortems (Tigers/Paper Tigers/Elephants), Three Levels of Product Work, High Agency, Opportunity Cost vs ROI, Product Sense
+  theme: Product & discovery
+
+- slug: sprint
+  title: Sprint
+  tagline: Jake Knapp's five-day process for answering critical business questions through design, prototyping, and testing with real customers — plus Make Time (2018) and Foundation Sprint from Click (2025)
+  theme: Product & discovery
+
+- slug: hooked
+  title: Hooked
+  tagline: Nir Eyal's Hook Model (Trigger → Action → Variable Reward → Investment), Manipulation Matrix for ethical evaluation, and Indistractable model for attention management
+  theme: Growth

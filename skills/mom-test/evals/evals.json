@@ -1,0 +1,87 @@
+{
+  "skill_name": "mom-test",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. The evals emphasize the differential of this skill: detecting bad data in customer conversations and redirecting toward questions that produce facts, not opinions. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome. An assertion that fails is data, not a defect in the eval.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "everyone-loves-it-diagnosis",
+      "prompt": "I've talked to about 15 potential customers over the past month about my idea for a team scheduling tool. Every single one said they'd use it and that it sounds really useful. Several said 'I love it!' and 'Definitely send me the link when it launches.' I feel pretty validated. What do you think — is it time to start building?",
+      "expected_output": "Output should: (a) NOT validate that the user is ready to build — 15/15 positive responses is a red flag, not a green flag; (b) classify 'I love it!' and 'Definitely send me the link' as compliments (fool's gold), not validation; (c) identify that the user was likely pitching their idea (violating Rule 1) and asking about future behavior (violating Rule 2); (d) ask what specific questions the user asked — were they about the customers' lives or about the idea?; (e) ask whether any of the 15 made a commitment (time, reputation, money) vs. just saying nice things; (f) suggest re-running conversations without mentioning the idea, focused on past behavior around the problem; (g) cite 'compliments are the fool's gold of customer learning' or equivalent from The Mom Test.",
+      "assertions": [
+        "Output does NOT accept 15/15 positive as validation or recommend starting to build",
+        "Output classifies 'I love it' and 'send me the link when it launches' as compliments, not signal",
+        "Output identifies likely Rule 1 violation (pitching the idea instead of learning about their life)",
+        "Output identifies likely Rule 2 violation (asking about future behavior instead of past specifics)",
+        "Output asks about commitment signals (time, reputation, or money) and notes their likely absence",
+        "Output suggests re-running conversations using Mom-Test-compliant questions",
+        "Output uses Fitzpatrick's 'compliments are fool's gold' line or equivalent anti-pattern language"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "question-audit",
+      "prompt": "I'm preparing for customer interviews about a project management tool for small agencies. Here are my questions:\n1. Would you use a project management tool designed specifically for agencies?\n2. How much would you pay for something like this?\n3. What features would your ideal PM tool have?\n4. Do you think managing projects is hard for small agencies?\n5. Would you switch from your current tool if something better came along?\n\nDo these look good?",
+      "expected_output": "Output should: (a) flag every single question as failing the Mom Test — all five are bad questions; (b) Q1 fails Rule 1 (pitching the idea) and Rule 2 (hypothetical future); (c) Q2 fails Rule 2 (hypothetical money for hypothetical product); (d) Q3 fails Rule 2 (invites fantasy/wish-list, not facts); (e) Q4 is a leading question that telegraphs the answer; (f) Q5 fails Rule 2 (hypothetical future switching); (g) provide Mom-Test-compliant alternatives for each question, focused on past behavior and current workflows; (h) suggest adding a 'scary question' that could invalidate the idea.",
+      "assertions": [
+        "Output flags all 5 questions as failing the Mom Test with specific reasoning",
+        "Output identifies Q1 as pitching the idea (Rule 1 violation) and hypothetical (Rule 2 violation)",
+        "Output identifies Q2 as hypothetical money and suggests asking about current spending instead",
+        "Output identifies Q3 as inviting fantasy and suggests asking about current workflow instead",
+        "Output provides at least 3 specific Mom-Test-compliant alternative questions focused on past behavior",
+        "Output does NOT approve any of the original questions as adequate",
+        "Output suggests adding a question that could invalidate the idea ('scary question')"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "conversation-notes-review",
+      "prompt": "Here are my notes from a customer conversation yesterday with Sarah, VP of Ops at a 200-person logistics company:\n\n- She said our concept is 'really interesting' and she could 'definitely see the value'\n- She thinks her team would use it 'probably daily'\n- She mentioned they currently use spreadsheets for tracking shipments but 'it's fine, it works'\n- She said she'd 'love to be a beta tester when we're ready'\n- She suggested we add a feature for customs documentation\n- Meeting lasted 45 minutes, very friendly and engaging\n\nThis felt like a great meeting. How did we do?",
+      "expected_output": "Output should: (a) classify most of this as bad data; (b) 'really interesting' and 'definitely see the value' = compliments (worthless); (c) 'probably daily' = fluff (future-tense hypothetical); (d) 'it's fine, it works' = the most important signal in the entire conversation — she doesn't actually have a painful problem; (e) 'love to be a beta tester' = non-committal compliment, not a real commitment; (f) the customs documentation feature request should be dug into (what's the real need?); (g) no commitment was made — no follow-up scheduled, no introduction offered, no money discussed; (h) the meeting was 'spinning' not 'advancing'; (i) flag that 'it's fine, it works' combined with no commitment signals suggests this is NOT a real prospect.",
+      "assertions": [
+        "Output classifies 'really interesting' and 'see the value' as compliments, not validation",
+        "Output flags 'probably daily' as fluff (future-tense hypothetical)",
+        "Output identifies 'it's fine, it works' as the most important signal — she doesn't have a painful problem",
+        "Output flags 'love to be a beta tester' as non-committal rather than a real commitment",
+        "Output identifies the customs documentation request as needing deeper investigation",
+        "Output notes the absence of real commitment (time, reputation, or money)",
+        "Output classifies the meeting as 'spinning' rather than 'advancing'",
+        "Output does NOT agree that this was a 'great meeting'"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "segmentation-confusion",
+      "prompt": "I've been talking to potential customers about a fitness accountability app. I've had 12 conversations total. Some people want group challenges and social features. Others want to be left alone and just track privately. Some want integration with their gym's equipment. Others don't go to a gym at all. One person wants meal planning, another thinks nutrition tracking is scope creep. I have no idea what to build. The feedback is all over the place.",
+      "expected_output": "Output should: (a) diagnose this as a segmentation problem, not a product-definition problem; (b) the contradictory feedback is because they're talking to different types of people and aggregating the feedback; (c) identify likely segments from the data (social/group-oriented exercisers, solo trackers, gym-goers, home/outdoor exercisers, holistic-health people); (d) recommend picking the segment with the strongest signals — measured by past behavior (who is spending money or time on this already?), not by who was most enthusiastic; (e) suggest re-running focused conversations within one segment; (f) cite The Mom Test on segmentation.",
+      "assertions": [
+        "Output diagnoses the core issue as a segmentation problem",
+        "Output identifies at least 2-3 distinct customer segments from the described feedback",
+        "Output recommends picking one segment to focus on based on problem urgency (past behavior, spending)",
+        "Output does NOT try to reconcile the contradictory feedback into one product vision",
+        "Output recommends re-running conversations focused on one segment",
+        "Output warns about the danger of aggregating mixed-segment feedback"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "learning-vs-selling-confusion",
+      "prompt": "I'm doing customer discovery for my B2B SaaS. I've been setting up 30-minute calls where I spend the first 10 minutes asking about their problems, then the last 20 minutes demoing my prototype and getting their reaction. People seem impressed by the demo. Is this a good approach?",
+      "expected_output": "Output should: (a) identify this as mixing learning and selling — two different modes that corrupt each other when combined; (b) the first 10 minutes are learning (Mom Test territory) but they're too short and probably already contaminated by the prospect knowing a demo is coming; (c) the last 20 minutes are pitching — once you demo, you've turned the meeting into a pitch and all subsequent feedback is reactions to the pitch, not facts about their life; (d) 'people seem impressed' = compliments about the demo, not validation of the problem; (e) recommend separating learning conversations from demo/selling conversations; (f) recommend longer learning conversations (30+ minutes) without ANY mention of the product; (g) suggest that if they want to demo, do it in a separate meeting AFTER the learning conversation, and push for commitment in the demo meeting.",
+      "assertions": [
+        "Output identifies the mixing of learning and selling as the core problem",
+        "Output explains why demoing corrupts the learning phase — reactions to the demo replace facts about their life",
+        "Output classifies 'people seem impressed' as compliments about the demo, not problem validation",
+        "Output recommends separating learning conversations from demo/selling conversations",
+        "Output recommends longer learning-only conversations without mentioning the product",
+        "Output does NOT approve the current 10/20 split as a good approach",
+        "Output explains that knowing a demo is coming likely biases the 'learning' portion too"
+      ],
+      "files": []
+    }
+  ]
+}

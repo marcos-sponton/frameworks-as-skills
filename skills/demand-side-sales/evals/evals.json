@@ -1,0 +1,84 @@
+{
+  "skill_name": "demand-side-sales",
+  "version": "v0",
+  "note": "These are v0 evals. They exist to make the skill testable and to invite community contributions. Each case describes a realistic scenario and the shape of output that a good application of the skill should produce. PRs adding cases, sharpening assertions, or reporting cases where the skill fails are welcome.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "flip-from-supply-to-demand-side",
+      "prompt": "We built a project management tool that's objectively better than what our competitors offer — faster, more features, better UI. But our conversion rate from trial to paid is only 3%. Help me figure out what's wrong.",
+      "expected_output": "Output should redirect from supply-side thinking ('our product is better') to demand-side thinking ('why aren't people switching?'). Should map the Four Forces — especially Anxiety (more features = more to learn = more Anxiety) and Habit (current tool is familiar, workflows are built around it). Should introduce the struggling moment concept and ask what's making today the day someone starts looking. Should NOT accept 'objectively better' at face value — features are supply-side, progress is demand-side.",
+      "assertions": [
+        "Output redirects from 'our product is better' to 'why aren't people switching?'",
+        "Output maps all four Forces (Push, Pull, Anxiety, Habit) — not just Push and Pull",
+        "Output identifies that more features may be increasing Anxiety rather than Pull",
+        "Output asks about or identifies the struggling moment that triggers the search",
+        "Output introduces the distinction between supply-side and demand-side thinking",
+        "Output uses Moesta's vocabulary (progress, hire/fire, struggling moment, the Forces) — not generic terms (pain points, needs, pros/cons)",
+        "Output cites Moesta or DSS101 at least once"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "plan-switch-interviews",
+      "prompt": "I run a B2B SaaS product for HR teams. We've had about 40 new customers in the last 6 months. I want to understand why they bought. How do I set up interviews?",
+      "expected_output": "Output should describe the Switch Interview method specifically — not generic customer interviews. Should specify: interview recent buyers (not prospects), 10-12 per round, two rounds preferred over one of 24, intentional segment coverage. Should describe the structural sequence (First Thought through ongoing use). Should include micromoves (no discussion guide, 'tell me more' not 'why?', play back incorrectly, Columbo move, talk less than 20%). Should specify debrief with cross-functional team for equal time. Should warn against the top anti-patterns (discussion guide, asking 'why', accepting first answer, interviewing prospects).",
+      "assertions": [
+        "Output specifies interviewing recent buyers, not prospects or leads",
+        "Output recommends 10-12 interviews per round, or two rounds rather than one large batch",
+        "Output describes the Switch Interview structural sequence (First Thought through ongoing use)",
+        "Output includes at least 2 interview micromoves (play back incorrectly, Columbo move, 'tell me more' not 'why?')",
+        "Output specifies debrief with the team as essential (not optional)",
+        "Output warns against at least 2 anti-patterns (discussion guide, asking 'why?', accepting first answer)",
+        "Output uses Moesta's vocabulary — 'Switch Interview' not 'customer interview'"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "find-real-competition",
+      "prompt": "We sell an online sleep tracking app. Our competitive analysis shows we're up against Oura Ring, Whoop, and Apple Watch sleep tracking. But our growth is stalling. What am I missing?",
+      "expected_output": "Output should apply Moesta's 'real competition' insight — the real competitor is not the obvious category competitors but whatever the customer would hire to make the same progress. Should reference the Casper vs. ZzzQuil case explicitly. Should ask what progress the customer is trying to make (better sleep? feeling in control? impressing a doctor?). Should explore non-obvious competitors: white noise machines, melatonin, a new mattress, a therapist, 'just going to bed earlier', doing nothing. Should NOT produce a competitive matrix against Oura/Whoop/Apple Watch — that's supply-side analysis.",
+      "assertions": [
+        "Output challenges the assumption that Oura/Whoop/Apple Watch are the real competitors",
+        "Output references the Casper vs. ZzzQuil case (or equivalent demand-side competition example)",
+        "Output asks about or identifies the struggling moment and the progress being sought",
+        "Output suggests non-obvious competitors (melatonin, white noise, new mattress, therapist, doing nothing, or similar)",
+        "Output does NOT produce a feature-comparison matrix against obvious competitors",
+        "Output frames the analysis in demand-side terms (what progress, what would they hire instead)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "timeline-stage-mismatch",
+      "prompt": "Our sales team says prospects go dark after the demo. We've tried following up more aggressively, shortening the demo, and adding a free trial. Nothing works. What should we do?",
+      "expected_output": "Output should diagnose a timeline-stage mismatch — the demo may be designed for Deciding but reaching people in Passive or Active Looking. Should introduce the buying timeline (six stages). Should reference the AutoBooks case (three demos by stage). Should question whether the 'demo request' means the same thing at every stage. Should push back on the free trial (Moesta's anti-free-trial stance — free prevents commitment). Should NOT suggest more aggressive follow-up (that's supply-side). Should suggest understanding which timeline stage each prospect is in and designing different interactions for each.",
+      "assertions": [
+        "Output diagnoses a potential timeline-stage mismatch (demo designed for one stage, reaching people at a different stage)",
+        "Output introduces the buying timeline with its stages",
+        "Output references the AutoBooks case or the principle that 'same action means different things at different stages'",
+        "Output questions or pushes back on the free trial approach",
+        "Output does NOT recommend more aggressive follow-up",
+        "Output suggests different content or interactions for different timeline stages"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "distinguish-moesta-from-ulwick",
+      "prompt": "I want to do JTBD research for my product. Should I start with outcome statements and a job map, or with interviews? What's the difference?",
+      "expected_output": "Output should clearly distinguish Moesta's demand-side method from Ulwick's ODI. Moesta: qualitative, Switch Interviews, Forces diagrams, timelines, verbatim language. Ulwick: quantitative, surveys, job maps, outcome statements, unmet-need scoring. Should NOT present them as the same method. Should explain when each is appropriate: Moesta for understanding causation of specific switches, Ulwick for prioritizing outcomes within a known job. Should credit both as valid JTBD lineages tracing to Christensen. Should mention Kalbach as a synthesis. Should NOT say 'the JTBD framework' as if there's only one.",
+      "assertions": [
+        "Output distinguishes Moesta (qualitative, interviews, forces) from Ulwick (quantitative, surveys, outcomes) as separate methods",
+        "Output does NOT present them as the same method or as interchangeable steps",
+        "Output explains when each is appropriate",
+        "Output credits both as valid JTBD lineages",
+        "Output does NOT use 'the JTBD framework' as if there's only one",
+        "Output mentions Kalbach as a synthesis or bridge between the two"
+      ],
+      "files": []
+    }
+  ]
+}
